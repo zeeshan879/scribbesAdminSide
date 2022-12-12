@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.fade{
+  padding-left: 0px !important;
+}
+.show{
+  padding-left: 0px !important;
+}
+ .modal{
+  padding-left: 0px !important;
+}
+.rounded-checkbox {
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle !important;
+  border: 1px solid #1CAC19;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.left .accordion-item{
+border: none !important;
+  padding: 0px !important;
+}
+.ua .accordion-item{
+  border: none;
+  border-bottom:1px solid #BCBCBC; 
+  
+
+}
+.left .accordion-button{
+  padding: 20px 0px !important;
+  font-size: 24px !important;
+  font-family: "Space Mono", sans-serif !important; 
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.dubai .progress-bar {
+  background-color: #1CAC19 !important;
+}
+.spain .progress-bar {
+  background-color: #FF902C !important;
+}
+.canada .progress-bar {
+  background-color: #92AAFF !important;
+}
+.nigeria .progress-bar {
+  background-color: #37BD9C !important;
+}
+.usa .progress-bar {
+  background-color: #FF9292 !important;
+}
+.left .accordion-body{
+  padding: 0px !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #1CAC19 !important;
+}
+.left .accordion-button:not(.collapsed) {
+  padding: 20px 0px !important;
+  background-color: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background: none !important;
+}
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #BCBCBC;
+  background-color:transparent;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+  background-color: #ccc;
+    border-radius:50%
+}
+
+/* When the checkbox is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+  background-color:  #1CAC19;
+  border: #1CAC19;
+  border-radius:50%
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  border:none;
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+  
+}
+
+/* Style the checkmark/indicator */
+.container1 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: none;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+.post_action_modal .modal-content{
+border-radius: 30px !important;
+
+}
+.post_share_modal .modal-content{
+border-radius: 30px !important;
+}
+.add_mode_modal .modal-content{
+  border-radius: 27px !important;
+}
+.userblock .modal-content{
+  border-radius: 27px;
+  height: 564px !important;
+  /*width: 553px !important;*/
+  padding: 74px 79px;
+}
+
+
+#style-12::-webkit-scrollbar-track
+{
+	height: 5px;
+	border-radius: 10px;
+	background-color: #BCBCBC;
+}
+
+#style-12::-webkit-scrollbar
+{
+	max-width: 12px !important;
+  height: 17px;
+  
+}
+
+#style-12::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color:white;
+height: 2px !important;
+}
+#style-desk::-webkit-scrollbar-track
+{
+	height: 5px;
+	border-radius: 10px;
+	background-color: #BCBCBC;
+}
+
+#style-desk::-webkit-scrollbar
+{
+	max-width: 12px !important;
+  height: 17px;
+  
+}
+
+#style-desk::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color:white;
+height: 2px !important;
+}
+
+
+
+
+
+
+
+
+      

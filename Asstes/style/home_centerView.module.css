@@ -1,0 +1,109 @@
+.total_useStaus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.user_infoBox {
+  height: 198px;
+  width: 224px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+  border-radius: 14.3182px;
+}
+.joined_chart_box {
+  height: 315px;
+  border-radius: 14px;
+  width: 700px;
+  background: #ffffff;
+  box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+  border-radius: 14.3182px;
+}
+.progres_status {
+  display: flex;
+  gap: 18px;
+  font-family: 'DM Sans', sans-seri !important;
+  align-items: center;
+  font-size: 16px;
+}
+.progres_weapper {
+  height: 315px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #ffffff;
+  box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+  border-radius: 14.3182px;
+}
+.avtive_user_wraper {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.active_userHeader {
+  height: 70px;
+  width: 100%;
+  padding: 0px 28px;
+  display: flex;
+
+  font-family: "Space Mono", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+  border-radius: 14.3182px;
+}
+.active_userItem{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 220px;
+  min-width: 200px;
+  padding: 6px 0px 0px 0px;
+}
+.activeProfile_name{
+
+}
+.action_box {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  flex-direction: column;
+}
+.active_action_item {
+  height: 35px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  padding-left: 5px;
+  background-color: rgba(28, 182, 25, 0.1);
+}
+.action_item {
+  height: 35px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  padding-left: 5px;
+}
+.admin_history {
+  height: 315px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px 28px 20px 27px;
+  background: #ffffff;
+  box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+  border-radius: 14.3182px;
+}

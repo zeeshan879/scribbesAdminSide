@@ -1,0 +1,136 @@
+.home_left_bar {
+  width: 330px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.05);
+}
+.left_bar_logo {
+  display: flex;
+  padding-top: 35px;
+  justify-content: center;
+  font-size: 42px;
+  color: #1cac19;
+  font-weight: 700;
+  font-family: "Space Mono", sans-serif;
+  letter-spacing: -0.085em;
+}
+.box_wrapper{
+  padding: 50px 39px 0px 38px;
+}
+
+.active_leftMenuHeading{
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  color: #1cac19;
+  cursor: pointer;
+  padding-bottom: 45px;
+}
+.leftMenuHeading{
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  padding-bottom: 45px;
+}
+.fullstop{
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color:  #BCBCBC;
+}
+.active_fullstop{
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #1cac19;
+
+}
+.subContentBox{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu_subitems{
+  display: flex;
+  gap: 8px;
+  font-family: "Space Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #BCBCBC;
+  cursor: pointer;
+  align-items: center;
+}
+.active_menu_subitems{
+  display: flex;
+  gap: 8px;
+  font-family: "Space Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1CAC19;
+  cursor: pointer;
+  align-items: center;
+}
+.menu_box{
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.menu_items{
+  display: flex;
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1850px){
+  .home_left_bar {
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.05);
+  }
+
+
+}
+@media screen and (max-width:1700px){
+
+}
+@media screen and (max-width:1200px){
+
+  .left_bar_logo {
+    display: flex;
+    padding-top: 25px;
+    justify-content: center;
+    font-size: 32px;
+    color: #1cac19;
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+    letter-spacing: -0.085em;
+  }
+
+
+
+
+}
+@media screen and (max-width:768px){
+
+
+
+
+}
