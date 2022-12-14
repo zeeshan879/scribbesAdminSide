@@ -1,0 +1,113 @@
+.main_wraper {
+  padding: 43px 49px 20px 38px;
+  width: 100%;
+}
+.header_wraper {
+  display: flex;
+  gap: 18px;
+  font-family: "Space Mono", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+}
+.content_container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 15px;
+  margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 39px 45px 58px 35px;
+}
+.suspend_btn {
+  width: 199px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #ff0000;
+  border-radius: 41px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid #ff0000;
+}
+.suspend_modal_body {
+  padding: 74px 82px;
+}
+.modal_heading {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Space Mono", sans-serif;
+  color: black;
+}
+.modal_btn {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #ff0000;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  border-radius: 41px;
+}
+.modal_btn2 {
+  margin-top: 25px;
+  width: 100%;
+  background-color:white;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  border: 1px solid #BCBCBC;
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  border-radius: 41px;
+}
+.modal_text {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 46px;
+  line-height: 31px;
+  font-family: "DM Sans", sans-serif;
+  color: black;
+}
+.Verify_btn {
+  width: 199px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  border-radius: 41px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  background-color: #1cac19;
+}
+.action_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.action_heading {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+.action_text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #bcbcbc;
+}

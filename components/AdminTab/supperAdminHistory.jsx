@@ -1,7 +1,8 @@
 import React from "react";
 import cen from "../../Asstes/style/home_centerView.module.css";
+import at from "../../Asstes/style/admin_tab.module.css";
 
-const HistoryOfAdminAction = () => {
+const SupperHistoryOfAdmin = () => {
   const history = [
     {
       title: "Muhammad",
@@ -18,16 +19,32 @@ const HistoryOfAdminAction = () => {
       time: "6h ago",
     },
     {
+	
+      title: "Joe",
+      action: "verified John.",
+      status: "( admin)",
+      subStatus: "",
+      time: "7h ago",
+    },
+
+    {
       title: "Muhammad",
-      action: "add Joe as.",
+      action: "deleted a post.",
       status: "(Super admin)",
       subStatus: "",
       time: "7h ago",
     },
     {
-      title: "Joe",
-      action: "verified john.",
-      status: "(admin)",
+		title: "Joe",
+		action: "verified John.",
+		status: "( admin)",
+		subStatus: "",
+		time: "7h ago",
+    },
+    {
+      title: "Muhammad",
+      action: "deleted a post.",
+      status: "(Super admin)",
       subStatus: "",
       time: "7h ago",
     },
@@ -37,6 +54,42 @@ const HistoryOfAdminAction = () => {
       status: "(Super admin)",
       subStatus: "",
       time: "7h ago",
+    },
+
+    {
+      title: "Muhammad",
+      action: "deleted a post.",
+      status: "(Super admin)",
+      subStatus: "",
+      time: "7h ago",
+    },
+    {
+		title: "Joe",
+		action: "verified John.",
+		status: "( admin)",
+		subStatus: "",
+		time: "7h ago",
+    },
+    {
+      title: "Muhammad",
+      action: "deleted a post.",
+      status: "(Super admin)",
+      subStatus: "",
+      time: "7h ago",
+    },
+    {
+      title: "Muhammad",
+      action: "deleted a post.",
+      status: "(Super admin)",
+      subStatus: "",
+      time: "7h ago",
+    },
+    {
+		title: "Joe",
+		action: "verified John.",
+		status: "( admin)",
+		subStatus: "",
+		time: "7h ago",
     },
     {
       title: "Muhammad",
@@ -48,11 +101,11 @@ const HistoryOfAdminAction = () => {
   ];
   return (
     <>
-      <div className={cen.progres_weapper}>
-        <div className="text-[20px] font-bold font-grotesk font-DM text-black">
+      <div className={at.supperAdmin_history}>
+        <div className="text-[20px] font-grotesk font-DM text-black font-bold">
           History Of Admin Actions
         </div>
-        <div className={cen.action_box}>
+        <div className={at.action_box}>
           {history.map((data, index) => {
             return (
               <>
@@ -79,4 +132,4 @@ const HistoryOfAdminAction = () => {
   );
 };
 
-export default HistoryOfAdminAction;
+export default SupperHistoryOfAdmin;

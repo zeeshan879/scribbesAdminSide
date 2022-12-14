@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import DashboardLeftMenu from "../AdminLeftMenu";
 import Home from "../../styles/Home.module.css";
 import DashboardTabs from "../DashboradContent";
-import UserTab from "../UserTabContent";
-import AllUsers from "../AllUsers";
+import TakeActionConten from "./takeActionConten"
+
 import Header from "../Header";
-import { useSelector } from "react-redux";
-
-const Users = () => {
-  const mangUserMenu = useSelector(
-    (state) => state.allGernalFunction.mangUserMenu
-  );
-
+const TakeAction = () => {
   return (
     <>
       <div className={Home.main_container}>
@@ -21,7 +15,7 @@ const Users = () => {
           </div>
           <div className={Home.centerView}>
             <Header />
-            <UserTab />
+			<TakeActionConten/>
           </div>
         </div>
       </div>
@@ -29,4 +23,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default TakeAction;

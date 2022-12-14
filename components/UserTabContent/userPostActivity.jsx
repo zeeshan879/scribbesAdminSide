@@ -6,8 +6,79 @@ import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useRouter } from "next/router";
 
+const userActivity = [
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    type: "Post",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "shared a post.",
+    time: "2:15 Pm",
+    type: "Post",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "posted a picture.",
+    time: "2:15 Pm",
+    type: "Post",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    des: "Having fun in Dubai :)",
+    type: "Post",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    type: "Post",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    type: "Comment",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    type: "Comment",
+  },
+  {
+    icon: profile2,
+    date: "15 Oct 2022",
+    name: "John Doe ",
+    action: "changed his profile picture.",
+    time: "2:15 Pm",
+    type: "Comment",
+  },
+];
 const UserPostActivity = () => {
   const router = useRouter();
+  
+  const data = router.query;
+
+
   return (
     <>
       <div className={us.main_container}>
@@ -15,7 +86,7 @@ const UserPostActivity = () => {
           <div className="cursor-pointer" onClick={() => router.back()}>
             <Image src={backArrow} />
           </div>
-          Posts
+          {data.keyword}
         </div>
         <div className={us.activity_content}>
           <div className={us.select_all}>

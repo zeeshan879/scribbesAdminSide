@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState = {
   activePageTab: 2,
   userTab:1,
+  adminTab:1,
   mangUserMenu:1
 };
 
@@ -19,8 +20,11 @@ export const scribbes = createSlice({
     handelMangUserMenu: (state, action) => {
       state.mangUserMenu = action.payload;
     },
+    handelAdminTab: (state, action) => {
+      state.adminTab = action.payload;
+    },
   },
 });
 // Action creators are generated for each case reducer function
-export const { handelaActivePageTab,handelaUserTab,handelMangUserMenu } = scribbes.actions;
+export const {handelAdminTab, handelaActivePageTab,handelaUserTab,handelMangUserMenu } = scribbes.actions;
 export default scribbes.reducer;

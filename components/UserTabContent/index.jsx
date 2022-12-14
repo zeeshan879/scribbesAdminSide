@@ -54,22 +54,45 @@ const UserTab = () => {
                     <Link
                       href={{
                         pathname: "/user-activity",
-                        query: userActivity, // the data
+                        query: { keyword: 'Post' }, // the data
                       }}
                     >
              
                       <div className={user.active_toggle_item}>Posts</div>
                     </Link>
+                    <Link
+                      href={{
+                        pathname: "/user-activity",
+                        query: { keyword: 'Comments' }, // the data
+                      }}
+                    >
                     <div className={user.active_toggle_item}>Comments</div>
+                    </Link>
+                    <Link
+                      href={{
+                        pathname: "/user-activity",
+                        query: { keyword: 'Actions' }, // the data
+                      }}
+                    >
                     <div className={user.active_toggle_item}>Actions</div>
+                    </Link>
+                    <Link
+                      href={{
+                        pathname: "/user-activity",
+                        query: { keyword: 'Searches' }, // the data
+                      }}
+                    >
                     <div className={user.active_toggle_item}>Searches</div>
+                    </Link>
                   </div>
                 )}
               </div>
             ) : (
               <div className={user.appeal_btn}>User Appeal</div>
             )}
+            <Link href="/take-action">
             <div className={user.appeal_btn}>Take Action</div>
+            </Link>
             <div className="cursor-pointer">
               <Image src={userLink} />
             </div>

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import DashboardLeftMenu from "../AdminLeftMenu";
 import Home from "../../styles/Home.module.css";
-import DashboardTabs from "../DashboradContent";
-import UserTab from "../UserTabContent";
-import AllUsers from "../AllUsers";
+import Admin from "./admin";
 import Header from "../Header";
 import { useSelector } from "react-redux";
 
-const Users = () => {
-  const mangUserMenu = useSelector(
-    (state) => state.allGernalFunction.mangUserMenu
+const AdminContentTab = () => {
+  const activePageTab = useSelector(
+    (state) => state.allGernalFunction.activePageTab
   );
 
   return (
@@ -21,7 +19,7 @@ const Users = () => {
           </div>
           <div className={Home.centerView}>
             <Header />
-            <UserTab />
+            <Admin />
           </div>
         </div>
       </div>
@@ -29,4 +27,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default AdminContentTab;

@@ -8,15 +8,14 @@ import Link from "next/link";
 import {
   handelaActivePageTab,
   handelMangUserMenu,
+  handelAdminTab,
 } from "../../redux/reducers/scribbes";
 import { useSelector, useDispatch } from "react-redux";
 
 const DashboardLeftMenu = () => {
   const [active, setActive] = useState(true);
   const [subItem, setSubItem] = useState(0);
-  const activePageTab = useSelector(
-    (state) => state.allGernalFunction.activePageTab
-  );
+  const adminTab = useSelector((state) => state.allGernalFunction.adminTab);
   const mangUserMenu = useSelector(
     (state) => state.allGernalFunction.mangUserMenu
   );
@@ -63,23 +62,25 @@ const DashboardLeftMenu = () => {
                 </Link>
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
-                    <div
-                      className={
-                        mangUserMenu == 2
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-                      onClick={() => dispatch(handelMangUserMenu(2))}
-                    >
+                    <Link href="/all-user">
                       <div
                         className={
                           mangUserMenu == 2
-                            ? lbar.active_fullstop
-                            : lbar.fullstop
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      All users
-                    </div>
+                        onClick={() => dispatch(handelMangUserMenu(2))}
+                      >
+                        <div
+                          className={
+                            mangUserMenu == 2
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        All users
+                      </div>
+                    </Link>
 
                     <div
                       className={
@@ -136,10 +137,95 @@ const DashboardLeftMenu = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>Admin</Accordion.Header>
+                <Link href="/admin">
+                  <Accordion.Header
+                    className={lbar.menu_items}
+                    onClick={() => dispatch(handelAdminTab(1))}
+                  >
+                    Admin
+                  </Accordion.Header>
+                </Link>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
+                  <div className={lbar.subContentBox}>
+                    <Link href="/super-admin">
+                      <div
+                        className={
+                          adminTab == 2
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                        onClick={() => dispatch(handelAdminTab(2))}
+                      >
+                        <div
+                          className={
+                            adminTab == 2 ? lbar.active_fullstop : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Super Admins
+                      </div>
+                    </Link>
+
+                    <div
+                      className={
+                        adminTab == 3
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelAdminTab(3))}
+                    >
+                      <div
+                        className={
+                          adminTab == 3 ? lbar.active_fullstop : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Add Admin
+                    </div>
+                    <div
+                      className={
+                        adminTab == 4
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelAdminTab(4))}
+                    >
+                      <div
+                        className={
+                          adminTab == 4 ? lbar.active_fullstop : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Create Role
+                    </div>
+                    <div
+                      className={
+                        adminTab == 5
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelAdminTab(5))}
+                    >
+                      <div
+                        className={
+                          adminTab == 5 ? lbar.active_fullstop : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Roles to Admin
+                    </div>
+                    <div
+                      className={
+                        adminTab == 5
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelAdminTab(5))}
+                    >
+                      <div
+                        className={
+                          adminTab == 5 ? lbar.active_fullstop : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Admin Setttings
+                    </div>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
