@@ -54,6 +54,12 @@ height: 35px;
 	z-index: 2;
 	top: 0;
 }
+.check_super{
+	position: absolute;
+	top: -15px;
+	z-index: 0;
+	left: 30px;
+}
 .allUser_main_box{
 	border-radius: 15px;
 	background: #FBFBFB;
@@ -140,15 +146,17 @@ height: 35px;
 cursor: pointer;
 font-size: 20px;
 font-weight: 400;
+font-family: "DM Sans", sans-serif;
 color: black;
 }
 .active_tabs_item{
 cursor: pointer;
 font-size: 20px;
 background: #FFFFFF;
-width: 150px;
+padding: 0px 20px;
 font-weight: 400;
 height: 53px;
+font-family: "DM Sans", sans-serif;
 display: flex;
 justify-content: center;
 align-items: center;

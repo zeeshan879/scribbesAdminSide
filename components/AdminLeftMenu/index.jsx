@@ -9,6 +9,7 @@ import {
   handelaActivePageTab,
   handelMangUserMenu,
   handelAdminTab,
+  handelComunityTab,
 } from "../../redux/reducers/scribbes";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -18,6 +19,9 @@ const DashboardLeftMenu = () => {
   const adminTab = useSelector((state) => state.allGernalFunction.adminTab);
   const mangUserMenu = useSelector(
     (state) => state.allGernalFunction.mangUserMenu
+  );
+  const communityTab = useSelector(
+    (state) => state.allGernalFunction.communityTab
   );
   const dispatch = useDispatch();
   const handleDashBoardHome = (data) => {
@@ -229,10 +233,92 @@ const DashboardLeftMenu = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>Communities</Accordion.Header>
+                <Link href="/communities">
+                  <Accordion.Header
+                    className={lbar.menu_items}
+                    onClick={() => dispatch(handelComunityTab(1))}
+                  >
+                    Communities
+                  </Accordion.Header>
+                </Link>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
+                  <div className={lbar.subContentBox}>
+                    <Link href="/all-communities">
+                      <div
+                        className={
+                          communityTab == 2
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                        onClick={() => dispatch(handelComunityTab(2))}
+                      >
+                        <div
+                          className={
+                            communityTab == 2
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        All Communities
+                      </div>
+                    </Link>
+
+                    <div
+                      className={
+                        communityTab == 3
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelComunityTab(3))}
+                    >
+                      <div
+                        className={
+                          communityTab == 3
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Verified Communities
+                    </div>
+                    <Link href="/scribbes-communities">
+                    <div
+                      className={
+                        communityTab == 4
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelComunityTab(4))}
+                    >
+                      <div
+                        className={
+                          communityTab == 4
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Scribbes Communities
+                    </div>
+                    </Link>
+                    <Link href="/add-community">
+                    <div
+                      className={
+                        communityTab == 5
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+                      onClick={() => dispatch(handelComunityTab(5))}
+                    >
+                      <div
+                        className={
+                          communityTab == 5
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      Add Community
+                    </div>
+                    </Link>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">

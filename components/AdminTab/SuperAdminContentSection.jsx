@@ -7,7 +7,8 @@ import activeFlag from "../../Asstes/DashboardImages/activeFlag.png";
 import profileArrow from "../../Asstes/DashboardImages/profileArrow.png";
 import Image from "next/image";
 import SupperAdminTable from "./supperAdminTable";
-import SupperHistoryOfAdmin from "./supperAdminHistory"
+import SupperHistoryOfAdmin from "./supperAdminHistory";
+import Link from "next/link";
 
 const SuperAdminContentSection = () => {
   return (
@@ -41,7 +42,9 @@ const SuperAdminContentSection = () => {
             </div>
           </div>
           <div className={at.admin_action_box}>
+            <Link href="/add-admin">
             <div className={at.add_admin_btn}>+Add Admin</div>
+            </Link>
             <div className={at.edit_admin_btn}>Edit Admin</div>
           </div>
         </div>
@@ -67,7 +70,7 @@ const SuperAdminContentSection = () => {
               <SupperAdminTable />
             </div>
           </div>
-          <SupperHistoryOfAdmin/>
+          <SupperHistoryOfAdmin />
         </div>
       </div>
     </>
