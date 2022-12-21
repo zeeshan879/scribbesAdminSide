@@ -89,7 +89,7 @@ const UserInfoForm = () => {
               </div>
               <div className={user.form_right_right}>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold pt-[20px]">
+                  <div className="font-DM text-[20px] font-bold ">
                     State
                   </div>
                   <div className={user.io_ele_box}>

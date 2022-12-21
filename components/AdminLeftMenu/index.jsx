@@ -10,13 +10,20 @@ import {
   handelMangUserMenu,
   handelAdminTab,
   handelComunityTab,
+  handleSidebarDropDown,
 } from "../../redux/reducers/scribbes";
 import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 const DashboardLeftMenu = () => {
+  const router = useRouter();
+  const pathName = router.pathname;
   const [active, setActive] = useState(true);
   const [subItem, setSubItem] = useState(0);
   const adminTab = useSelector((state) => state.allGernalFunction.adminTab);
+  const sidebarDropDown = useSelector(
+    (state) => state.allGernalFunction.sidebarDropDown
+  );
   const mangUserMenu = useSelector(
     (state) => state.allGernalFunction.mangUserMenu
   );
@@ -32,12 +39,18 @@ const DashboardLeftMenu = () => {
       dispatch(handelaActivePageTab(1));
     }
   };
+
+  //useEffect(()=>{
+  //  if(router)
+  //},[router.pathname])
   return (
     <>
       <div className={lbar.home_left_bar}>
-        <div className={lbar.left_bar_logo}>Scribbes</div>
+        <Link href="/">
+          <div className={lbar.left_bar_logo}>Scribbes</div>
+        </Link>
         <div className={lbar.box_wrapper}>
-          <Link href="/dashboard">
+          <Link href="/">
             <div
               className={
                 active == true
@@ -53,31 +66,30 @@ const DashboardLeftMenu = () => {
           <div className={lbar.menu_box}>
             <Accordion
               className="left"
+              defaultActiveKey={sidebarDropDown}
               onClick={() => handleDashBoardHome(true)}
             >
               <Accordion.Item eventKey="0">
-                <Link href="/user">
-                  <Accordion.Header
-                    className={lbar.menu_items}
-                    onClick={() => dispatch(handelMangUserMenu(1))}
-                  >
-                    <div>Users</div>
-                  </Accordion.Header>
-                </Link>
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("0"))}
+                >
+                  <div>Users</div>
+                </Accordion.Header>
+
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
-                    <Link href="/all-user">
+                    <Link href="/All-users">
                       <div
                         className={
-                          mangUserMenu == 2
+                          pathName === "/All-users"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-                        onClick={() => dispatch(handelMangUserMenu(2))}
                       >
                         <div
                           className={
-                            mangUserMenu == 2
+                            pathName === "/All-users"
                               ? lbar.active_fullstop
                               : lbar.fullstop
                           }
@@ -88,7 +100,7 @@ const DashboardLeftMenu = () => {
 
                     <div
                       className={
-                        mangUserMenu == 3
+                        pathName === "/verified-users"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
@@ -96,7 +108,7 @@ const DashboardLeftMenu = () => {
                     >
                       <div
                         className={
-                          mangUserMenu == 3
+                          pathName === "/verified-users"
                             ? lbar.active_fullstop
                             : lbar.fullstop
                         }
@@ -105,7 +117,7 @@ const DashboardLeftMenu = () => {
                     </div>
                     <div
                       className={
-                        mangUserMenu == 4
+                        pathName === "/suspended-users"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
@@ -113,7 +125,7 @@ const DashboardLeftMenu = () => {
                     >
                       <div
                         className={
-                          mangUserMenu == 4
+                          pathName === "/suspended-users"
                             ? lbar.active_fullstop
                             : lbar.fullstop
                         }
@@ -122,7 +134,7 @@ const DashboardLeftMenu = () => {
                     </div>
                     <div
                       className={
-                        mangUserMenu == 5
+                        pathName === "/Reported-users"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
@@ -130,7 +142,7 @@ const DashboardLeftMenu = () => {
                     >
                       <div
                         className={
-                          mangUserMenu == 5
+                          pathName === "/Reported-users"
                             ? lbar.active_fullstop
                             : lbar.fullstop
                         }
@@ -140,91 +152,95 @@ const DashboardLeftMenu = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
+
               <Accordion.Item eventKey="1">
-                <Link href="/admin">
-                  <Accordion.Header
-                    className={lbar.menu_items}
-                    onClick={() => dispatch(handelAdminTab(1))}
-                  >
-                    Admin
-                  </Accordion.Header>
-                </Link>
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("1"))}
+                >
+                  Admin
+                </Accordion.Header>
+
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
                     <Link href="/super-admin">
                       <div
                         className={
-                          adminTab == 2
+                          pathName === "/super-admin"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-                        onClick={() => dispatch(handelAdminTab(2))}
                       >
                         <div
                           className={
-                            adminTab == 2 ? lbar.active_fullstop : lbar.fullstop
+                            pathName === "/super-admin"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
                           }
                         ></div>{" "}
                         Super Admins
                       </div>
                     </Link>
-
-                    <div
-                      className={
-                        adminTab == 3
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-                      onClick={() => dispatch(handelAdminTab(3))}
-                    >
+                    <Link href="/add-admin">
                       <div
                         className={
-                          adminTab == 3 ? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/add-admin"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      Add Admin
-                    </div>
+              
+                      >
+                        <div
+                          className={
+                            pathName === "/add-admin"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Add Admin
+                      </div>
+                    </Link>
                     <div
                       className={
-                        adminTab == 4
+                        pathName === "/create-admin"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-                      onClick={() => dispatch(handelAdminTab(4))}
+               
                     >
                       <div
                         className={
-                          adminTab == 4 ? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/create-admin" ? lbar.active_fullstop : lbar.fullstop
                         }
                       ></div>{" "}
                       Create Role
                     </div>
                     <div
                       className={
-                        adminTab == 5
+                        pathName === "/roles-to-admin"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-                      onClick={() => dispatch(handelAdminTab(5))}
+              
                     >
                       <div
                         className={
-                          adminTab == 5 ? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/roles-to-admin"? lbar.active_fullstop : lbar.fullstop
                         }
                       ></div>{" "}
                       Roles to Admin
                     </div>
                     <div
                       className={
-                        adminTab == 5
+                        pathName === "/admin-setttings"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-                      onClick={() => dispatch(handelAdminTab(5))}
+             
                     >
                       <div
                         className={
-                          adminTab == 5 ? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/admin-setttings"? lbar.active_fullstop : lbar.fullstop
                         }
                       ></div>{" "}
                       Admin Setttings
@@ -232,29 +248,30 @@ const DashboardLeftMenu = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
+
               <Accordion.Item eventKey="2">
-                <Link href="/communities">
+       
                   <Accordion.Header
                     className={lbar.menu_items}
-                    onClick={() => dispatch(handelComunityTab(1))}
+                    onClick={() => dispatch(handleSidebarDropDown("2"))}
                   >
                     Communities
                   </Accordion.Header>
-                </Link>
+           
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
                     <Link href="/all-communities">
                       <div
                         className={
-                          communityTab == 2
+                          pathName === "/all-communities"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-                        onClick={() => dispatch(handelComunityTab(2))}
+                        onClick={() => dispatch(handleSidebarDropDown("2"))}
                       >
                         <div
                           className={
-                            communityTab == 2
+                            pathName === "/all-communities"
                               ? lbar.active_fullstop
                               : lbar.fullstop
                           }
@@ -263,60 +280,64 @@ const DashboardLeftMenu = () => {
                       </div>
                     </Link>
 
+                    <Link href="/verified-communities">
+
                     <div
                       className={
-                        communityTab == 3
+                        pathName === "/verified-communities"
+                 
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-                      onClick={() => dispatch(handelComunityTab(3))}
+             
                     >
                       <div
                         className={
-                          communityTab == 3
+                          pathName === "/verified-communities"
                             ? lbar.active_fullstop
                             : lbar.fullstop
                         }
                       ></div>{" "}
                       Verified Communities
                     </div>
+                    </Link>
                     <Link href="/scribbes-communities">
-                    <div
-                      className={
-                        communityTab == 4
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-                      onClick={() => dispatch(handelComunityTab(4))}
-                    >
                       <div
                         className={
-                          communityTab == 4
-                            ? lbar.active_fullstop
-                            : lbar.fullstop
+                          pathName === "/scribbes-communities"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      Scribbes Communities
-                    </div>
+                  
+                      >
+                        <div
+                          className={
+                            pathName === "/scribbes-communities"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Scribbes Communities
+                      </div>
                     </Link>
                     <Link href="/add-community">
-                    <div
-                      className={
-                        communityTab == 5
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-                      onClick={() => dispatch(handelComunityTab(5))}
-                    >
                       <div
                         className={
-                          communityTab == 5
-                            ? lbar.active_fullstop
-                            : lbar.fullstop
+                          pathName === "/add-community"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      Add Community
-                    </div>
+            
+                      >
+                        <div
+                          className={
+                            pathName === "/add-community"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Add Community
+                      </div>
                     </Link>
                   </div>
                 </Accordion.Body>
@@ -329,10 +350,112 @@ const DashboardLeftMenu = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
-                <Accordion.Header>Verifications</Accordion.Header>
+            
+                  <Accordion.Header className={lbar.menu_items}
+                     onClick={() => dispatch(handleSidebarDropDown("4"))}
+                  >
+                    Verifications
+                  </Accordion.Header>
+    
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
+                  <div className={lbar.subContentBox}>
+                  <Link href="/verification-request">
+                      <div
+                        className={
+                          pathName === "/verification-request"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                   
+                      >
+                        <div
+                          className={
+                            pathName === "/verification-request"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Verifications Requests
+                      </div>
+                    </Link>
+                    <Link href="/user-verification">
+
+                    <div
+                      className={
+                        pathName === "/user-verification"
+                          ? lbar.active_menu_subitems
+                          : lbar.menu_subitems
+                      }
+         
+                    >
+                      <div
+                        className={
+                          pathName === "/user-verification"
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
+                        }
+                      ></div>{" "}
+                      User Verifications
+                    </div>
+                    </Link>
+                    <Link href="/community-verification">
+                      <div
+                        className={
+                          pathName === "/community-verification"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+             
+                      >
+                        <div
+                          className={
+                            pathName === "/community-verification"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Community Verifications
+                      </div>
+                    </Link>
+                    <Link href="/ad">
+                      <div
+                        className={
+                          pathName === "/verified-user"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+          
+                      >
+                        <div
+                          className={
+                            pathName === "/verified-user"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Verified Users
+                      </div>
+                    </Link>
+                    <Link href="/community-verification-detail">
+                      <div
+                        className={
+                          pathName === "/community-verification-detail"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+            
+                      >
+                        <div
+                          className={
+                            pathName === "/community-verification-detail"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Verified Communities
+                      </div>
+                    </Link>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="5">

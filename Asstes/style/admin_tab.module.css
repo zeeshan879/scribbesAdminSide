@@ -138,6 +138,7 @@ gap: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
   background: #ffffff;
   box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
   border-radius: 14.3182px;

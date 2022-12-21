@@ -21,7 +21,7 @@ import { userActivity } from "../../Help/userActivityPost";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 
-const UserTab = () => {
+const UserInformation = () => {
   const [activeToggle, setActiveToggle] = useState(false);
   const userTab = useSelector((state) => state.allGernalFunction.userTab);
   const dispatch = useDispatch();
@@ -122,4 +122,4 @@ const UserTab = () => {
   );
 };
 
-export default UserTab;
+export default UserInformation;

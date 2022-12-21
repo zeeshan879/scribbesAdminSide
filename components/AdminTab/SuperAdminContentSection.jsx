@@ -30,6 +30,7 @@ const SuperAdminContentSection = () => {
               <div className="font-grotesk font-bold text-[30px]">40</div>
               <div className="font-grotesk text-base">Online Admins</div>
             </div>
+            <Link href="/Allsupper-admin" >
             <div className={at.supper_admin_count_item}>
               <div className="relative">
                 <div className="flex justify-center">
@@ -40,6 +41,7 @@ const SuperAdminContentSection = () => {
               <div className="font-grotesk font-bold text-[30px]">30</div>
               <div className="font-grotesk text-base">Super Admins</div>
             </div>
+            </Link>
           </div>
           <div className={at.admin_action_box}>
             <Link href="/add-admin">

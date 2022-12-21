@@ -1,12 +1,14 @@
 import React from "react";
-import SupperAdmin from "../components/AdminTab/supperAdmin";
+import AdminContentTab from "../components/AdminTab";
+import Super_Admin from "../components/AdminTab/supperAdmin"
 
-const SuperAdminPage = () => {
+const Admin_Page = () => {
   return (
     <>
-      <SupperAdmin />
+    <Super_Admin/>
+ 
     </>
   );
 };
 
-export default SuperAdminPage;
+export default Admin_Page;

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import DashboardLeftMenu from "../AdminLeftMenu";
-import Home from "../../styles/Home.module.css";
-import Admin from "./admin";
-import Header from "../Header";
-import { useSelector } from "react-redux";
-import SuperAdminContentSection from "./SuperAdminContentSection"
+import DashboardLeftMenu from "../../AdminLeftMenu";
+import Home from "../../../styles/Home.module.css";
+import Header from "../../Header";
 
-const AdminContentTab = () => {
-  const activePageTab = useSelector(
-    (state) => state.allGernalFunction.activePageTab
+import VerifiedUserBodySec from "./verifiedUserBodySec"
+
+import { useSelector } from "react-redux";
+
+const UserVerificationMainPage = () => {
+  const mangUserMenu = useSelector(
+    (state) => state.allGernalFunction.mangUserMenu
   );
 
   return (
@@ -20,9 +21,9 @@ const AdminContentTab = () => {
           </div>
           <div className={Home.centerView}>
             <Header />
-            <Admin/>
-          
-          
+     
+            <VerifiedUserBodySec/>
+       
           </div>
         </div>
       </div>
@@ -30,4 +31,4 @@ const AdminContentTab = () => {
   );
 };
 
-export default AdminContentTab;
+export default UserVerificationMainPage;

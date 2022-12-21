@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import DashboardLeftMenu from "../AdminLeftMenu";
 import Home from "../../styles/Home.module.css";
-import Admin from "./admin";
+import DashboardTabs from "../DashboradContent";
+import UserInformation from "../UserTabContent";
+import AllUsers from "../AllUsers";
 import Header from "../Header";
 import { useSelector } from "react-redux";
-import SuperAdminContentSection from "./SuperAdminContentSection"
 
-const AdminContentTab = () => {
-  const activePageTab = useSelector(
-    (state) => state.allGernalFunction.activePageTab
+const UsersInformationMainPage = () => {
+  const mangUserMenu = useSelector(
+    (state) => state.allGernalFunction.mangUserMenu
   );
 
   return (
@@ -20,9 +21,8 @@ const AdminContentTab = () => {
           </div>
           <div className={Home.centerView}>
             <Header />
-            <Admin/>
-          
-          
+	
+            <UserInformation />
           </div>
         </div>
       </div>
@@ -30,4 +30,4 @@ const AdminContentTab = () => {
   );
 };
 
-export default AdminContentTab;
+export default UsersInformationMainPage;

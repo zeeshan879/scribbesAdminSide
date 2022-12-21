@@ -5,7 +5,8 @@ const initialState = {
   userTab:1,
   adminTab:1,
   mangUserMenu:1,
-  communityTab:1
+  communityTab:1,
+  sidebarDropDown:"0"
 };
 
 export const scribbes = createSlice({
@@ -27,8 +28,11 @@ export const scribbes = createSlice({
     handelComunityTab: (state, action) => {
       state.communityTab = action.payload;
     },
+    handleSidebarDropDown: (state, action) => {
+      state.sidebarDropDown = action.payload;
+    },
   },
 });
 // Action creators are generated for each case reducer function
-export const {handelAdminTab, handelComunityTab,handelaActivePageTab,handelaUserTab,handelMangUserMenu } = scribbes.actions;
+export const {handelAdminTab, handelComunityTab,handelaActivePageTab,handelaUserTab,handelMangUserMenu,handleSidebarDropDown } = scribbes.actions;
 export default scribbes.reducer;
