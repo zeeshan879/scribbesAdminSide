@@ -188,7 +188,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-              
                       >
                         <div
                           className={
@@ -206,11 +205,12 @@ const DashboardLeftMenu = () => {
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-               
                     >
                       <div
                         className={
-                          pathName === "/create-admin" ? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/create-admin"
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
                         }
                       ></div>{" "}
                       Create Role
@@ -221,11 +221,12 @@ const DashboardLeftMenu = () => {
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-              
                     >
                       <div
                         className={
-                          pathName === "/roles-to-admin"? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/roles-to-admin"
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
                         }
                       ></div>{" "}
                       Roles to Admin
@@ -236,11 +237,12 @@ const DashboardLeftMenu = () => {
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
-             
                     >
                       <div
                         className={
-                          pathName === "/admin-setttings"? lbar.active_fullstop : lbar.fullstop
+                          pathName === "/admin-setttings"
+                            ? lbar.active_fullstop
+                            : lbar.fullstop
                         }
                       ></div>{" "}
                       Admin Setttings
@@ -250,14 +252,13 @@ const DashboardLeftMenu = () => {
               </Accordion.Item>
 
               <Accordion.Item eventKey="2">
-       
-                  <Accordion.Header
-                    className={lbar.menu_items}
-                    onClick={() => dispatch(handleSidebarDropDown("2"))}
-                  >
-                    Communities
-                  </Accordion.Header>
-           
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("2"))}
+                >
+                  Communities
+                </Accordion.Header>
+
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
                     <Link href="/all-communities">
@@ -281,25 +282,22 @@ const DashboardLeftMenu = () => {
                     </Link>
 
                     <Link href="/verified-communities">
-
-                    <div
-                      className={
-                        pathName === "/verified-communities"
-                 
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-             
-                    >
                       <div
                         className={
                           pathName === "/verified-communities"
-                            ? lbar.active_fullstop
-                            : lbar.fullstop
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      Verified Communities
-                    </div>
+                      >
+                        <div
+                          className={
+                            pathName === "/verified-communities"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Verified Communities
+                      </div>
                     </Link>
                     <Link href="/scribbes-communities">
                       <div
@@ -308,7 +306,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-                  
                       >
                         <div
                           className={
@@ -327,7 +324,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-            
                       >
                         <div
                           className={
@@ -343,30 +339,125 @@ const DashboardLeftMenu = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
-                <Accordion.Header>Reports</Accordion.Header>
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("3"))}
+                >
+                  Reports
+                </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
+                  <div className={lbar.subContentBox}>
+                    <Link href="/all-reports">
+                      <div
+                        className={
+                          pathName === "/all-reports"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/all-reports"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        All Reports
+                      </div>
+                    </Link>
+
+                    <Link href="/new-reports">
+                      <div
+                        className={
+                          pathName === "/new-reports"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/new-reports"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        New Reports
+                      </div>
+                    </Link>
+                    <Link href="/user-reports">
+                      <div
+                        className={
+                          pathName === "/user-reports"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/user-reports"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        User Reports
+                      </div>
+                    </Link>
+                    <Link href="/community-reports">
+                      <div
+                        className={
+                          pathName === "/community-reports"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/community-reports"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Community Reports
+                      </div>
+                    </Link>
+                    <Link href="/report-detail">
+                      <div
+                        className={
+                          pathName === "/report-detail"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/report-detail"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Most Reported Posts
+                      </div>
+                    </Link>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
-            
-                  <Accordion.Header className={lbar.menu_items}
-                     onClick={() => dispatch(handleSidebarDropDown("4"))}
-                  >
-                    Verifications
-                  </Accordion.Header>
-    
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("4"))}
+                >
+                  Verifications
+                </Accordion.Header>
+
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
-                  <Link href="/verification-request">
+                    <Link href="/verification-request">
                       <div
                         className={
                           pathName === "/verification-request"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-                   
                       >
                         <div
                           className={
@@ -379,24 +470,22 @@ const DashboardLeftMenu = () => {
                       </div>
                     </Link>
                     <Link href="/user-verification">
-
-                    <div
-                      className={
-                        pathName === "/user-verification"
-                          ? lbar.active_menu_subitems
-                          : lbar.menu_subitems
-                      }
-         
-                    >
                       <div
                         className={
                           pathName === "/user-verification"
-                            ? lbar.active_fullstop
-                            : lbar.fullstop
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
                         }
-                      ></div>{" "}
-                      User Verifications
-                    </div>
+                      >
+                        <div
+                          className={
+                            pathName === "/user-verification"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        User Verifications
+                      </div>
                     </Link>
                     <Link href="/community-verification">
                       <div
@@ -405,7 +494,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-             
                       >
                         <div
                           className={
@@ -424,7 +512,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-          
                       >
                         <div
                           className={
@@ -443,7 +530,6 @@ const DashboardLeftMenu = () => {
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
-            
                       >
                         <div
                           className={
