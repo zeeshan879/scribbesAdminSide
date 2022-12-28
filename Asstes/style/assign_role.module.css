@@ -1,0 +1,81 @@
+.assign_role_main_page{
+width: 100%;
+background: #FFFFFF;
+box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+border-radius: 14.3182px;
+padding: 29px 33px 71px 37px;
+}
+.prfile_box{
+	display: flex;
+	gap: 15px;
+	align-items: center;
+
+}
+.profile_action_box{
+	background: #FFFFFF;
+	width: 100%;
+	padding: 23px 36px 57px 35px;
+	margin-top: 49px;
+box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+border-radius: 14.3182px;
+}
+.canecl_btn{
+	height: 45px;
+	width: 180px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: #1CAC19;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 700;
+	border: 1px solid #1CAC19;
+	border-radius: 41px;
+
+}
+.change_btn{
+	height: 45px;
+	width: 180px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	align-items: center;
+	display: flex;
+	background-color: #1CAC19;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 700;
+	border: 1px solid #1CAC19;
+	border-radius: 41px;
+
+}
+.view_profile_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 52px;
+	font-size: 20px;
+	color: #1CAC19;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 500;
+	width: 199px;
+	border: 1px solid #1CAC19;
+	cursor: pointer;
+	border-radius: 41px;
+}
+.admin_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 16px;
+	font-weight: 400;
+	font-size: 12px;
+	border: 1px solid #BCBCBC;
+	color: #BCBCBC;
+	width: 87px;
+	border-radius: 6px;
+}

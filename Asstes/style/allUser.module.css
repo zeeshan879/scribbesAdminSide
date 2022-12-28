@@ -10,6 +10,20 @@
 	width: 100%;
 
 }
+.mange_role_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 35px;
+	color: #1CAC19;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	width: 139px;
+	border-radius: 41px;
+	border: 1px solid  #1CAC19;
+}
 .entity_ele{
 	border: none;
 	height: 100%;

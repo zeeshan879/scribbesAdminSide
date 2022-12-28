@@ -199,22 +199,25 @@ const DashboardLeftMenu = () => {
                         Add Admin
                       </div>
                     </Link>
+                    <Link href="/assign-role">
                     <div
                       className={
-                        pathName === "/create-admin"
+                        pathName === "/assign-role"
                           ? lbar.active_menu_subitems
                           : lbar.menu_subitems
                       }
                     >
                       <div
                         className={
-                          pathName === "/create-admin"
+                          pathName === "/assign-role"
                             ? lbar.active_fullstop
                             : lbar.fullstop
                         }
                       ></div>{" "}
                       Create Role
                     </div>
+                    </Link>
+                <Link href="roles-to-admin" >
                     <div
                       className={
                         pathName === "/roles-to-admin"
@@ -231,6 +234,7 @@ const DashboardLeftMenu = () => {
                       ></div>{" "}
                       Roles to Admin
                     </div>
+                    </Link>
                     <div
                       className={
                         pathName === "/admin-setttings"
@@ -552,10 +556,87 @@ const DashboardLeftMenu = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="6">
-                <Accordion.Header>Settings</Accordion.Header>
+                <Accordion.Header
+                  className={lbar.menu_items}
+                  onClick={() => dispatch(handleSidebarDropDown("6"))}
+                >
+                  Settings
+                </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
+                  <div className={lbar.subContentBox}>
+                    <Link href="/setting/profile">
+                      <div
+                        className={
+                          pathName === "/setting/profile"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/setting/profile"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Profile
+                      </div>
+                    </Link>
+                    <Link href="/setting/account-setting">
+                      <div
+                        className={
+                          pathName === "/setting/account-setting"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/setting/account-setting"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Account-Settings
+                      </div>
+                    </Link>
+                    <Link href="/setting/notification">
+                      <div
+                        className={
+                          pathName === "/setting/notification"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/setting/notification"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Notifications
+                      </div>
+                    </Link>
+                    <Link href="/setting/privacy-safety">
+                      <div
+                        className={
+                          pathName === "/setting/privacy-safety"
+                            ? lbar.active_menu_subitems
+                            : lbar.menu_subitems
+                        }
+                      >
+                        <div
+                          className={
+                            pathName === "/setting/privacy-safety"
+                              ? lbar.active_fullstop
+                              : lbar.fullstop
+                          }
+                        ></div>{" "}
+                        Privacy & Safety
+                      </div>
+                    </Link>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>

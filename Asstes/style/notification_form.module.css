@@ -1,0 +1,24 @@
+.main_container{
+	background-color: white;
+	border-radius: 15px;
+	width: 100%;
+	margin-top: 43px;
+	padding: 19px 44px 33px 24px;
+}
+.noti_box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.noti_box2{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 45px;
+}
+.noti_box3{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
