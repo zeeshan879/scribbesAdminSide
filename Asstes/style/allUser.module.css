@@ -8,6 +8,7 @@
 	align-items: center;
 	margin-top: 50px;
 	width: 100%;
+	gap: 10px;
 
 }
 .mange_role_btn{
@@ -24,6 +25,7 @@
 	border-radius: 41px;
 	border: 1px solid  #1CAC19;
 }
+
 .entity_ele{
 	border: none;
 	height: 100%;
@@ -153,7 +155,8 @@ height: 35px;
 .tabs_wrper{
 	display: flex;
 	align-items: center;
-	width: 800px;
+	width: 700px;
+
 	justify-content: space-between;
 }
 .tabs_item{
@@ -178,4 +181,214 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 border-radius: 41px;
 font-weight: 400;
 color: #000580;
+}
+@media screen and (max-width:1600px){
+	.filter_box{
+		display: flex;
+		gap: 5px;
+		width: 100%;
+		align-items: center;
+	}
+	.filter_left{
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+	.active_tabs_item{
+		cursor: pointer;
+		font-size: 18px;
+		background: #FFFFFF;
+		padding: 0px 20px;
+		font-weight: 400;
+		height: 53px;
+		font-family: "DM Sans", sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 41px;
+		font-weight: 400;
+		color: #000580;
+		}
+		.tabs_item{
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: 400;
+			font-family: "DM Sans", sans-serif;
+			color: black;
+			}
+			.tabs_wrper{
+				display: flex;
+				align-items: center;
+				width: 650px;
+			
+				justify-content: space-between;
+			}
+}
+@media screen and (max-width:1440px){
+	.main_container{
+		padding: 30px 20px 20px 20px;
+		width: 100%;
+	}
+	.tabs_wrper{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 20px;
+		justify-content: space-between;
+	}
+	.active_tabs_item{
+		cursor: pointer;
+		font-size: 16px;
+		background: #FFFFFF;
+		padding: 0px 15px;
+		font-weight: 400;
+		height: 43px;
+		font-family: "DM Sans", sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 41px;
+		font-weight: 400;
+		color: #000580;
+		}
+		.tabs_item{
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 400;
+			font-family: "DM Sans", sans-serif;
+			color: black;
+			}
+			.filter_left{
+				display: flex;
+				gap: 15px;
+				align-items: center;
+			}
+			.table_name{
+	display: flex;
+	gap: 20px;
+	padding-top: 5px;
+font-size: 14px;
+	align-items: center;
+}
+.pagination_wrap{
+	display: flex;
+	padding-top: 28px;
+	justify-content: space-between;
+	padding-bottom: 30px;
+
+}
+.paginatio_box{
+	display: flex;
+	gap:10px ;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+	color: #BCBCBC;
+	font-family: "DM Sans", sans-serif;
+	align-items: center;
+}
+}
+@media screen and (max-width:1330px){
+	.tabs_scrol_box{
+		width: 400px;
+		padding: 10px 0px;
+		overflow-x: scroll;
+	}
+	.tabs_wrper{
+		display: flex;
+		align-items: center;
+		width: 600px;
+		gap: 20px;
+		justify-content: space-between;
+	}
+}
+@media screen and (max-width:1140px){
+	.filter_box{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		align-items: center;
+	}
+	.filter_right{
+		display: flex;
+		gap: 5px;
+		color: #BCBCBC;;
+		font-size: 16px;
+		font-weight: 400;
+		font-family: "DM Sans", sans-serif;
+		padding: 0px 10px;
+		align-items: center;
+	}
+	._filter_enitiy{
+		border: 1px solid #BCBCBC;
+	border-radius: 13px;
+	width: 55px;
+	font-size: 13px;
+	height: 30px;
+	
+	}
+}
+@media screen and (max-width:1100px){
+	.allUser_main_box{
+		border-radius: 15px;
+		background: #FBFBFB;
+		margin-top: 25px;
+		width: 900px;
+	}
+}
+@media screen and (max-width:930px){
+	.tabs_filter_box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+		width: 100%;
+	
+	}
+	.pagination_wrap{
+		display: flex;
+		flex-direction: column;
+		padding-top: 20px;
+		gap: 10px;
+		justify-content:center;
+		align-items: center;
+		padding-bottom: 30px;
+	
+	}
+}
+@media screen and (max-width:850px){
+	.tabs_wrper{
+		display: flex;
+		align-items: center;
+		width: 650px;
+		gap: 5px;
+		justify-content: space-between;
+	}
+	.tabs_filter_box{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+		width: 100%;
+	
+	}
+
+}
+@media screen and (max-width:450px){
+	.tabs_scrol_box{
+		width: 350px;
+		padding: 10px 0px;
+		overflow-x: scroll;
+	}
+	.tabs_wrper{
+		display: flex;
+		align-items: center;
+		width: 580px;
+		gap: 5px;
+		justify-content: space-between;
+	}
 }

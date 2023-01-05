@@ -15,18 +15,18 @@ const DashboardTabs = () => {
       <div className={Home.Inner_Container}>
         <UserCounterInfo />
         <div className={Home.map_progres_wrap}>
-          <div>
+          <div className="w-full">
             <Userjoinchart />
           </div>
-          <div>
+          <div className="w-full">
             <ProgressBars />
           </div>
         </div>
         <div className={Home.map_progres_wrap}>
-          <div>
+          <div className="w-full">
             <HistoryOfAdminAction />
           </div>
-          <div>
+          <div className="w-full">
             <MostActiveUser />
           </div>
         </div>

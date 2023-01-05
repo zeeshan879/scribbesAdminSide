@@ -133,11 +133,12 @@ const UserCommunityTable = () => {
   ];
   return (
     <>
-	      <div className="flex justify-end pr-[85px]">
+	      <div className="flex justify-end pr-[10px] lg:pr-[85px]">
           <div className={au.community_add}>
             Communities Joined <Image src={profileArrow} />
           </div>
         </div>
+        <div className="table_scrol_contoler">
       <div className={au.allUser_main_box}>
   
         <Table className="all-user-table">
@@ -199,6 +200,7 @@ const UserCommunityTable = () => {
 		<div className="flex justify-center cursor-pointer pt-[40px] pb-[40px] underline font-DM">
 		See all  communities
 		</div>
+      </div>
       </div>
     </>
   );

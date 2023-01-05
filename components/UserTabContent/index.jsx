@@ -30,7 +30,7 @@ const UserInformation = () => {
     <>
       {userTab != 5 && (
         <div className={user.header_box}>
-          <div className="flex gap-[44px] items-center">
+          <div className="flex gap-[20px]  2xl:gap-[44px] items-center">
             <div className="cursor-pointer" onClick={() => router.back()}>
               <Image src={backArrow} />
             </div>

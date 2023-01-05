@@ -8,6 +8,7 @@
 .inner_tabs {
   display: flex;
   gap: 44px;
+
   align-items: center;
 }
 .checkmark_box {
@@ -240,4 +241,221 @@
   align-items: center;
   cursor: pointer;
   font-family: "DM Sans", sans-serif;
+}
+@media screen and (max-width:1685px){
+  .inner_tabs {
+    display: flex;
+    gap: 24px;
+ 
+    align-items: center;
+  }
+  .active_tabs_items {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000580;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+    height: 53px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .tabs_items {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .header_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width:1440px){
+  .header_box {
+    width: 100%;
+    display: flex;
+    padding: 20px 20px 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .from_container {
+  padding: 20px 20px 0px 20px;
+  width: 100%;
+}
+}
+@media screen and (max-width:1300px){
+  .appeal_btn {
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "DM Sans", sans-serif;
+    color: #1cac19;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 41px;
+    border: 1px solid #1cac19;
+  }
+  .header_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width:1160px){
+  .header_box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px 20px 0px 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header_right {
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width:1000px){
+  .info_form_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px 20px 20px 20px;
+}
+._form_left {
+  width: 100%;
+  margin-top: -10px;
+}
+.acount_from_last {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-between;
+  width: 100%;
+}
+.io_form {
+  background-color: white;
+  height: auto;
+  border-radius: 15px;
+}
+.acount_form_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-between;
+  padding: 20px 20px 20px 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+.heading_2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 0px;
+  font-family: "Space Mono", sans-serif;
+}
+.io_ele_box {
+  width: 100%;
+  padding-left: 25px;
+  height: 50px;
+  margin-top: 12px;
+  background-color: #fbfbfb;
+}
+}
+@media screen and (max-width:815px){
+  .active_tabs_items {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000580;
+    display: flex;
+    width: 100%;
+    padding: 0px 15px;
+    height: 43px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .tabs_items {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .inner_tabs {
+    display: flex;
+    gap: 15px;
+ 
+    align-items: center;
+  }
+}
+@media screen and (max-width:480px){
+  .tabs_scrol_controler{
+width: 300px;
+overflow-x: scroll;
+  }
+  .inner_tabs {
+    display: flex;
+    gap: 15px;
+ width: 480px;
+    align-items: center;
+  }
+  .header_right {
+    display: flex;
+    padding-left: 0px;
+    align-items: center;
+    gap: 10px;
+  }
+  .active_tabs_items {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000580;
+    display: flex;
+    width: 140px;
+    padding: 0px 5px;
+    height: 43px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .appeal_btn {
+    width: 130px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "DM Sans", sans-serif;
+    color: #1cac19;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 41px;
+    border: 1px solid #1cac19;
+  }
 }

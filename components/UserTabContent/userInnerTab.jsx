@@ -14,7 +14,8 @@ const UserInnertabs = () => {
 
   return (
     <>
-      <div className={user.inner_tabs}>
+   <div className={user.tabs_scrol_controler}>
+   <div className={user.inner_tabs}>
         <div
           className={userTab == 1 ? user.active_tabs_items : user.tabs_items}
           onClick={() => dispatch(handelaUserTab(1))}
@@ -40,6 +41,7 @@ const UserInnertabs = () => {
           Actions
         </div>
       </div>
+   </div>
     </>
   );
 };

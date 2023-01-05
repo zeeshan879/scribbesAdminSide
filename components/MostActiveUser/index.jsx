@@ -40,14 +40,15 @@ const MostActiveUser = () => {
   ];
   return (
     <>
-      <div className={cen.avtive_user_wraper}>
+<div className={cen.most_active_user_scrol}>
+<div className={cen.avtive_user_wraper}>
         <div className={cen.active_userHeader}>
-          <div className="font-grotesk font-bold text-[20px]">
+          <div className="font-grotesk font-bold text-base md:text-[18px] 2xl:text-[20px]">
             Most Active Users
           </div>
-          <div className="font-DM font-medium text-[20px]">Hours Spent</div>
-          <div className="font-DM font-medium text-[20px]">Posts</div>
-          <div className="flex gap-[14px] items-center cursor-pointer">
+          <div className="font-DM font-medium text-base md:text-[18px] 2xl:text-[20px]">Hours Spent</div>
+          <div className="font-DM font-medium text-base md:text-[18px] 2xl:text-[20px]">Posts</div>
+          <div className="flex gap-[10px] 2xl:gap-[14px] items-center cursor-pointer">
             <div>
               <Image src={activeFlag} />
             </div>
@@ -68,22 +69,23 @@ const MostActiveUser = () => {
                     <Image src={data.profile} />
                   </div>
                   <div className={cen.activeProfile_name}>
-                    <div className="font-DM font-medium text-[20px] leading-[26px]">
+                    <div className="font-DM font-medium text-base md:text-[18px] 2xl:text-[20px] leading-[26px]">
                       {data.name}
                     </div>
-                    <div className="font-DM font-normal text-base leading-[20px]">
+                    <div className="font-DM text-[14px] md:text-base font-normal text-base leading-[20px]">
                       {data.follow}
                     </div>
                   </div>
                 </div>
-                <div className="w-[50px] ">{data.time} </div>
-                <div>{data.post} </div>
+                <div className="w-[50px] text-[14px] md:text-base">{data.time} </div>
+                <div className="text-[14px] md:text-base">{data.post} </div>
                 <div className="w-[60px]"></div>
               </div>
             </>
           );
         })}
       </div>
+</div>
     </>
   );
 };

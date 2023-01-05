@@ -45,7 +45,7 @@ const UserCounterInfo = () => {
                 <div>
                   <Image src={data.icon} />
                 </div>
-                <div className="text-[30px] font-grotesk font-bold pt-[26px]">
+                <div className="text-[25px] 2xl:text-[30px] font-grotesk font-bold pt-[16px] 2xl:pt-[26px]">
                   {data.title}
                 </div>
                 <div className="pt-[10px] font-grotesk font-normal">

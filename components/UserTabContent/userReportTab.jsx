@@ -126,8 +126,9 @@ const UserReportTab = () => {
   ];
   return (
     <>
+     <div className="table_scrol_contoler">
       <div className={au.allUser_main_box}>
-        <Table className="all-user-table">
+        <Table className="all-user-table" responsive>
           <thead>
             <tr className="h-[60px]">
               <th>
@@ -177,9 +178,10 @@ const UserReportTab = () => {
             })}
           </tbody>
         </Table>
-		<div className="flex justify-center cursor-pointer pt-[40px] pb-[40px] underline font-DM">
+		<div className="flex justify-center cursor-pointer pt-[20px] lg:pt-[40px] pb-[40px] underline font-DM">
 		See all  communities
 		</div>
+      </div>
       </div>
     </>
   );

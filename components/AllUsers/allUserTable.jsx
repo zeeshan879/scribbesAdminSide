@@ -137,30 +137,33 @@ const AllUserTable = () => {
   ];
   return (
     <>
+    <div className="table_scrol_contoler">
+
+
       <div className={au.allUser_main_box}>
-        <Table className="all-user-table">
+        <Table className="all-user-table"  responsive>
           <thead>
-            <tr className="h-[60px]">
+            <tr className="h-[50px] 2xl:h-[60px]">
               <th>
-                <div className="h-[30px] font-DM">Name</div>
+                <div className="h-[25px] 2xl:h-[30px] font-DM">Name</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Contact</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">Contact</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">IP Address</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">IP Address</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Id</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">Id</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Status</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">Status</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Country</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">Country</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Action</div>
+              <div className="h-[25px] 2xl:h-[30px] font-DM">Action</div>
               </th>
             </tr>
           </thead>
@@ -168,9 +171,9 @@ const AllUserTable = () => {
             {tableData.map((data,index) => {
               return (
                 <>
-                <Link href="/user-information">
+                <Link href="/users/user-information">
                   <tr className={index %2 !=0?au.table_row2: au.table_row}>
-                    <td className="w-[250px] ">
+                    <td className="w-[200px] 2xl:w-[250px] ">
                       <div className={au.table_name}>
                         <div className={data.check==true?au.table_Active_checBox: au.table_checBox}></div>
                         <div className={au.table_name_inner}>
@@ -182,25 +185,25 @@ const AllUserTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
                       <div>{data.email}</div>
                       <div>{data.phone}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
                       <div className="pt-[10px]">{data.ip}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
                       <div className="pt-[10px]">{data.id}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
                       <div className="pt-[10px]">{data.status}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
                       <div className="pt-[10px]">{data.country}</div>
                     </td>
                     <td>
-                      <div className="pt-[10px] flex items-center gap-8">
-                        <div className="flex gap-4 items-center">
+                      <div className="pt-[10px] flex items-center gap-[15px] 2xl:gap-8">
+                        <div className="flex gap-3 2xl:gap-4 items-center">
                           <div className="cursor-pointer">
                             <Image src={edit} />
                           </div>
@@ -221,8 +224,9 @@ const AllUserTable = () => {
           </tbody>
         </Table>
       </div>
+      </div>
       <div className={au.pagination_wrap}>
-        <div className="text-[#BCBCBC] font-DM text-[20px]">Showing 5 to 10 of 50 entries</div>
+        <div className="text-[#BCBCBC] font-DM text-base 2xl:text-[20px]">Showing 5 to 10 of 50 entries</div>
         <div className={au.paginatio_box}>
           <Image src={preArrow} />
           <div>1</div>
@@ -238,7 +242,7 @@ const AllUserTable = () => {
           <div>next</div>
           <Image src={nextArrow} />
         </div>
-        <div className="w-[300px]"></div>
+        <div className="w-[50px] lg:w-[100px] 2xl:w-[300px]"></div>
       </div>
     </>
   );

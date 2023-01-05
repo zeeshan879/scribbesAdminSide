@@ -1,9 +1,11 @@
 .header_wraper {
   height: 90px;
-
+/*position: fixed;
+top: 0;*/
   width: 100%;
   display: flex;
   z-index: 5;
+  gap: 20px;
   justify-content: space-between !important;
   align-items: center;
   background: #ffffff;
@@ -15,6 +17,18 @@
   padding-left: 49px;
   align-items: center;
 }
+.header_date{
+  color: #bcbcbc;
+  font-family: "DM Sans", sans-serif;
+  min-width: 100px;
+}
+
+.mobile_menu_btn{
+  padding-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .header_search {
   height: 63px;
   border-radius: 41px;
@@ -24,6 +38,10 @@
   font-weight: 400;
   font-family: "DM Sans", sans-serif;
   color: #bcbcbc;
+}
+.header_profile{
+  height: 64px;
+  width: 64px;
 }
 .header_right_side {
   display: flex;
@@ -59,4 +77,107 @@
   font-weight: 400;
   font-family: "DM Sans", sans-serif;
   color: #bcbcbc;
+}
+@media screen and (max-width:1440px){
+  .header_left {
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    align-items: center;
+  }
+  .header_right_side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width:1200px){
+  .header_search {
+    height: 53px;
+    border-radius: 41px;
+    border: 2px solid #bcbcbc;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    color: #bcbcbc;
+  }
+  .header_wraper {
+    height: 80px;
+  
+    width: 100%;
+    display: flex;
+    z-index: 5;
+    gap: 20px;
+    justify-content: space-between !important;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+  }
+  .ip_ele {
+    height: 100%;
+    padding-left: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 41px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    color: #bcbcbc;
+  }
+  .notisep {
+    height: 80px;
+    border: 1px solid #bcbcbc;
+  }
+  .header_date{
+    display: none;
+  }
+  .header_profile{
+    height: 44px !important;
+    width: 44px !important;
+  }
+}
+@media screen and (min-width:769px){
+  .mobile_menu_btn{
+    padding-left: 20px;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width:768px){
+  .notification_icon{
+    display: none;
+  }
+    .notisep {
+    height: 80px;
+    border: 1px solid #bcbcbc;
+  }
+  .notisep {
+    height: 80px;
+    display: none;
+    border: 1px solid #bcbcbc;
+  }
+  .ip_ele {
+    height: 100%;
+    padding-left: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    padding: 0px 10px;
+    border-radius: 41px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    color: #bcbcbc;
+  }
+}
+@media screen and (min-width:669px){
+
+}
+@media screen and (max-width:668px){
+  .header_search{
+    display: none;
+  }
 }

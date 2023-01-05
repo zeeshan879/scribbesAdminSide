@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import lbar from "../../Asstes/style/homeLeftmenu.module.css";
 import Image from "next/image";
 import arrowDown from "../../Asstes/DashboardImages/arrowDown.png";
 import Accordion from "react-bootstrap/Accordion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   handelaActivePageTab,
   handelMangUserMenu,
@@ -13,8 +16,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 
-
-const DashboardLeftMenu = () => {
+const MobileLeftMenu = (props) => {
   const router = useRouter();
   const pathName = router.pathname;
   const [active, setActive] = useState(true);
@@ -39,14 +41,18 @@ const DashboardLeftMenu = () => {
 
   return (
     <>
-<div className={lbar.left_menu_control}>
-<div className={lbar.home_left_bar}>
+      <Offcanvas className={lbar.mobile_left_side} show={props.state} onHide={props.onClick}>
+
+        <div className={lbar.home_left_bar}>
+          <div className="flex justify-end px-4 pt-3 text-xl cursor-pointer" onClick={props.onClick}>
+            <AiOutlineClose/>
+          </div>
         <Link href="/">
           <div className={lbar.left_bar_logo}>Scribbes</div>
         </Link>
         <div className={lbar.left_menu_search}>
           <div className={lbar.search_opt}>
-            <input placeholder="Search name, email, ip etc " className={lbar.search_ele} />
+            <input placeholder="Search name, ip etc " className={lbar.search_ele} />
           </div>
         </div>
         <div className={lbar.box_wrapper}>
@@ -79,17 +85,17 @@ const DashboardLeftMenu = () => {
 
                 <Accordion.Body>
                   <div className={lbar.subContentBox}>
-                    <Link href="/users/all-users">
+                    <Link href="/All-users">
                       <div
                         className={
-                          pathName === "/users/all-users"
+                          pathName === "/All-users"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
                       >
                         <div
                           className={
-                            pathName === "/users/all-users"
+                            pathName === "/All-users"
                               ? lbar.active_fullstop
                               : lbar.fullstop
                           }
@@ -643,10 +649,9 @@ const DashboardLeftMenu = () => {
           </div>
         </div>
       </div>
-</div>
- 
+      </Offcanvas>
     </>
   );
 };
 
-export default DashboardLeftMenu;
+export default MobileLeftMenu;

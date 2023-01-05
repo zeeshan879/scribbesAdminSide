@@ -21,7 +21,7 @@
 .joined_chart_box {
   height: 315px;
   border-radius: 14px;
-  width: 700px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
   border-radius: 14.3182px;
@@ -35,7 +35,7 @@
 }
 .progres_weapper {
   height: 315px;
-  width: 700px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +45,7 @@
   border-radius: 14.3182px;
 }
 .avtive_user_wraper {
-  width: 700px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -106,4 +106,90 @@
   background: #ffffff;
   box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
   border-radius: 14.3182px;
+}
+@media screen and (max-width:1440px){
+  .active_userHeader {
+    height: 70px;
+    width: 100%;
+    padding: 0px 14px;
+    display: flex;
+  gap: 10px;
+    font-family: "Space Mono", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+  .progres_weapper {
+    height: 315px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #ffffff;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+}
+@media screen and (max-width:803px){
+  .total_useStaus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .user_infoBox {
+    height: 160px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+  .progres_status {
+    display: flex;
+    gap: 18px;
+    font-family: 'DM Sans', sans-seri !important;
+    align-items: center;
+    font-size: 16px;
+  }
+  .action_box {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .active_action_item {
+    height: 35px;
+    display: flex;
+    font-size: 13px;
+    border-radius: 6px;
+    align-items: center;
+    padding-left: 4px;
+    background-color: rgba(28, 182, 25, 0.1);
+  }
+}
+
+@media screen and (max-width:500px){
+
+  .most_active_user_scrol{
+    width: 350px;
+    overflow-x: scroll;
+  }
+  .avtive_user_wraper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
 }

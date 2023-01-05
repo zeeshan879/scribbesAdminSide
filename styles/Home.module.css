@@ -4,7 +4,7 @@
 margin: auto;
 min-height: 100vh;
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   background-color: #f8f8f8;
 }
@@ -30,6 +30,7 @@ min-height: 100vh;
   display: flex;
   padding-top: 33px;
   width: 100%;
+  gap: 20px;
   justify-content: space-between;
 }
 .explore_screen{
@@ -52,11 +53,28 @@ min-height: 100vh;
   .centerView{
     width: 100%;
   }
+  .Inner_Container{
+    padding: 20px 20px;
+  
+  }
 }
 @media screen and (max-width:1440px){
   .explore_screen{
     width: 100%;
     padding: 20px 20px 30px 20px;
+  }
+  .user_report_div{
+    padding: 20px 20px 0px 20px;
+  }
+}
+@media screen and (max-width:1140px){
+  .map_progres_wrap{
+    display: flex;
+    flex-direction: column;
+    padding-top: 33px;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width:1050px){
@@ -72,6 +90,7 @@ min-height: 100vh;
   .Message_center{
     width: 100%;
   }
+
 }
 @media screen and (max-width:550px){
   .left_menu{
@@ -92,7 +111,6 @@ min-height: 100vh;
 
   .centerView{
     width: 100%;
-    margin-top: 50px;
    
   }
 }

@@ -21,8 +21,7 @@ const UsersMainPage = () => {
           </div>
           <div className={Home.centerView}>
             <Header />
-			<AllUsers/>
-            {/*<UserTab />*/}
+            <AllUsers />
           </div>
         </div>
       </div>
