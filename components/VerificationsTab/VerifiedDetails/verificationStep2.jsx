@@ -7,7 +7,7 @@ const VerifyProfileStep2 = () => {
   return (
     <>
       <div className={vp.verify_profile_step2}>
-        <div className="text-[18px] sm:text-[20px] font-DM font-bold">
+        <div className="text-[16px] sm:text-[20px] font-DM font-bold">
 		Step 2: Notability Confirmation
         </div>
         <div className="max-w-[900px] text-base font-DM leading-5 pt-3">
@@ -55,7 +55,7 @@ const VerifyProfileStep2 = () => {
 			<input className={vp.form_ele} placeholder="Link 5" />
 		</div>
 
-		<div className="flex justify-end">
+		<div className="flex justify-end mt-4 lg:mt-[0px]">
 		<div className="flex gap-[10px] items-center">
 		<div className={vp.step2_deny_btn}>Deny</div>
 		<div className={vp.step2_save_btn}>Verify</div>

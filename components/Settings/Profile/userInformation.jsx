@@ -19,7 +19,7 @@ const ProfileUserInfoForm = () => {
                 <Image src={profile} />
               </div>
               <div>
-                <div className="text-[20px] font-DM font-bold">John Doe</div>
+                <div className="text-base lg:text-[20px] font-DM font-bold">John Doe</div>
                 <div className={user.super_Admin_btn}>Super Admin</div>
               </div>
             </div>
@@ -29,17 +29,17 @@ const ProfileUserInfoForm = () => {
           <div className={user.info_form_box}>
             <div className={user._form_left}>
               <div className={user.form_name}>
-                <div className="font-DM text-[20px] font-bold">First name</div>
+                <div className="font-DM text-base lg:text-[20px] font-bold">First name</div>
                 <div className={user.io_ele_outPut_box}>John</div>
               </div>
               <div className={user.form_name}>
-                <div className="font-DM text-[20px] font-bold pt-[20px]">
+                <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                   Last name
                 </div>
                 <div className={user.io_ele_outPut_box}>Doe</div>
               </div>
               <div className={user.form_name}>
-                <div className="font-DM text-[20px] font-bold pt-[20px]">
+                <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                   Address
                 </div>
                 <div className={user.io_ele_outPut_box}>
@@ -47,7 +47,7 @@ const ProfileUserInfoForm = () => {
                 </div>
               </div>
               <div className={user.form_name}>
-                <div className="font-DM text-[20px] font-bold pt-[20px]">
+                <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                   Phone number
                 </div>
                 <div className={user.io_ele_outPut_box}>+17139794269</div>
@@ -56,17 +56,17 @@ const ProfileUserInfoForm = () => {
             <div className={user._form_right}>
               <div className={user.form_rightLeft}>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold ">City</div>
+                  <div className="font-DM text-base lg:text-[20px] font-bold ">City</div>
                   <div className={user.io_ele_outPut_box}>Houston</div>
                 </div>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold pt-[20px]">
+                  <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                     Country
                   </div>
                   <div className={user.io_ele_outPut_box}>United States</div>
                 </div>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold pt-[20px] ">
+                  <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px] ">
                     Date of birth
                   </div>
                   <div className={user.io_ele_outPut_box}>02/09/1997</div>
@@ -74,17 +74,17 @@ const ProfileUserInfoForm = () => {
               </div>
               <div className={user.form_right_right}>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold ">State</div>
+                  <div className="font-DM text-base lg:text-[20px] font-bold ">State</div>
                   <div className={user.io_ele_outPut_box}>Texas</div>
                 </div>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold pt-[20px]">
+                  <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                     Zip code
                   </div>
                   <div className={user.io_ele_outPut_box}>77001</div>
                 </div>
                 <div className="w-full">
-                  <div className="font-DM text-[20px] font-bold pt-[20px]">
+                  <div className="font-DM text-base lg:text-[20px] font-bold pt-[20px]">
                     Gender
                   </div>
                   <div className={user.io_ele_outPut_box}>Male</div>

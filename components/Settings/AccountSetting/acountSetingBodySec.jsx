@@ -66,7 +66,7 @@ const AccountSettingBodySec = () => {
         <div className={as.pass_heading}>Change Password</div>
         <div className={as.change_pass_wrapper}>
           <div className={as.curent_pass_box}>
-            <div className="text-[20px] font-DM font-bold">
+            <div className="text-base lg:text-[20px] font-DM font-bold">
               Current Password
             </div>
             <div className={as.c_pass_wraper}>
@@ -78,22 +78,22 @@ const AccountSettingBodySec = () => {
           </div>
           <div className={as.seprator}></div>
           <div className={as.new_pass_box}>
-            <div className="text-[20px] font-DM font-bold">New Password</div>
+            <div className="text-base lg:text-[20px] font-DM font-bold">New Password</div>
             <div className={as.c_pass_wraper2}>
               <input className={as.ip_ele} placeholder="New Password" />
             </div>
-            <div className="text-[20px] font-DM font-bold">
+            <div className="text-base lg:text-[20px] font-DM font-bold">
               Confirm New Password
             </div>
             <div className={as.c_pass_wraper2}>
               <input className={as.ip_ele} placeholder="Confirm New Password" />
             </div>
-            <div className="flex justify-end pt-[40px]">
+            <div className="flex justify-end pt-5 lg:pt-[40px]">
               <div className={as.pass_save_btn}>Save</div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center pt-[40px] pb-[40px]">
+        <div className="flex justify-center pt-1 lg:pt-[40px]  pb-[40px]">
           <div className="flex gap-2 items-center font-DM text-base text-[#FF0000] cursor-pointer" onClick={()=>handleModal()}>
             <Image src={delet} />
             Delete Account

@@ -111,3 +111,93 @@ padding-right: 19px;
 	height: 63px;
 	border: 2px solid #BCBCBC;
 }
+@media screen and (max-width:1440px){
+  .create_account_body {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    padding: 20px 20px;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+  .heading {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-family: "Space Mono", sans-serif;
+  }
+}
+@media screen and (max-width:800px){
+  .main_ip_wrapwer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    justify-content: space-between;
+  }
+  .small_ip {
+    width: 100%;
+    height: 53px;
+    margin-top: 7px;
+    padding-left: 35px;
+    border-radius: 41px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 2px solid  #bcbcbc;
+  }
+  .main_ip_country {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+    justify-content: space-between;
+  }
+  .slect_country {
+    width: 100%;
+    height: 53px;
+    margin-top: 7px;
+  padding-left:12px ;
+  cursor: pointer;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 19px;
+    border-radius: 41px;
+    border: 2px solid  #bcbcbc;
+  }
+  .select_dender{
+    width: 100%;
+    height: 53px;
+    margin-top: 7px;
+    padding-left:35px ;
+    cursor: pointer;
+    display: flex;
+  justify-content: space-between;
+    align-items: center;
+    padding-right: 26px;
+    border-radius: 41px;
+    border: 2px solid  #bcbcbc;
+  }
+  .heading {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    font-family: "Space Mono", sans-serif;
+  }
+  .email_box{
+    width: 100%;
+    padding-left: 35px;
+    border-radius: 41px;
+    height: 53px;
+    border: 2px solid #BCBCBC;
+  }
+  .select_sep{
+    height: 53px;
+    border: 1px solid #BCBCBC;
+  }
+}

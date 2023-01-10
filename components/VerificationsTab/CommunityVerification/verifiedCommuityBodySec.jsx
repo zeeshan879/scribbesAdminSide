@@ -15,7 +15,7 @@ const VerifiedCommunityBodySec = () => {
             <VerifiedCommunityFilter />
           </div>
         </div>
-        <div className="mt-[25px] w-full">
+        <div className="mt-[15px] lg:mt-[25px] w-full">
           <VerifiedCommunityTable />
         </div>
       </div>

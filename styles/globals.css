@@ -199,7 +199,7 @@ border: none !important;
     border-radius:50%
 }
 .container2:hover input ~ .checkmark2 {
-  background-color: #ccc;
+
     border-radius:50%
 }
 
@@ -252,11 +252,11 @@ border: none !important;
   transform: rotate(45deg);
 }
 .container2 .checkmark2:after {
-  left: 6px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  /*border: none;*/
+  left: 7px;
+  top: 3px;
+width: 7px;
+  height: 12px;
+  border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -397,7 +397,12 @@ height: 2px !important;
 	background-color:white;
 height: 2px !important;
 }
-
+@media screen and (max-width:1440px){
+  .body_container{
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+  }
+}
 @media screen and (max-width:1100px){
   .table_scrol_contoler{
   width: 800px;

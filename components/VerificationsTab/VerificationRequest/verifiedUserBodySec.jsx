@@ -4,6 +4,7 @@ import VerificationRequestTabs from "./verificationReqTab";
 import VerificationRequestFilter from "./verificationReqFilter";
 import VerifiedUserTable from "../UserVerification/VerifiedUserTable";
 import BackArrow from "../../BackArrow";
+import AllUsersFilters from "../../AllUsers/allUsersFilters"
 
 const VerifiedUserBodySec = () => {
   return (
@@ -13,10 +14,10 @@ const VerifiedUserBodySec = () => {
         <div className="flex justify-between pt-[65px] ">
           <div></div>
           <div>
-            <VerificationRequestFilter />
+            <AllUsersFilters />
           </div>
         </div>
-        <div className="mt-[25px] w-full">
+        <div className="mt-[15px] lg:mt-[25px] w-full">
           <VerifiedUserTable />
         </div>
       </div>

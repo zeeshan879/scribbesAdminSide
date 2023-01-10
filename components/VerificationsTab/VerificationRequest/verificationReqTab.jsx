@@ -6,6 +6,7 @@ const VerificationRequestTabs = () => {
   const [active, setActive] = useState(1);
   return (
     <>
+    <div className={au.tabs_scrol_box}>
       <div className={au.tabs_wrper}>
         <div
           className={active === 1 ? au.active_tabs_item : au.tabs_item}
@@ -25,6 +26,7 @@ const VerificationRequestTabs = () => {
         >
           Community verifications
         </div>
+      </div>
       </div>
     </>
   );

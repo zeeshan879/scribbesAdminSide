@@ -1,5 +1,5 @@
 import React from 'react'
-import AllReportsMainPage from "../components/ReportsMenuOption/allReportsMainPage"
+import AllReportsMainPage from "../../components/ReportsMenuOption/allReportsMainPage"
 
 const Allreports = () => {
   return (

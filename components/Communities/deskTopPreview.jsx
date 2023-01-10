@@ -63,7 +63,8 @@ const DeskTopPreview = () => {
             More
           </div>
         </div>
-        <div className={nc.desk_des}>
+   <div className={nc.desktop_last_box}>
+   <div className={nc.desk_des}>
           <div className="font-DM text-base font-normal text-[#BCBCBC]">
             Description
           </div>
@@ -73,6 +74,8 @@ const DeskTopPreview = () => {
             hsainimmammmmajwjij awawdwa. No tu aiigramth logicially busrrt.
           </div>
         </div>
+        <div className={nc.create_com_btn}>Create Community</div>
+   </div>
       </div>
     </>
   );

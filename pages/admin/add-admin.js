@@ -1,5 +1,5 @@
 import React from 'react'
-import AddAdminPage from "../components/AdminTab/addAdminPage"
+import AddAdminPage from "../../components/AdminTab/addAdminPage"
 
 const add_admin = () => {
   return (

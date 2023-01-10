@@ -154,6 +154,7 @@ const VerifiedCommunityTable = () => {
   ];
   return (
     <>
+    <div className="table_scrol_contoler">
       <div className={au.allUser_main_box}>
         <Table className="all-user-table">
           <thead>
@@ -187,7 +188,7 @@ const VerifiedCommunityTable = () => {
               return (
                 <>
                   <tr className={index %2 !=0?au.table_row2: au.table_row}>
-                    <td className="w-[250px] ">
+                    <td className="w-[210px] lg:w-[250px] ">
                       <div className={au.table_name}>
 					  <label class="container1">
                             <input type="checkbox" />
@@ -202,20 +203,20 @@ const VerifiedCommunityTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
 					<div className="pt-[15px] text-center">{data.cdate}</div>
                   
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[15px]">{data.ip}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[15px]">{data.id}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[15px]">{data.status}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[15px]">{data.country}</div>
                     </td>
             
@@ -238,6 +239,7 @@ const VerifiedCommunityTable = () => {
             })}
           </tbody>
         </Table>
+      </div>
       </div>
       <div className={au.pagination_wrap}>
         <div className="text-[#BCBCBC] font-DM text-[20px]">Showing 5 to 10 of 50 entries</div>

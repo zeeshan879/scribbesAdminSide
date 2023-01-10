@@ -23,9 +23,7 @@ const VerificationRequest = () => {
           <div className={Home.centerView}>
             <Header />
             <VerificationBodySec />
-            {/*<VerifiedUserBodySec/>*/}
-            {/*<VerifiedCommunityBodySec/>*/}
-            {/*<VerificationDetailsBodySec/>*/}
+    
           </div>
         </div>
       </div>

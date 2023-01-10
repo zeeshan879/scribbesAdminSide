@@ -143,6 +143,7 @@ const VerificationReqTable = () => {
   ];
   return (
     <>
+    <div className="table_scrol_contoler">
       <div className={au.allUser_main_box}>
         <Table className="all-user-table">
           <thead>
@@ -176,7 +177,7 @@ const VerificationReqTable = () => {
               return (
                 <>
                   <tr className={index %2 !=0?au.table_row2: au.table_row}>
-                    <td className="w-[250px] ">
+                    <td className="w-[170px] lg:w-[250px] ">
                       <div className={au.table_name}>
                         
                         <div className={au.table_name_inner}>
@@ -188,20 +189,20 @@ const VerificationReqTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-sm lg:text-base font-normal">
                       <div>{data.email}</div>
                       <div>{data.phone}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[10px]">{data.type}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[10px]">{data.ip}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[10px]">{data.id}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm lg:text-base font-normal">
                       <div className="pt-[10px]">{data.status}</div>
                     </td>
             
@@ -225,8 +226,9 @@ const VerificationReqTable = () => {
           </tbody>
         </Table>
       </div>
+      </div>
       <div className={au.pagination_wrap}>
-        <div className="text-[#BCBCBC] font-DM text-[20px]">Showing 5 to 10 of 50 entries</div>
+        <div className="text-[#BCBCBC] font-DM text-sm lg:text-base lg:text-[20px]">Showing 5 to 10 of 50 entries</div>
         <div className={au.paginatio_box}>
           <Image src={preArrow} />
           <div>1</div>

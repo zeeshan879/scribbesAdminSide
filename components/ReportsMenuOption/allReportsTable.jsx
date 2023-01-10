@@ -156,30 +156,32 @@ const AllReportsTable = () => {
   ];
   return (
     <>
+ 
+    <div className="table_scrol_contoler">
       <div className={au.allUser_main_box}>
-        <Table className="all-user-table">
+        <Table className="all-user-table" responsive>
           <thead>
             <tr className="h-[60px]">
               <th>
-                <div className="h-[30px] font-DM">Name</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Name</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Contact</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Contact</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Type</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Type</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">IP Address</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">IP Address</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Id</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Id</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Report Counts</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Report Counts</div>
               </th>
               <th>
-                <div className="h-[30px] font-DM">Last Report Time</div>
+                <div className="h-[30px] text-sm xl:text-base font-DM">Last Report Time</div>
               </th>
 
               <th>
@@ -192,7 +194,7 @@ const AllReportsTable = () => {
               return (
                 <>
                   <tr className={index % 2 != 0 ? au.table_row2 : au.table_row}>
-                    <td className="w-[250px] ">
+                    <td className="w-[150px] xl:w-[250px] ">
                       <div className={au.table_name}>
                         <div className={au.table_name_inner}>
                           <div className={au.check_mark}>
@@ -203,23 +205,23 @@ const AllReportsTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm xl:text-base font-normal">
                       <div>{data.email}</div>
                       <div>{data.phone}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm xl:text-base font-normal">
                       <div className="pt-[10px]">{data.type}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm xl:text-base font-normal">
                       <div className="pt-[10px]">{data.ip}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm xl:text-base font-normal">
                       <div className="pt-[10px]">{data.id}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-[10px]">{data.reportCounts}</div>
+                    <td className="font-DM text-sm xl:text-base font-normal">
+                      <div className="pt-[10px] text-center lg:text-start">{data.reportCounts}</div>
                     </td>
-                    <td className="font-DM text-base font-normal">
+                    <td className="font-DM text-sm xl:text-base font-normal">
                       <div className="pt-[10px]">{data.lastReportTime}</div>
                     </td>
 
@@ -237,8 +239,9 @@ const AllReportsTable = () => {
           </tbody>
         </Table>
       </div>
+      </div>
       <div className={au.pagination_wrap}>
-        <div className="text-[#BCBCBC] font-DM text-[20px]">
+        <div className="text-[#BCBCBC] font-DM text-sm xl:text-base  xl:text-[20px]">
           Showing 5 to 10 of 50 entries
         </div>
         <div className={au.paginatio_box}>
@@ -256,7 +259,7 @@ const AllReportsTable = () => {
           <div>next</div>
           <Image src={nextArrow} />
         </div>
-        <div className="w-[300px]"></div>
+        <div className="w-[200px] xl:w-[300px]"></div>
       </div>
     </>
   );

@@ -16,7 +16,7 @@ const CreateAdminAccount = () => {
             <div className={ca.heading}>Create Admin Account</div>
             <div className={ca.main_ip_wrapwer}>
               <div>
-                <div className="font-DM font-medium text-[20px]">
+                <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">
                   First Name*
                 </div>
                 <div className={ca.small_ip}>
@@ -24,7 +24,7 @@ const CreateAdminAccount = () => {
                 </div>
               </div>
               <div>
-                <div className="font-DM font-medium text-[20px]">
+                <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">
                   Last Name*
                 </div>
                 <div className={ca.small_ip}>
@@ -33,7 +33,7 @@ const CreateAdminAccount = () => {
               </div>
             </div>
             <div className={ca.larg_ele_box}>
-              <div className="font-DM font-medium text-[20px]">
+              <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">
                 Email Address*
               </div>
               <div className={ca.email_box}>
@@ -41,13 +41,13 @@ const CreateAdminAccount = () => {
               </div>
             </div>
             <div className={ca.larg_ele_box}>
-              <div className="font-DM font-medium text-[20px]">Username*</div>
+              <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">Username*</div>
               <div className={ca.email_box}>
                 <input placeholder="John Doe" className={ca.ip_ele} />
               </div>
             </div>
             <div className={ca.larg_ele_box}>
-              <div className="font-DM font-medium text-[20px]">Password*</div>
+              <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">Password*</div>
               <div className={ca.email_box}>
                 <input
                   placeholder="12345678"
@@ -58,7 +58,7 @@ const CreateAdminAccount = () => {
             </div>
             <div className={ca.main_ip_country}>
               <div>
-                <div className="font-DM font-medium text-[20px]">Country*</div>
+                <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">Country*</div>
                 <div className={ca.slect_country}>
                   <div className="flex items-center gap-[10px]">
                     <div className="pt-[5px]">
@@ -75,7 +75,7 @@ const CreateAdminAccount = () => {
                 </div>
               </div>
               <div>
-                <div className="font-DM font-medium text-[20px]">Gender*</div>
+                <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">Gender*</div>
                 <div className={ca.select_dender}>
 				<div className="font-DM">Male</div>
                     <div>
@@ -85,7 +85,7 @@ const CreateAdminAccount = () => {
               </div>
             </div>
             <div className={ca.larg_ele_box}>
-              <div className="font-DM font-medium text-[20px]">Admin type*</div>
+              <div className="font-DM font-medium text-[18px] 2xl:text-[20px]">Admin type*</div>
               <div className={ca.select_admin_type}>
 			  <div className="font-DM">Super Admin</div>
                     <div>

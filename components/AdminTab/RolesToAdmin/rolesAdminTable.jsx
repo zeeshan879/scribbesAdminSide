@@ -145,10 +145,10 @@ const RolesToAdminTable = () => {
   return (
     <>
   
-    
+    <div className="table_scrol_contoler">
      
         <div className={au.allUser_main_box}>
-          <Table className="all-user-table">
+          <Table className="all-user-table" responsive>
             <thead>
               <tr className="h-[60px]">
                 <th>
@@ -207,7 +207,7 @@ const RolesToAdminTable = () => {
                       <td className="font-DM text-base font-normal">
                         <div className="pt-[15px]">{data.status}</div>
                       </td>
-                      <td>
+                      <td >
                         <div className={au.mange_role_btn}>
                    
                         Manage Role
@@ -219,6 +219,7 @@ const RolesToAdminTable = () => {
               })}
             </tbody>
           </Table>
+        </div>
         </div>
   
   

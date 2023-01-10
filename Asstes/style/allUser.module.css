@@ -21,6 +21,7 @@
 	font-family: "DM Sans", sans-serif;
 	font-weight: 400;
 	font-size: 16px;
+	margin-top: 5px;
 	width: 139px;
 	border-radius: 41px;
 	border: 1px solid  #1CAC19;
@@ -127,6 +128,13 @@ height: 35px;
 	background-color: white;
 
 
+}
+.all_reports_fillters{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding-top: 30px;
 }
 .community_add{
 	display: flex;
@@ -359,6 +367,14 @@ font-size: 14px;
 		padding-bottom: 30px;
 	
 	}
+	.all_reports_fillters{
+		display: flex;
+		padding-top: 30px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
 }
 @media screen and (max-width:850px){
 	.tabs_wrper{
@@ -376,6 +392,21 @@ font-size: 14px;
 		width: 100%;
 	
 	}
+	.mange_role_btn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		height: 35px;
+		color: #1CAC19;
+		font-family: "DM Sans", sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		margin-top: 5px;
+		width: 120px;
+		border-radius: 41px;
+		border: 1px solid  #1CAC19;
+	}
 
 }
 @media screen and (max-width:450px){
@@ -391,4 +422,11 @@ font-size: 14px;
 		gap: 5px;
 		justify-content: space-between;
 	}
+	/*.filter_box{
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		width: 100%;
+		align-items: center;
+	}*/
 }

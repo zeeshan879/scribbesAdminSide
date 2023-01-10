@@ -115,11 +115,11 @@ const SupperHistoryOfAdmin = () => {
                   }
                 >
                   {data.title}
-                  <span className="text-[#bcbcbc] text-xs px-[2px]">
+                  <span className="text-[#bcbcbc] text-[10px] md:text-xs px-[0px] md:px-[2px]">
                     {data.status}
                   </span>{" "}
                   {data.action}
-                  <span className="text-[#bcbcbc] text-xs">
+                  <span className="text-[#bcbcbc] text-[10px] md:text-xs">
                     {data?.subStatus}. 1h ago
                   </span>
                 </div>

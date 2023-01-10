@@ -1,5 +1,5 @@
 import React from 'react'
-import CommunitiesMainPage from '../components/Communities'
+import CommunitiesMainPage from '../../components/Communities'
 
 const Communities = () => {
   return (

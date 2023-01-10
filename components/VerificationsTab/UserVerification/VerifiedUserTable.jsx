@@ -23,7 +23,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-      type:"User"
+      type: "User",
     },
     {
       name: "John Doe",
@@ -35,7 +35,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-      type:"Community"
+      type: "Community",
     },
     {
       name: "John Doe",
@@ -47,7 +47,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Blocked",
       country: "United Sates",
-	  type:"Community"
+      type: "Community",
     },
     {
       name: "John Doe",
@@ -59,21 +59,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Blocked",
       country: "United Sates",
-	  type:"User"
-
-    },
-    {
-      name: "John Doe",
-	  mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Suspended",
-      country: "United Sates",
-	  type:"User"
-
+      type: "User",
     },
     {
       name: "John Doe",
@@ -85,8 +71,19 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Suspended",
       country: "United Sates",
-	  type:"User"
-  
+      type: "User",
+    },
+    {
+      name: "John Doe",
+      mark: true,
+      email: "johndoe@mail.com",
+      phone: "+92 300 3399922",
+      check: false,
+      ip: "66.249.66.24",
+      id: "66.249.66.24",
+      status: "Suspended",
+      country: "United Sates",
+      type: "User",
     },
     {
       name: "John Doe",
@@ -98,8 +95,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-	  type:"User"
-  
+      type: "User",
     },
     {
       name: "John Doe",
@@ -111,8 +107,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-	  type:"User"
- 
+      type: "User",
     },
     {
       name: "John Doe",
@@ -124,8 +119,7 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-	  type:"User"
- 
+      type: "User",
     },
     {
       name: "John Doe",
@@ -137,99 +131,103 @@ const VerifiedUserTable = () => {
       id: "66.249.66.24",
       status: "Active",
       country: "United Sates",
-	  type:"User"
-
+      type: "User",
     },
   ];
   return (
     <>
-      <div className={au.allUser_main_box}>
-        <Table className="all-user-table">
-          <thead>
-            <tr className="h-[60px]">
-              <th>
-                <div className="h-[30px] font-DM">Name</div>
-              </th>
-              <th>
-                <div className="h-[30px] font-DM">Contact</div>
-              </th>
-              <th>
-			  <div className="h-[30px] font-DM">IP Address</div>
-              </th>
-              <th>
-              <div className="h-[30px] font-DM">Id</div>
-              </th>
-              <th>
-                <div className="h-[30px] font-DM">Status</div>
-              </th>
-              <th>
-                <div className="h-[30px] font-DM">Country</div>
-              </th>
+      <div className="table_scrol_contoler">
+        <div className={au.allUser_main_box}>
+          <Table className="all-user-table" responsive>
+            <thead>
+              <tr className="h-[60px]">
+                <th>
+                  <div className="h-[30px] font-DM">Name</div>
+                </th>
+                <th>
+                  <div className="h-[30px] font-DM">Contact</div>
+                </th>
+                <th>
+                  <div className="h-[30px] font-DM">IP Address</div>
+                </th>
+                <th>
+                  <div className="h-[30px] font-DM">Id</div>
+                </th>
+                <th>
+                  <div className="h-[30px] font-DM">Status</div>
+                </th>
+                <th>
+                  <div className="h-[30px] font-DM">Country</div>
+                </th>
 
-              <th>
-                <div className="h-[30px] font-DM">Action</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((data,index) => {
-              return (
-                <>
-                  <tr className={index %2 !=0?au.table_row2: au.table_row}>
-                    <td className="w-[250px] ">
-                      <div className={au.table_name}>
-					  <label class="container1">
+                <th>
+                  <div className="h-[30px] font-DM">Action</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData.map((data, index) => {
+                return (
+                  <>
+                    <tr
+                      className={index % 2 != 0 ? au.table_row2 : au.table_row}
+                    >
+                      <td className="w-[200px] lg:w-[250px]">
+                        <div className={au.table_name}>
+                          <label class="container1">
                             <input type="checkbox" />
                             <span class="checkmark"></span>
                           </label>
-                        <div className={au.table_name_inner}>
-                          <div className={au.check_mark}>
-                            {data.mark && <Image src={checkMark} />}
-                          </div>
-                          <Image src={profile2} />
-                          {data.name}
-                        </div>
-                      </div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div>{data.email}</div>
-                      <div>{data.phone}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-[10px]">{data.ip}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-[10px]">{data.id}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-[10px]">{data.status}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-[10px]">{data.country}</div>
-                    </td>
-            
-                    <td>
-                      <div className="pt-[10px] flex items-center gap-8">
-                        <div className="flex gap-4 items-center">
-                          <div className="cursor-pointer">
-                            <Image src={edit} />
-                          </div>
-                          <div className="cursor-pointer">
-                            <Image src={delte} />
+                          <div className={au.table_name_inner}>
+                            <div className={au.check_mark}>
+                              {data.mark && <Image src={checkMark} />}
+                            </div>
+                            <Image src={profile2} />
+                            {data.name}
                           </div>
                         </div>
-   
-                      </div>
-                    </td>
-                  </tr>
-                </>
-              );
-            })}
-          </tbody>
-        </Table>
+                      </td>
+                      <td className="font-DM text-sm lg:text-base font-normal">
+                        <div>{data.email}</div>
+                        <div>{data.phone}</div>
+                      </td>
+                      <td className="font-DM text-sm lg:text-base font-normal">
+                        <div className="pt-[10px]">{data.ip}</div>
+                      </td>
+                      <td className="font-DM text-sm lg:text-base font-normal">
+                        <div className="pt-[10px]">{data.id}</div>
+                      </td>
+                      <td className="font-DM text-sm lg:text-base font-normal">
+                        <div className="pt-[10px]">{data.status}</div>
+                      </td>
+                      <td className="font-DM text-sm lg:text-base font-normal">
+                        <div className="pt-[10px]">{data.country}</div>
+                      </td>
+
+                      <td>
+                        <div className="pt-[10px] flex items-center gap-8">
+                          <div className="flex gap-4 items-center">
+                            <div className="cursor-pointer">
+                              <Image src={edit} />
+                            </div>
+                            <div className="cursor-pointer">
+                              <Image src={delte} />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </>
+                );
+              })}
+            </tbody>
+          </Table>
+        </div>
       </div>
       <div className={au.pagination_wrap}>
-        <div className="text-[#BCBCBC] font-DM text-[20px]">Showing 5 to 10 of 50 entries</div>
+        <div className="text-[#BCBCBC] font-DM text-base lg:text-[20px]">
+          Showing 5 to 10 of 50 entries
+        </div>
         <div className={au.paginatio_box}>
           <Image src={preArrow} />
           <div>1</div>

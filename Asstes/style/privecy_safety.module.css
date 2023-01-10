@@ -10,3 +10,12 @@
 	margin: 20px 0px;
 	border: 1px solid #BCBCBC;
 }
+@media screen and (max-width:1440px){
+	.main_wrapper{
+		width: 100%;
+		background-color: white;
+		border-radius: 15px;
+		margin-top: 20px;
+		padding: 19px 0px 20px 0px;
+	}
+}

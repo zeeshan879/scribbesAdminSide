@@ -1,5 +1,5 @@
 import React from 'react'
-import CommunityReportsMainPage from "../components/ReportsMenuOption/CommunityReports/communityReportsMainPage"
+import CommunityReportsMainPage from "../../components/ReportsMenuOption/CommunityReports/communityReportsMainPage"
 
 const Community_reports = () => {
 	return(

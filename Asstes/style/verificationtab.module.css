@@ -1,6 +1,7 @@
 .wraper{
 	display: flex;
 	gap: 94px;
+	flex-wrap: wrap;
 }
 .items_box{
 	width: 224px;
@@ -14,4 +15,28 @@
 	background-color: white;
 	box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
 
+}
+.verify_req_filter_box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 50px;
+}
+@media screen and (max-width:1160px){
+	.wraper{
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+@media screen and (max-width:920px){
+	.verify_req_filter_box{
+		display: flex;
+		gap: 20px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 50px;
+	}
 }

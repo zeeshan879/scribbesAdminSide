@@ -130,8 +130,9 @@ const CommnityBodySection = () => {
             <AllCommunitiesTableFilters />
           </div>
         </div>
+        <div className="table_scrol_contoler">
         <div className={au.allUser_main_box}>
-          <Table className="all-user-table">
+          <Table className="all-user-table" responsive>
             <thead>
               <tr className="h-[60px]">
                 <th>
@@ -180,20 +181,20 @@ const CommnityBodySection = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="font-DM text-base font-normal ">
+                      <td className="font-DM text-sm  lg:text-base font-normal ">
                         <div className="pt-[15px]">{data.date}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm  lg:text-base font-normal">
                         <div className="pt-[15px]">{data.ip}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm  lg:text-base font-normal">
                         <div className="pt-[15px]">{data.id}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm  lg:text-base font-normal">
                         <div className="pt-[15px]">{data.status}</div>
                       </td>
 
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm  lg:text-base font-normal">
                         <div className="pt-[15px]">{data.member}</div>
                       </td>
                       <td>
@@ -218,8 +219,9 @@ const CommnityBodySection = () => {
             </tbody>
           </Table>
         </div>
+        </div>
         <div className={au.pagination_wrap}>
-          <div className="text-[#BCBCBC] font-DM text-[20px]">
+          <div className="text-[#BCBCBC]  font-DM text-[16px] lg:text-[20px]">
             Showing 5 to 10 of 50 entries
           </div>
           <div className={au.paginatio_box}>

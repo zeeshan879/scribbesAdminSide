@@ -20,14 +20,14 @@ const SuperAdminContentSection = () => {
               <div>
                 <Image src={cardImg} />
               </div>
-              <div className="font-grotesk font-bold text-[30px]">50</div>
+              <div className="font-grotesk font-bold text-[20px] lg:text-[30px]">50</div>
               <div className="font-grotesk text-base">Admins</div>
             </div>
             <div className={at.supper_admin_count_item}>
               <div>
                 <Image src={onlineAdmin} />
               </div>
-              <div className="font-grotesk font-bold text-[30px]">40</div>
+              <div className="font-grotesk font-bold text-[20px] lg:text-[30px]">40</div>
               <div className="font-grotesk text-base">Online Admins</div>
             </div>
             <Link href="/Allsupper-admin" >
@@ -38,7 +38,7 @@ const SuperAdminContentSection = () => {
                 </div>
                 <Image src={cardImg} />
               </div>
-              <div className="font-grotesk font-bold text-[30px]">30</div>
+              <div className="font-grotesk font-bold text-[20px] lg:text-[30px]">30</div>
               <div className="font-grotesk text-base">Super Admins</div>
             </div>
             </Link>
@@ -51,8 +51,9 @@ const SuperAdminContentSection = () => {
           </div>
         </div>
         <div className={at.admin_his_tab}>
+
           <div className={at.sup_admin_table}>
-            <div className="w-full flex justify-end pt-4">
+            <div className="w-full max-w-[900px] flex justify-end pt-1 2xl:pt-4">
               <div className="flex items-center gap-[40px]">
                 <div className="flex cursor-pointer items-center gap-[14px]">
                   <Image src={activeFlag} />
@@ -72,9 +73,11 @@ const SuperAdminContentSection = () => {
               <SupperAdminTable />
             </div>
           </div>
+       
           <SupperHistoryOfAdmin />
+          </div>
         </div>
-      </div>
+    
     </>
   );
 };

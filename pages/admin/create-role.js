@@ -1,5 +1,5 @@
 import React from 'react'
-import RolesToAdminMainPage from "../components/AdminTab/AssignRole/assignRoleMainPage"
+import RolesToAdminMainPage from "../../components/AdminTab/AssignRole/assignRoleMainPage"
 
 const AssignRole = () => {
   return (

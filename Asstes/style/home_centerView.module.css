@@ -191,5 +191,22 @@
     flex-direction: column;
     gap: 12px;
   }
+  .active_action_item {
+    height: 35px;
+    display: flex;
+    font-size: 12px;
+    border-radius: 6px;
+    align-items: center;
+    padding-left: 4px;
+    background-color: rgba(28, 182, 25, 0.1);
+  }
+  .action_item {
+    height: 35px;
+    display: flex;
+    border-radius: 6px;
+    font-size: 12px;
+    align-items: center;
+    padding-left: 5px;
+  }
   
 }

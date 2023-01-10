@@ -10,7 +10,7 @@ const RolesToAdminBodySec = () => {
     <>
       <div className="body_container">
         <BackArrow pageName="Roles to Admin" />
-        <div className="flex justify-between pt-[65px] ">
+        <div className="flex justify-between pt-5 lg:pt-[65px] ">
           <div>
 
           </div>
@@ -18,7 +18,7 @@ const RolesToAdminBodySec = () => {
             <RolesToAdminTableFilter />
           </div>
         </div>
-        <div className="mt-[25px] w-full">
+        <div className="mt-[0px] lg:mt-[25px] w-full">
           <RolesToAdminTable />
         </div>
       </div>

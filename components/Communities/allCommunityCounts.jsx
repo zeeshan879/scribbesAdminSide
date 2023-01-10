@@ -15,7 +15,7 @@ const AllCommunityCounts = () => {
           <div>
             <Image src={all} />
           </div>
-          <div className="text-[30px] font-bold font-grotesk">1000</div>
+          <div className="text-[20px] lg:text-[30px] font-bold font-grotesk">1000</div>
           <div className="text-base font-normal font-grotesk">
             All Communities
           </div>
@@ -24,7 +24,7 @@ const AllCommunityCounts = () => {
           <div>
             <Image src={verified} />
           </div>
-          <div className="text-[30px] font-bold font-grotesk">500</div>
+          <div className="text-[20px] lg:text-[30px] font-bold font-grotesk">500</div>
           <div className="text-base font-normal font-grotesk">
             Verified Communities
           </div>
@@ -36,7 +36,7 @@ const AllCommunityCounts = () => {
             </div>
             <Image src={scribeCom} />
           </div>
-          <div className="text-[30px] font-bold font-grotesk">30</div>
+          <div className="text-[20px] lg:text-[30px] font-bold font-grotesk">30</div>
           <div className="text-base font-normal font-grotesk">
             Scribbes Communities
           </div>
@@ -45,7 +45,7 @@ const AllCommunityCounts = () => {
           <div>
             <Image src={reportCom} />
           </div>
-          <div className="text-[30px] font-bold font-grotesk">1000</div>
+          <div className="text-[20px] lg:text-[30px] font-bold font-grotesk">1000</div>
           <div className="text-base font-normal font-grotesk">
             Reported Communities
           </div>

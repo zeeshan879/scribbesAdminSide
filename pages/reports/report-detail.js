@@ -1,5 +1,5 @@
 import React from 'react'
-import ReportDetailMainPage from "../components/ReportsMenuOption/ReportDetail/reportDetailMainPage"
+import ReportDetailMainPage from "../../components/ReportsMenuOption/ReportDetail/reportDetailMainPage"
 
 const Reportdetail = () => {
   return (

@@ -133,6 +133,7 @@ const AllCommnityBodySection = () => {
             <AllCommunitiesTableFilters />
           </div>
         </div>
+        <div className="table_scrol_contoler">
         <div className={au.allUser_main_box}>
           <Table className="all-user-table">
             <thead>
@@ -221,8 +222,9 @@ const AllCommnityBodySection = () => {
             </tbody>
           </Table>
         </div>
+        </div>
         <div className={au.pagination_wrap}>
-          <div className="text-[#BCBCBC] font-DM text-[20px]">
+          <div className="text-[#BCBCBC] font-DM text-base lg:text-[20px]">
             Showing 5 to 10 of 50 entries
           </div>
           <div className={au.paginatio_box}>

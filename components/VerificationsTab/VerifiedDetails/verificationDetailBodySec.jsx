@@ -19,7 +19,7 @@ const VerificationDetailsBodySec = () => {
               </div>
               <div className={vd.view_btn}>View Profile</div>
             </div>
-            <div className="font-DM text-[20px]">John Doe</div>
+            <div className="font-DM text-base lg:text-[20px]">John Doe</div>
           </div>
 
           <div className="w-full">

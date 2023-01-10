@@ -1,8 +1,9 @@
 import React from "react";
 import AllReportsCounts from "./allReportsCounts"
 import VerificationRequestTabs from "./allReportsTabs"
-import AllReportsTableFilter from "./allReportsFillter"
+import AllUsersFilters from "../AllUsers/allUsersFilters"
 import AllReportsTable from "./allReportsTable"
+import au from "../../Asstes/style/allUser.module.css"
 
 
 const AllReportsBodySec = () => {
@@ -10,15 +11,15 @@ const AllReportsBodySec = () => {
     <>
       <div className="body_container">
         <AllReportsCounts />
-        <div className="flex justify-between pt-[65px] ">
+        <div className={au.all_reports_fillters}>
           <div>
             <VerificationRequestTabs />
           </div>
           <div>
-            <AllReportsTableFilter />
+            <AllUsersFilters />
           </div>
         </div>
-        <div className="mt-[25px] w-full">
+        <div className="mt-[15px] lg:mt-[25px] w-full">
           <AllReportsTable />
         </div>
       </div>

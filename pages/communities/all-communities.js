@@ -1,5 +1,5 @@
 import React from 'react'
-import AllCommunitiesMainPage from "../components/Communities/AllCommunityPage"
+import AllCommunitiesMainPage from "../../components/Communities/AllCommunityPage"
 
 const Allcommunities = () => {
   return (

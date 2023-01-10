@@ -131,6 +131,7 @@ const ScribbesCommnityBodySection = () => {
             <AllCommunitiesTableFilters />
           </div>
         </div>
+        <div className="table_scrol_contoler">
         <div className={au.allUser_main_box}>
           <Table className="all-user-table">
             <thead>
@@ -181,20 +182,20 @@ const ScribbesCommnityBodySection = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="font-DM text-base font-normal ">
+                      <td className="font-DM  text-sm lg:text-base font-normal ">
                         <div className="pt-[15px]">{data.date}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm lg:text-base font-normal">
                         <div className="pt-[15px]">{data.ip}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm lg:text-base font-normal">
                         <div className="pt-[15px]">{data.id}</div>
                       </td>
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm lg:text-base font-normal">
                         <div className="pt-[15px]">{data.status}</div>
                       </td>
 
-                      <td className="font-DM text-base font-normal">
+                      <td className="font-DM text-sm lg:text-base font-normal">
                         <div className="pt-[15px]">{data.member}</div>
                       </td>
                       <td>
@@ -219,8 +220,9 @@ const ScribbesCommnityBodySection = () => {
             </tbody>
           </Table>
         </div>
+        </div>
         <div className={au.pagination_wrap}>
-          <div className="text-[#BCBCBC] font-DM text-[20px]">
+          <div className="text-[#BCBCBC] font-DM text-base lg:text-[20px]">
             Showing 5 to 10 of 50 entries
           </div>
           <div className={au.paginatio_box}>

@@ -72,9 +72,10 @@ const SupperAdminTable = () => {
     },
   ];
   return (
-    <>
-      <div className={at.supper_admin_table_wraper}>
-        <Table className="all-user-table">
+ <>
+        <div className={at.super_admin_scroler}>
+ <div className={at.supper_admin_table_wraper}>
+        <Table className="all-user-table" >
           <thead>
             <tr className="h-[60px]">
               <th>
@@ -110,33 +111,33 @@ const SupperAdminTable = () => {
                             <span class="checkmark"></span>
                           </label>
                         </div>
-                        <div className="flex items-center gap-[18px]">
+                        <div className="flex items-center gap-[10px] 2xl:gap-[18px]">
                           <div className="relative">
                             <div className={at.supper}>
                               {data.supper && <Image src={supper} />}
                             </div>
                             <Image src={data.profile} />
                           </div>
-                          <div className="font-DM text-base font-normal">
+                          <div className="font-DM text-sm 2xl:text-base font-normal">
                             {data.name}
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-3">{data.email}</div>
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
+                      <div className="pt-[18px]">{data.email}</div>
+                    </td>
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
+                      <div className="pt-[18px]">{data.rank}</div>
+                    </td>
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
+                      <div className="pt-[18px]">{data.id}</div>
+                    </td>
+                    <td className="font-DM text-sm 2xl:text-base font-normal">
+                      <div className="pt-[18px]">{data.status}</div>
                     </td>
                     <td className="font-DM text-base font-normal">
-                      <div className="pt-3">{data.rank}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-3">{data.id}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-3">{data.status}</div>
-                    </td>
-                    <td className="font-DM text-base font-normal">
-                      <div className="pt-3 flex gap-[30px] justify-center">
+                      <div className="pt-[18px] flex gap-[10px] 2xl:gap-[30px] justify-center">
                         <div className="cursor-pointer">
                           <MdOutlineModeEditOutline className="text-[#BCBCBC] text-xl" />
                         </div>
@@ -151,10 +152,12 @@ const SupperAdminTable = () => {
             })}
           </tbody>
         </Table>
-        <div className="flex justify-center cursor-pointer pt-[20px] pb-[40px] underline font-DM">
+
+      </div>
+      </div>
+      <div className="flex justify-center cursor-pointer pt-[10px] lg:pt-[20px] pb-[10px] lg:pb-[40px] underline font-DM">
           See all communities
         </div>
-      </div>
     </>
   );
 };

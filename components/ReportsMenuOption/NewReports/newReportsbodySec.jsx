@@ -3,6 +3,7 @@ import React from "react";
 import AllReportsTableFilter from "../allReportsFillter"
 import AllReportsTable from "../allReportsTable"
 import BackArrow from "../../BackArrow";
+import AllUsersFilters from "../../AllUsers/allUsersFilters"
 
 
 const NewReportsBodySec = () => {
@@ -15,10 +16,10 @@ const NewReportsBodySec = () => {
 
           </div>
           <div>
-            <AllReportsTableFilter />
+            <AllUsersFilters />
           </div>
         </div>
-        <div className="mt-[25px] w-full">
+        <div className=" mt-4 lg:mt-[25px] w-full">
           <AllReportsTable />
         </div>
       </div>

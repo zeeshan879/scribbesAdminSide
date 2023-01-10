@@ -10,7 +10,7 @@ const AssignRoleContent = () => {
           <div>
             <Image src={profile} />
           </div>
-          <div className="font-DM font-bold text-[20px]">
+          <div className="font-DM font-bold text-[18px] lg:text-[20px]">
             John Doe
             <div className={ar.admin_btn}>Admin</div>
           </div>
@@ -21,7 +21,7 @@ const AssignRoleContent = () => {
           <div className="flex flex-col gap-[25px]">
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   User Verifications
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
@@ -37,14 +37,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   Community Verifications
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to verify community
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" />
                   <span class="checkmarkAssigneRole"></span>
@@ -53,14 +53,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold ">
                   User Reports
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to handle user reports
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" />
                   <span class="checkmarkAssigneRole"></span>
@@ -69,14 +69,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   Community Reports
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to handle community reports
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" />
                   <span class="checkmarkAssigneRole"></span>
@@ -85,14 +85,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   Suspend Users
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to suspend users
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" />
                   <span class="checkmarkAssigneRole"></span>
@@ -101,14 +101,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   Suspend Communities
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to suspend communities
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" checked />
                   <span class="checkmarkAssigneRole"></span>
@@ -117,14 +117,14 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold text-[20px]">
+                <div className="font-grotesk font-bold text-[18px] lg:text-[20px]">
                   All Roles
                 </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to verify and suspend users
                 </div>
               </div>
-			  <div>
+              <div>
                 <label class="assigneRole">
                   <input type="checkbox" />
                   <span class="checkmarkAssigneRole"></span>
@@ -133,8 +133,8 @@ const AssignRoleContent = () => {
             </div>
           </div>
 
-          <div className="flex justify-end pt-[100px]">
-            <div className="flex items-center gap-[10px]">
+          <div className="flex justify-center md:justify-end pt-[50px] lg:pt-[100px]">
+            <div className="flex flex-col md:flex-row items-center gap-[10px]">
               <div className={ar.canecl_btn}>Cancel</div>
               <div className={ar.change_btn}>Change Role</div>
             </div>
