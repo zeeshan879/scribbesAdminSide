@@ -10,7 +10,7 @@ const CommunityReportsBodySec = () => {
     <>
       <div className="body_container">
         <BackArrow pageName="Community Reports" />
-        <div className="flex justify-between pt-[65px] ">
+        <div className="flex justify-between pt-[65px]">
           <div></div>
           <div>
             <AllUsersFilters />

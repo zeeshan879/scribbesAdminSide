@@ -18,7 +18,7 @@ const RangeProgressChart = (props) => {
         styles={buildStyles({
           textColor: "black",
           pathColor: "#1CAC19",
-          textSize: "16px",
+          textSize: "12px",
           trailColor: "#000580",
         })}
       />
