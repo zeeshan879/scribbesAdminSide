@@ -117,6 +117,9 @@ border: none !important;
 .usa .progress-bar {
   background-color: #FF9292 !important;
 }
+.analysis .progress-bar {
+  background-image: linear-gradient(to right, #1CAC19, #000580) !important;
+}
 .left .accordion-body{
   padding: 0px !important;
 }

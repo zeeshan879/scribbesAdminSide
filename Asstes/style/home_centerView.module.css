@@ -5,6 +5,25 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+.select_gender{
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1CAC19;
+}
+.select_age_box{
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1CAC19;
+
+}
 .user_infoBox {
   height: 198px;
   width: 224px;
@@ -22,6 +41,7 @@
   height: 315px;
   border-radius: 14px;
   width: 100%;
+  padding: 18px 30px;
   background: #ffffff;
   box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
   border-radius: 14.3182px;

@@ -558,17 +558,17 @@ const DashboardLeftMenu = () => {
                   </Accordion.Header>
                   <Accordion.Body>
                     <div className={lbar.subContentBox}>
-                      <Link href="/verification/verification-request">
+                      <Link href="/statistics/ovser-all-statistics">
                         <div
                           className={
-                            pathName === "/verification/verification-request"
+                            pathName === "/statistics/ovser-all-statistics"
                               ? lbar.active_menu_subitems
                               : lbar.menu_subitems
                           }
                         >
                           <div
                             className={
-                              pathName === "/verification/verification-request"
+                              pathName === "/statistics/ovser-all-statistics"
                                 ? lbar.active_fullstop
                                 : lbar.fullstop
                             }
