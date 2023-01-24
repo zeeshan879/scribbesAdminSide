@@ -630,24 +630,7 @@ const DashboardLeftMenu = () => {
                           User Statistics
                         </div>
                       </Link>
-                      <Link href="">
-                        <div
-                          className={
-                            pathName === "/community-verification-detail"
-                              ? lbar.active_menu_subitems
-                              : lbar.menu_subitems
-                          }
-                        >
-                          <div
-                            className={
-                              pathName === "/community-verification-detail"
-                                ? lbar.active_fullstop
-                                : lbar.fullstop
-                            }
-                          ></div>{" "}
-                          Verified Communities
-                        </div>
-                      </Link>
+        
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>

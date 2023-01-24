@@ -3,7 +3,9 @@ import OverAllUserInfo from "./overAllUserInfo";
 import VideosInfocard from "../videoStatistics/VidosInfoCard";
 import SelectCountry from "../../SelectCountry";
 import SelectMonth from "../SelectMonth";
-import FollwersAnalysis from "./FollwersAnalysis"
+import FollwersAnalysis from "./FollwersAnalysis";
+import MostPostHourChartSec from "./mostPostHourChart";
+import vs from "../../../Asstes/style/video_statics.module.css"
 
 const OverAllStatisticsBodySec = () => {
   return (
@@ -23,11 +25,14 @@ const OverAllStatisticsBodySec = () => {
         <div>
           <VideosInfocard />
         </div>
-<div className="w-full flex justify-between pt-[33px]">
-<div className="w-full">
-<FollwersAnalysis/>
-</div>
-</div>
+        <div className={vs.followers_posted_hour}>
+          <div className="w-full">
+            <FollwersAnalysis />
+          </div>
+          <div className={vs.most_posted_box}>
+            <MostPostHourChartSec />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -9,7 +9,7 @@ const SelectMonth = () => {
   return (
     <>
       <div className={vs.select_month} onClick={() => setSelect(!select)}>
-        <div className="text-[#1CAC19] font-DM text-base">Month</div>
+        <div className="text-[#1CAC19] font-DM text-xs lg:text-base">Month</div>
         <div>
           <Image src={profileArrow} />
         </div>

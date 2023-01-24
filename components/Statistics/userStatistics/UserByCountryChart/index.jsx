@@ -7,7 +7,9 @@ const UserByCountryChart = () => {
     <>
       <div className={vs.user_chart_box}>
         <div className="flex justify-between items-center">
-		<div className="font-grotesk font-bold text[20px]">Users by Country</div>
+          <div className="font-grotesk font-bold text[20px]">
+            Users by Country
+          </div>
           <SelectMonth />
         </div>
       </div>

@@ -12,7 +12,6 @@ import conversion from "../../../Asstes/DashboardImages/conversion.png";
 import Image from "next/image";
 
 const OverAllUserInfo = () => {
-  // const [analysisBox,setAnalysisBox]=useState()
   const analysisBox = [
     {
       id: "0",
@@ -35,19 +34,19 @@ const OverAllUserInfo = () => {
     {
       id: "3",
       icon: tcomunity,
-      toalUser: "120000",
+      toalUser: "10000",
       title: "Total Communities",
     },
     {
       id: "4",
       icon: ncomunity,
-      toalUser: "120000",
+      toalUser: "10000",
       title: "New Communities",
     },
     {
       id: "5",
       icon: suser,
-      toalUser: "120000",
+      toalUser: "10000",
       title: "Suspended Users",
     },
   ];
@@ -77,16 +76,16 @@ const OverAllUserInfo = () => {
                       <Image src={data?.icon} />
                     </div>
                     <div>
-                      <div className="flex w-full justify-between">
-                        <div className="font-DM font-DM font-grotesk text-[30px]">
-                          120000
+                      <div className="flex w-full justify-between items-center">
+                        <div className={fa.box_heaing}>
+                          {data.toalUser}
                         </div>
                         <div className={fa.conversion_box}>
                           <Image src={conversion} />
                           500%
                         </div>
                       </div>
-                      <div className="font-grotesk pt-[12px]">{data.title}</div>
+                      <div className="font-grotesk text-sm 2xl:text-base pt-[12px]">{data.title}</div>
                     </div>
                   </div>
                 </>
@@ -94,8 +93,8 @@ const OverAllUserInfo = () => {
             })}
           </div>
         </div>
-        <div className="w-full">
-          <UserJoinedChartComponent height="360" />
+        <div className="w-full ">
+          <UserJoinedChartComponent height="" chartText="Male 60% Female 40%" />
         </div>
       </div>
     </>

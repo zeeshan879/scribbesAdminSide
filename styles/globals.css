@@ -329,7 +329,12 @@ input:checked + .slider1:before {
 .slider1.round:before {
   border-radius: 50%;
 }
+.text_rotate{
+  rotate:  270deg;
+  font-family: "DM Sans", sans-serif;
+  
 
+}
 
 
 
@@ -453,6 +458,12 @@ height: 2px !important;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  }
+  .text_rotate{
+    rotate:  270deg;
+    font-family: "DM Sans", sans-serif;
+    width: 10px;
+  
   }
 }
 

@@ -15,7 +15,7 @@ const DashboardTabs = () => {
       <div className={Home.Inner_Container}>
         <UserCounterInfo />
         <div className={Home.map_progres_wrap}>
-          <div className="w-full">
+          <div className="w-full h-full">
             <Userjoinchart />
           </div>
           <div className="w-full">

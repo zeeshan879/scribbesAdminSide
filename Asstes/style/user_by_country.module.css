@@ -1,0 +1,85 @@
+.main_container{
+
+    background: #FFFFFF;
+box-shadow: 0px 21.9915px 65.9744px rgba(0, 0, 0, 0.05);
+border-radius: 31.4164px;
+width: 100%;
+margin-top: 43px;
+padding: 29px 26px;
+}
+.AZ_box{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  
+}
+.az_toggle_wraper{
+    background: #FFFFFF;
+    height: 166px;
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 33px;
+    top: 20px;
+    z-index: 5;
+    right: 0;
+    position: absolute;
+    border: 0.3px solid #BCBCBC;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.az_items{
+    height: 38px;
+    display: flex;
+    color: black;
+    padding-left: 43px;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+
+}
+.country_inner_box{
+    display: flex;
+    width: 100%;
+    gap: 80px;
+    justify-content: space-between;
+}
+.user_chart_box{
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.az_items:hover{
+    height: 38px;
+    display: flex;
+    color: black;
+    padding-left: 43px;
+    align-items: center;
+    background-color:#D9D9D9;
+    font-family: "DM Sans", sans-serif;
+
+}
+.user_country_box{
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 66px;
+}
+.country_info_itmes{
+
+width: 100%;
+gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.country_info_tile{
+    width: 100%;
+    height: 70px;
+    padding: 0px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+border-radius: 14.3182px;
+}

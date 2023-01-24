@@ -57,11 +57,11 @@ const InfoAboutUserVideo = () => {
             return (
               <>
                 <div className={info.card1}>
-                  <div className="font-grotesk text-[20px] font-bold">
+                  <div className="font-grotesk text-base lg:text-[20px] font-bold">
                     {data.title}
                   </div>
                   <div>
-                    <div className="text-[30px] font-grotesk font-bold">
+                    <div className="text-[20px] lg:text-[30px] font-grotesk font-bold">
                       {data.option}
                     </div>
                     <div className="text-base font-grotesk">{data.des}</div>

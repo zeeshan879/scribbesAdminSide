@@ -41,7 +41,7 @@
   height: 315px;
   border-radius: 14px;
   width: 100%;
-  padding: 18px 30px;
+  padding: 18px 30px 50px 30px;
   background: #ffffff;
   box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
   border-radius: 14.3182px;
@@ -175,6 +175,20 @@
     box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
     border-radius: 14.3182px;
   }
+  .country_icon{
+    height: 30px !important;
+    width:30px !important
+  }
+  .select_age_box{
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1CAC19;
+  
+  }
   .progres_status {
     display: flex;
     gap: 18px;
@@ -198,7 +212,17 @@
     background-color: rgba(28, 182, 25, 0.1);
   }
 }
-
+@media screen and (max-width:768px){
+  .joined_chart_box {
+    height: 315px;
+    border-radius: 14px;
+    width: 100%;
+    padding: 15px 15px;
+    background: #ffffff;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+}
 @media screen and (max-width:500px){
 
   .most_active_user_scrol{

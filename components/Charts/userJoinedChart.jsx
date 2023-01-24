@@ -7,6 +7,8 @@ import SelectGender from "../SelectGender";
 import SelectCountry from "../SelectCountry";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const UserJoinedChartComponent = (props) => {
+  const chartTitle=props?.chartText
+
   const [state, setState] = useState({
     series: [
       {
@@ -41,8 +43,11 @@ const UserJoinedChartComponent = (props) => {
         },
       },
       title: {
-        text: 'Male 60% Female 40%',
-        align: 'left'
+        text:chartTitle,
+        align: 'left',
+      
+        
+      
       },
       dataLabels: {
         enabled: false,
@@ -89,9 +94,9 @@ const UserJoinedChartComponent = (props) => {
   });
   return (
     <>
-      <div className="flex justify-between items-center">
-        <div className="font-bold font-grotesk text-[20px]">Users Joined</div>
-        <div className="flex gap-[40px] items-center">
+      <div className="flex justify-between items-center pb-[20px] md:pb-[0px]">
+        <div className="font-bold font-grotesk text-xs lg:text-[20px]">Users Joined</div>
+        <div className="flex gap-2 lg:gap-[40px] items-center">
           <div>
             <SelectCountry />
           </div>
@@ -103,22 +108,13 @@ const UserJoinedChartComponent = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="flex items-center gap-[13px] pl-[50px] pt-[30px]">
-        <div className="flex items-center gap-[5px] font-grotesk">
-            <div>Male</div>
-            <div className="font-bold">60%</div>
-        </div>
-        <div className="flex items-center gap-[5px] font-grotesk">
-            <div>Female</div>
-            <div className="font-bold">40%</div>
-        </div>
-      </div> */}
+  
       {typeof window !== "undefined" && (
         <Chart
           options={state.options}
           series={state.series}
           type="area"
-          height={props?.height}
+          height="100%"
         />
       )}
     </>

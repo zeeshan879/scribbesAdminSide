@@ -4,7 +4,7 @@ import Image from "next/image";
 import activeFlag from "../../../../Asstes/DashboardImages/activeFlag.png";
 import profileArrow from "../../../../Asstes/DashboardImages/profileArrow.png";
 import conversion from "../../../../Asstes/DashboardImages/conversion.png";
-import SelectMonth from "../../SelectMonth"
+import SelectMonth from "../../SelectMonth";
 
 const InfoAboutUserPost = () => {
   const largeCard = [
@@ -40,7 +40,6 @@ const InfoAboutUserPost = () => {
       option: "500000",
       des: "Than last month",
     },
-
   ];
   return (
     <>
@@ -50,18 +49,18 @@ const InfoAboutUserPost = () => {
             <Image src={activeFlag} />
             <Image src={profileArrow} />
           </div>
-<SelectMonth/>
+          <SelectMonth />
         </div>
         <div className={info.card_wraper}>
           {largeCard.map((data) => {
             return (
               <>
                 <div className={info.card1}>
-                  <div className="font-grotesk text-[20px] font-bold">
+                  <div className="font-grotesk text-base lg:text-[20px] font-bold">
                     {data.title}
                   </div>
                   <div>
-                    <div className="text-[30px] font-grotesk font-bold">
+                    <div className=" text-[20px] lg:text-[30px] font-grotesk font-bold">
                       {data.option}
                     </div>
                     <div className="text-base font-grotesk">{data.des}</div>
@@ -71,7 +70,7 @@ const InfoAboutUserPost = () => {
             );
           })}
         </div>
-		<div className="flex justify-end items-center gap-[42px] mt-[26px]">
+        <div className="flex justify-end items-center gap-[42px] mt-[26px]">
           <div className="flex items-center gap-[14px] cursor-pointer">
             <Image src={activeFlag} />
             <Image src={profileArrow} />
@@ -81,22 +80,28 @@ const InfoAboutUserPost = () => {
             <Image src={profileArrow} />
           </div>
         </div>
-		<div className={info.card_wraper}>
-			{
-				smallCard.map((data)=>{
-					return(
-						<>
-									<div className={info.small_Card}>
-				<div className="font-grotesk font-normal">{data.title}</div>
-				<div className="flex items-center gap-[8px] text-base font-bold font-grotesk">500000<span className="flex items-center gap-1 text-[#1CAC19] font-normal"> <Image src={conversion} />500%</span> <span className="font-normal text-[#BCBCBC]">Than last month</span> </div>
-			</div>
-						
-						</>
-					)
-				})
-			}
-
-		</div>
+        <div className={info.card_wraper}>
+          {smallCard.map((data) => {
+            return (
+              <>
+                <div className={info.small_Card}>
+                  <div className="font-grotesk font-normal">{data.title}</div>
+                  <div className="flex items-center gap-[8px] text-base font-bold font-grotesk">
+                    500000
+                    <span className="flex items-center gap-1 text-[#1CAC19] font-normal">
+                      {" "}
+                      <Image src={conversion} />
+                      500%
+                    </span>{" "}
+                    <span className="font-normal text-[#BCBCBC]">
+                      Than last month
+                    </span>{" "}
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );
