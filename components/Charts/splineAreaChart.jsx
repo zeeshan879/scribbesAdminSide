@@ -24,7 +24,11 @@ const SplineAreaChart = (props) => {
       chart: {
         height: 350,
         type: "area",
+        toolbar: {
+          show: false,
+        },
       },
+      //   Surah yaseen ayat 1 to 12 seven times,three three times surah falaq naas and ayat ul qursi Pani pe dum kar ke peena he
       grid: {
         show: false,
       },
@@ -58,6 +62,9 @@ const SplineAreaChart = (props) => {
         x: {
           format: "dd/MM/yy HH:mm",
         },
+      },
+      legend: {
+        show: false,
       },
     },
   });

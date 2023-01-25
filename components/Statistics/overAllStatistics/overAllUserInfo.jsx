@@ -93,7 +93,7 @@ const OverAllUserInfo = () => {
             })}
           </div>
         </div>
-        <div className="w-full ">
+        <div className="w-full pb-[50px]">
           <UserJoinedChartComponent height="" chartText="Male 60% Female 40%" />
         </div>
       </div>

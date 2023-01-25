@@ -15,21 +15,25 @@ const PostInfocard = () => {
       title: "Total Likes",
       option: "500000",
       des: "Than last month",
+      nextPage:""
     },
     {
       title: "Total Comments",
       option: "500000",
       des: "Than last month",
+      nextPage:""
     },
     {
       title: "Total Shares",
       option: "500000",
       des: "Than last month",
+      nextPage:""
     },
     {
       title: "Total Saved",
       option: "500000",
       des: "Than last month",
+      nextPage:""
     },
   ];
   return (

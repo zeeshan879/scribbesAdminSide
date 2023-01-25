@@ -50,6 +50,27 @@
   background-color: #FF0000;
   cursor: pointer;
 }
+.country_indicator{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #000580;
+  cursor: pointer;
+}
+.country_indicator2{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #2982CC;
+  cursor: pointer;
+}
+.country_indicator3{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #A5D6FF;
+  cursor: pointer;
+}
 .select_month {
   display: flex;
   gap: 10px;
@@ -106,6 +127,18 @@
   font-family: "DM Sans", sans-serif;
   color: black;
 }
+.progres_audience_box{
+display: flex;
+gap: 50px;
+align-items: center;
+padding-top: 16px;
+}
+.overview_chart_box{
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  height: 100%;
+}
 .followers_posted_hour{
 	display: flex;
 	justify-content: space-between;
@@ -115,6 +148,7 @@
 }
 .most_posted_box{
 	width: 70%;
+
 }
 .circular_progress_chart {
   width: 440px;
@@ -142,6 +176,35 @@
 		width: 100%;
 		padding-top: 33px;
 	}
+  .reached_audiance_container {
+    padding: 20px 20px;
+    background: #ffffff;
+    height: 450px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin: 43px 0px 20px 0px;
+    box-shadow: 0px 10.0227px 30.0682px rgba(0, 0, 0, 0.05);
+    border-radius: 14.3182px;
+  }
+  .circular_progress_chart {
+    width: 440px;
+    padding-right: 20px;
+    height: 100%;
+    border-right: 1px solid #bcbcbc;
+  }
+  .overview_chart_box{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    height: 100%;
+  }
+  .progres_audience_box{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 16px;
+    }
 }
 @media screen and (max-width:1178px){
 	.followers_posted_hour{

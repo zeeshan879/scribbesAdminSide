@@ -21,7 +21,9 @@ const MostPostHourChartSec = () => {
             </div>
           </div>
         </div>
-        <MostPostedHourChart height="285" />
+    <div className="h-[82%]">
+    <MostPostedHourChart />
+    </div>
         <div className="flex justify-between text-xs xl:text-base items-center pl-[30px] md:pl-[70px] pr-4">
           <div className="font-grotesk">
             Average most posted hour is <span className="font-bold">8PM</span>
