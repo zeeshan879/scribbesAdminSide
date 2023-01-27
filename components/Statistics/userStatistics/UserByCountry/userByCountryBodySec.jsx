@@ -9,10 +9,11 @@ import UserByCountryChart from "../../../Charts/userByCountryChart";
 
 const UserByCountryBodySec = () => {
   const [click, setClick] = useState(false);
+  const pageInfo={tile:"Users Statistics",subtitle:"users by country"}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Users Statistics , users by country" />
+        <BackArrow pageName={pageInfo} />
         <div className={uc.main_container}>
           <div className="flex justify-end">
             <div className={uc.AZ_box} onClick={() => setClick(!click)}>

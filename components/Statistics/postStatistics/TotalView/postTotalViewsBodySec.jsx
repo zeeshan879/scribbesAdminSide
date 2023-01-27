@@ -5,10 +5,11 @@ import InfoAboutUserPost from "./infoAboutUserPost"
 import PopularPostByCountry from "../../popularPostByCountry"
 
 const TotalViewBodySec = () => {
+  const pageInfo = { tile: "Post Statistics", subtitle: "Total Views" };
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Post Statistics , Total Views" />
+        <BackArrow pageName={pageInfo} />
 		<InfoAboutUserPost/>
     <PopularPostByCountry/>
 

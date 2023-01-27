@@ -10,10 +10,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ReportDetailBodySec = () => {
+  const pageInfo={tile:"Report Details",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Report Details" />
+        <BackArrow pageName={pageInfo} />
         <div className={rd.main_content_wrapper}>
           <div className={rd.profile_wraper}>
             <div className={rd.profile_left_box}>

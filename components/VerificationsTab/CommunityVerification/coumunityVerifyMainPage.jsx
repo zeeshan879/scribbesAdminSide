@@ -5,12 +5,10 @@ import Header from "../../Header";
 
 import VerifiedCommunityBodySec from "./verifiedCommuityBodySec"
 
-import { useSelector } from "react-redux";
+
 
 const CommunityVerifyMainPage = () => {
-  const mangUserMenu = useSelector(
-    (state) => state.allGernalFunction.mangUserMenu
-  );
+
 
   return (
     <>

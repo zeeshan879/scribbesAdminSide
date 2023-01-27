@@ -17,6 +17,7 @@ import com from "../../Asstes/style/communites.module.css";
 import AllCommunitiesTableFilters from "./AllcommunitiesTableFilter";
 
 const ScribbesCommnityBodySection = () => {
+  const pageInfo={tile:"Scribbes Communities",subtitle:""}
   const tableData = [
     {
       name: "Basket Hounds",
@@ -124,7 +125,7 @@ const ScribbesCommnityBodySection = () => {
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Scribbes Communities" />
+        <BackArrow pageName={pageInfo} />
         <div className={com.filterBox_wraper}>
           <div></div>
           <div>

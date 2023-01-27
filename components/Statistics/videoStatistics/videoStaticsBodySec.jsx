@@ -8,10 +8,11 @@ import ReachedAudiance from "./reachedAudianceSec"
 import PopularPostVideos from "./MostPopularVideos/mostPoplaurVideos"
 
 const VideoStaticsBodySec = () => {
+  const pageInfo={tile:"Videos Statistics",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Posts Statistics" />
+        <BackArrow pageName={pageInfo} />
 
 		<ReachedAudiance/>
 		<div className="flex justify-end items-center gap-[42px]">

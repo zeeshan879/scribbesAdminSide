@@ -7,7 +7,7 @@ const LineChart = () => {
     series: [
       {
         name: "Desktops",
-        data: [10, 141, 150, 170, 180, 202, 269, 291, 300],
+        data: [0, 100, 200, 300, 400, 500, 600, 700, 800],
       },
     ],
     options: {

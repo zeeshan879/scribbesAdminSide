@@ -7,10 +7,11 @@ import VerifyProfileStep1 from "./verificationStep1";
 import VerifyProfileStep2 from "./verificationStep2"
 
 const VerificationDetailsBodySec = () => {
+  const pageInfo={tile:"Verified Users",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Verified Users" />
+        <BackArrow pageName={pageInfo} />
         <div className={vd.main_conten_box}>
           <div className={vd.profile_box}>
             <div className="flex gap-[35px] items-center">

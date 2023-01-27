@@ -5,10 +5,11 @@ import BackArrow from "../../BackArrow";
 
 
 const AssignRoleBodySec = () => {
+  const pageInfo={tile:"Assign Roles",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Assign Roles" />
+        <BackArrow pageName={pageInfo} />
      
         <div className="mt-[25px] w-full">
           <AssignRoleContent />

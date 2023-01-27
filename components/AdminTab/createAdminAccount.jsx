@@ -6,10 +6,11 @@ import arrowDown from "../../Asstes/DashboardImages/arrowDown.png";
 import Image from "next/image";
 
 const CreateAdminAccount = () => {
+  const pageInfo={tile:"Add Admin",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Add Admin" />
+        <BackArrow pageName={pageInfo} />
 
         <div className={ca.create_account_body}>
           <div className="max-w-[474px]">

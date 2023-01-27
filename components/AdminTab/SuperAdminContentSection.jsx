@@ -44,7 +44,7 @@ const SuperAdminContentSection = () => {
             </Link>
           </div>
           <div className={at.admin_action_box}>
-            <Link href="/add-admin">
+            <Link href="/admin/add-admin">
             <div className={at.add_admin_btn}>+Add Admin</div>
             </Link>
             <div className={at.edit_admin_btn}>Edit Admin</div>

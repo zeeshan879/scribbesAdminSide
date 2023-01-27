@@ -16,6 +16,7 @@ import com from "../../Asstes/style/communites.module.css";
 import AllCommunitiesTableFilters from "./AllcommunitiesTableFilter";
 
 const CommnityBodySection = () => {
+  const pageInfo={tile:"Verified Communities",subtitle:""}
   const tableData = [
     {
       name: "Basket Hounds",
@@ -123,7 +124,7 @@ const CommnityBodySection = () => {
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Verified Communities" />
+        <BackArrow pageName={pageInfo} />
         <div className={com.filterBox_wraper}>
           <div></div>
           <div>

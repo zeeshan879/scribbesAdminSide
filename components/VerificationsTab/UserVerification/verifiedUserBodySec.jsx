@@ -5,10 +5,11 @@ import VerifiedUserTable from "../UserVerification/VerifiedUserTable";
 import BackArrow from "../../BackArrow";
 
 const VerifiedUserBodySec = () => {
+  const pageInfo={tile:"Verified Users",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Verified Users" />
+        <BackArrow pageName={pageInfo} />
         <div className="flex justify-between pt-[65px] ">
           <div></div>
           <div>

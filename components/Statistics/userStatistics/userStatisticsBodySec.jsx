@@ -10,10 +10,11 @@ import UserByAgeChart from "./UserByAgeChart";
 import vs from "../../../Asstes/style/video_statics.module.css";
 
 const UserStaticsBodySec = () => {
+  const pageInfo={tile:"Users Statistics",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Users Statistics" />
+        <BackArrow pageName={pageInfo} />
         <div className="flex justify-end">
           <div>
             <SelectMonth />

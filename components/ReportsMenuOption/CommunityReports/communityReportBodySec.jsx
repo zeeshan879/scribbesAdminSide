@@ -6,10 +6,11 @@ import BackArrow from "../../BackArrow";
 import AllUsersFilters from "../../AllUsers/allUsersFilters"
 
 const CommunityReportsBodySec = () => {
+  const pageInfo={tile:"Community Reports",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Community Reports" />
+        <BackArrow pageName={pageInfo} />
         <div className="flex justify-between pt-[65px]">
           <div></div>
           <div>

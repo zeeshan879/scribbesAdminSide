@@ -9,10 +9,11 @@ import PopularPostPost from "./MostPopularPost";
 import SelectMonth from "../SelectMonth";
 
 const PostStaticsBodySec = () => {
+  const pageInfo={tile:"Posts Statistics",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Posts Statistics" />
+        <BackArrow pageName={pageInfo} />
 
         <ReachedAudiance />
         <div className="flex justify-end items-center gap-[42px]">

@@ -4,10 +4,11 @@ import BackArrow from "../../BackArrow";
 import NotificationActionForm from "./notificationActionForm"
 
 const NotificationBodySec = () => {
+  const pageInfo={tile:"Notifications",subtitle:""}
   return (
     <>
       <div className="body_container">
-<BackArrow pageName="Notifications" />
+<BackArrow pageName={pageInfo} />
      <NotificationActionForm/>
       </div>
     </>

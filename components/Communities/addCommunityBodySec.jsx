@@ -5,10 +5,11 @@ import CommunityInformation from "./comunityInformation";
 import DeskTopPreview from "./deskTopPreview";
 
 const AddCommunityBodySec = () => {
+  const pageInfo={tile:"Add Community",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Add Community" />
+        <BackArrow pageName={pageInfo} />
         <div className={ac.add_com_container}>
           <CommunityInformation />
           <DeskTopPreview />

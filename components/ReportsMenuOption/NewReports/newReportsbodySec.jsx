@@ -7,10 +7,11 @@ import AllUsersFilters from "../../AllUsers/allUsersFilters"
 
 
 const NewReportsBodySec = () => {
+  const pageInfo={tile:"New Reports",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="New Reports" />
+        <BackArrow pageName={pageInfo} />
         <div className="flex justify-between pt-[65px] ">
           <div>
 

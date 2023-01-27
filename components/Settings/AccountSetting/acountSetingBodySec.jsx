@@ -13,10 +13,11 @@ const AccountSettingBodySec = () => {
   const handleModal=()=>{
     setOpen(!open)
   }
+  const pageInfo={tile:"Account Settings",subtitle:""}
   return (
     <>
       <div className="body_container">
-        <BackArrow pageName="Account Settings" />
+        <BackArrow pageName={pageInfo} />
         <div className={as.acount_seting_form}>
           <div className={as.acount_left_form}>
             <div>
