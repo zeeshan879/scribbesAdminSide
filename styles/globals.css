@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.assigneRole{
+.assigneRole {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -29,14 +28,14 @@
   height: 20px;
   border-radius: 5px;
   width: 20px;
-  border:1px solid #1CAC19;
-  background-color:transparent;
+  border: 1px solid #1cac19;
+  background-color: transparent;
 }
 .assigneRole:hover input ~ .checkmarkAssigneRole {
   background-color: none;
 }
 .assigneRole input:checked ~ .checkmarkAssigneRole {
-  background-color: #1CAC19;
+  background-color: #1cac19;
 }
 .checkmarkAssigneRole:after {
   content: "";
@@ -58,73 +57,70 @@
   transform: rotate(45deg);
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
 }
-.fade{
+.fade {
   padding-left: 0px !important;
 }
-.show{
+.show {
   padding-left: 0px !important;
 }
- .modal{
+.modal {
   padding-left: 0px !important;
 }
 .rounded-checkbox {
-  width:20px;
+  width: 20px;
   height: 20px;
   border-radius: 50%;
   vertical-align: middle !important;
-  border: 1px solid #1CAC19;
+  border: 1px solid #1cac19;
   appearance: none !important;
   -webkit-appearance: none !important;
   outline: none !important;
   cursor: pointer;
 }
 
-.left .accordion-item{
-border: none !important;
+.left .accordion-item {
+  border: none !important;
   padding: 0px !important;
 }
-.ua .accordion-item{
+.ua .accordion-item {
   border: none;
-  border-bottom:1px solid #BCBCBC; 
-  
-
+  border-bottom: 1px solid #bcbcbc;
 }
-.left .accordion-button{
+.left .accordion-button {
   padding: 20px 0px !important;
   font-size: 24px !important;
-  font-family: "Space Mono", sans-serif !important; 
+  font-family: "Space Mono", sans-serif !important;
 }
 .accordion-button:focus {
   box-shadow: none !important;
 }
 .dubai .progress-bar {
-  background-color: #1CAC19 !important;
+  background-color: #1cac19 !important;
 }
 .spain .progress-bar {
-  background-color: #FF902C !important;
+  background-color: #ff902c !important;
 }
 .canada .progress-bar {
-  background-color: #92AAFF !important;
+  background-color: #92aaff !important;
 }
 .nigeria .progress-bar {
-  background-color: #37BD9C !important;
+  background-color: #37bd9c !important;
 }
 .usa .progress-bar {
-  background-color: #FF9292 !important;
+  background-color: #ff9292 !important;
 }
 .analysis .progress-bar {
-  background-image: linear-gradient(to right, #1CAC19, #000580) !important;
+  background-image: linear-gradient(to right, #1cac19, #000580) !important;
 }
-.left .accordion-body{
+.left .accordion-body {
   padding: 0px !important;
 }
 .accordion-button:not(.collapsed) {
-  color: #1CAC19 !important;
+  color: #1cac19 !important;
 }
 .left .accordion-button:not(.collapsed) {
   padding: 20px 0px !important;
@@ -182,8 +178,8 @@ border: none !important;
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 1px solid #BCBCBC;
-  background-color:transparent;
+  border: 1px solid #bcbcbc;
+  background-color: transparent;
 }
 .checkmark2 {
   position: absolute;
@@ -192,36 +188,35 @@ border: none !important;
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 1px solid #1CAC19;
-  background-color:white;
+  border: 1px solid #1cac19;
+  background-color: white;
 }
 
 /* On mouse-over, add a grey background color */
 .container1:hover input ~ .checkmark {
   background-color: #ccc;
-    border-radius:50%
+  border-radius: 50%;
 }
 .container2:hover input ~ .checkmark2 {
-
-    border-radius:50%
+  border-radius: 50%;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container1 input:checked ~ .checkmark {
-  background-color:  #1CAC19;
-  border: #1CAC19;
-  border-radius:50%
+  background-color: #1cac19;
+  border: #1cac19;
+  border-radius: 50%;
 }
 .container2 input:checked ~ .checkmark2 {
-  background-color:  #1CAC19;
-  border: #1CAC19 !important;
-  border-radius:50%
+  background-color: #1cac19;
+  border: #1cac19 !important;
+  border-radius: 50%;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
-  border:none;
+  border: none;
   position: absolute;
   display: none;
 }
@@ -235,11 +230,9 @@ border: none !important;
 /* Show the checkmark when checked */
 .container1 input:checked ~ .checkmark:after {
   display: block;
-  
 }
 .container2 input:checked ~ .checkmark2:after {
   display: block;
-  
 }
 
 /* Style the checkmark/indicator */
@@ -257,7 +250,7 @@ border: none !important;
 .container2 .checkmark2:after {
   left: 7px;
   top: 3px;
-width: 7px;
+  width: 7px;
   height: 12px;
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -272,7 +265,7 @@ width: 7px;
   height: 11px;
 }
 
-.switch1 input { 
+.switch1 input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -286,10 +279,10 @@ width: 7px;
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-.body_container{
+.body_container {
   padding: 43px 49px 42px 38px;
   width: 100%;
 }
@@ -300,19 +293,18 @@ width: 7px;
   height: 20px;
   width: 20px;
   left: 0px;
-  bottom:-4px;
-  background-color: #1CAC19;
-  -webkit-transition: .4s;
-  transition: .4s;
+  bottom: -4px;
+  background-color: #1cac19;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider1 {
-  background-color:rgba(28, 172, 25, 0.6);
-
+  background-color: rgba(28, 172, 25, 0.6);
 }
 
 input:focus + .slider1 {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider1:before {
@@ -329,14 +321,62 @@ input:checked + .slider1:before {
 .slider1.round:before {
   border-radius: 50%;
 }
-.text_rotate{
-  rotate:  270deg;
+.text_rotate {
+  rotate: 270deg;
   font-family: "DM Sans", sans-serif;
-  
+}
+/* ................upload file */
+#form-file-upload {
+  height: 16rem;
 
+  border: none !important;
+  background-size: 100%;
+  text-align: center;
+  outline: none !important;
+  position: relative;
+  background-repeat: no-repeat;
+  /* background-image: url("../Asstes/DashboardImages/upload_profile.png"); */
 }
 
+#input-file-upload {
+  display: none;
+}
 
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border: none !important;
+  outline: none !important;
+}
+
+#label-file-upload.drag-active {
+  background-color: #ffffff;
+  outline: none !important;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  outline: none !important;
+  background-color: transparent;
+}
+
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  outline: none !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -347,129 +387,111 @@ input:checked + .slider1:before {
     background: black;
   }
 }
-.post_action_modal .modal-content{
-border-radius: 30px !important;
-
+.post_action_modal .modal-content {
+  border-radius: 30px !important;
 }
-.post_share_modal .modal-content{
-border-radius: 30px !important;
+.post_share_modal .modal-content {
+  border-radius: 30px !important;
 }
-.add_mode_modal .modal-content{
+.add_mode_modal .modal-content {
   border-radius: 27px !important;
 }
-.userblock .modal-content{
+.userblock .modal-content {
   border-radius: 27px;
   height: 564px !important;
   /*width: 553px !important;*/
   padding: 74px 79px;
 }
 
-
-#style-12::-webkit-scrollbar-track
-{
-	height: 5px;
-	border-radius: 10px;
-	background-color: #BCBCBC;
+#style-12::-webkit-scrollbar-track {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #bcbcbc;
 }
 
-#style-12::-webkit-scrollbar
-{
-	max-width: 12px !important;
+#style-12::-webkit-scrollbar {
+  max-width: 12px !important;
   height: 17px;
-  
 }
 
-#style-12::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color:white;
-height: 2px !important;
+#style-12::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+  height: 2px !important;
 }
-#style-desk::-webkit-scrollbar-track
-{
-	height: 5px;
-	border-radius: 10px;
-	background-color: #BCBCBC;
+#style-desk::-webkit-scrollbar-track {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #bcbcbc;
 }
 
-#style-desk::-webkit-scrollbar
-{
-	max-width: 12px !important;
+#style-desk::-webkit-scrollbar {
+  max-width: 12px !important;
   height: 17px;
-  
 }
 
-#style-desk::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color:white;
-height: 2px !important;
+#style-desk::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+  height: 2px !important;
 }
-@media screen and (max-width:1440px){
-  .body_container{
+@media screen and (max-width: 1440px) {
+  .body_container {
     padding: 20px 20px 20px 20px;
     width: 100%;
   }
 }
-@media screen and (max-width:1100px){
-  .table_scrol_contoler{
-  width: 800px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 1100px) {
+  .table_scrol_contoler {
+    width: 800px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:1085px){
-  .table_scrol_contoler{
-  width: 750px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 1085px) {
+  .table_scrol_contoler {
+    width: 750px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:1040px){
-  .table_scrol_contoler{
-  width: 600px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 1040px) {
+  .table_scrol_contoler {
+    width: 600px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:890px){
-  .table_scrol_contoler{
-  width: 550px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 890px) {
+  .table_scrol_contoler {
+    width: 550px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:850px){
-  .table_scrol_contoler{
-  width: 500px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 850px) {
+  .table_scrol_contoler {
+    width: 500px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:790px){
-  .table_scrol_contoler{
-  width: 450px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 790px) {
+  .table_scrol_contoler {
+    width: 450px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width:768px){
-  .table_scrol_contoler{
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+@media screen and (max-width: 768px) {
+  .table_scrol_contoler {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
-  .text_rotate{
-    rotate:  270deg;
+  .text_rotate {
+    rotate: 270deg;
     font-family: "DM Sans", sans-serif;
     width: 10px;
-  
   }
 }
-
-
-
-
-
-
-      

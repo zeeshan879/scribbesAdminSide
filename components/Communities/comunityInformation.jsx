@@ -4,13 +4,18 @@ import Image from "next/image";
 import chose from "../../Asstes/DashboardImages/chose.png";
 import earth from "../../Asstes/DashboardImages/earth.png";
 import lock from "../../Asstes/DashboardImages/lock.png";
+import { useSelector,useDispatch } from "react-redux";
 
 const CommunityInformation = () => {
   const [chose1, activeChose] = useState(false);
+  const changeView = useSelector(
+    (state) => state.allGernalFunction.mobileDesktopView
+  );
   return (
     <>
+   
 
-      <div className={nc.create_community_wraper}>
+      <div className={changeView===true? nc.create_community_wraper:nc.create_community_wraper_mblView}>
         <div className={nc.header_wraper}>Community Information</div>
         <div className={nc.info_body}>
           <div className={nc.comunity_name}>

@@ -17,6 +17,14 @@ top: 0;*/
   padding-left: 49px;
   align-items: center;
 }
+.profile_togle_inner{
+  padding: 23px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  border-bottom: 2px solid #BCBCBC;
+}
 .header_date{
   color: #bcbcbc;
   font-family: "DM Sans", sans-serif;
@@ -43,10 +51,21 @@ top: 0;*/
   height: 64px;
   width: 64px;
 }
+.profile_toggle{
+  position: absolute;
+  height: 271px;
+  background: #FFFFFF;
+  border: 0.3px solid #BCBCBC;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+  width: 315px;
+  top: 60px;
+  border-radius: 10px;
+}
 .header_right_side {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
   cursor: pointer;
   padding-right: 49px;
 }
@@ -91,6 +110,25 @@ top: 0;*/
     gap: 10px;
     cursor: pointer;
     padding-right: 20px;
+  }
+  .profile_togle_inner{
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+    border-bottom: 2px solid #BCBCBC;
+  }
+  .profile_toggle{
+    position: absolute;
+    height: 230px;
+    background: #FFFFFF;
+    border: 0.3px solid #BCBCBC;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    top: 60px;
+    left: -20px;
+    border-radius: 10px;
   }
 }
 @media screen and (max-width:1200px){
@@ -172,6 +210,25 @@ top: 0;*/
     font-family: "DM Sans", sans-serif;
     color: #bcbcbc;
   }
+  .profile_toggle{
+    position: absolute;
+    height: 200px;
+    background: #FFFFFF;
+    border: 0.3px solid #BCBCBC;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    top: 40px;
+    left: -100px;
+    border-radius: 10px;
+  }
+  .profile_togle_inner{
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+    border-bottom: 2px solid #BCBCBC;
+  }
 }
 @media screen and (min-width:669px){
 
@@ -179,5 +236,18 @@ top: 0;*/
 @media screen and (max-width:668px){
   .header_search{
     display: none;
+  }
+}
+@media screen and (max-width:425px){
+  .profile_toggle{
+    position: absolute;
+    height: 200px;
+    background: #FFFFFF;
+    border: 0.3px solid #BCBCBC;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    top: 40px;
+    left: -50px;
+    border-radius: 10px;
   }
 }

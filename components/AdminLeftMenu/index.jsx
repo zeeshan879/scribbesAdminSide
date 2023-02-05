@@ -97,10 +97,10 @@ const DashboardLeftMenu = () => {
                           All users
                         </div>
                       </Link>
-
+                      <Link href="/verification/verified-user">
                       <div
                         className={
-                          pathName === "/verified-users"
+                          pathName === "/verification/verified-user"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
@@ -108,13 +108,14 @@ const DashboardLeftMenu = () => {
                       >
                         <div
                           className={
-                            pathName === "/verified-users"
+                            pathName === "/verification/verified-user"
                               ? lbar.active_fullstop
                               : lbar.fullstop
                           }
                         ></div>{" "}
                         Verified users
                       </div>
+                      </Link>
                       <div
                         className={
                           pathName === "/suspended-users"
@@ -134,7 +135,7 @@ const DashboardLeftMenu = () => {
                       </div>
                       <div
                         className={
-                          pathName === "/Reported-users"
+                          pathName === "/reports/user-reports"
                             ? lbar.active_menu_subitems
                             : lbar.menu_subitems
                         }
@@ -142,7 +143,7 @@ const DashboardLeftMenu = () => {
                       >
                         <div
                           className={
-                            pathName === "/Reported-users"
+                            pathName === "/reports/user-reports"
                               ? lbar.active_fullstop
                               : lbar.fullstop
                           }

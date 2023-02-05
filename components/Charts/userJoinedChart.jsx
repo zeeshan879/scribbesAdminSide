@@ -7,7 +7,7 @@ import SelectGender from "../SelectGender";
 import SelectCountry from "../SelectCountry";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const UserJoinedChartComponent = (props) => {
-  const chartTitle=props?.chartText
+  const chartTitle = props?.chartText;
 
   const [state, setState] = useState({
     series: [
@@ -43,11 +43,8 @@ const UserJoinedChartComponent = (props) => {
         },
       },
       title: {
-        text:chartTitle,
-        align: 'left',
-      
-        
-      
+        text: chartTitle,
+        align: "left",
       },
       dataLabels: {
         enabled: false,
@@ -95,8 +92,10 @@ const UserJoinedChartComponent = (props) => {
   return (
     <>
       <div className="flex justify-between items-center pb-[20px] md:pb-[0px]">
-        <div className="font-bold font-grotesk text-xs lg:text-[20px]">Users Joined</div>
-        <div className="flex gap-2 lg:gap-[40px] items-center">
+        <div className="font-bold font-grotesk text-xs lg:text-[20px]">
+          Users Joined
+        </div>
+        <div className="flex gap-[20px] lg:gap-[40px] items-center">
           <div>
             <SelectCountry />
           </div>
@@ -108,7 +107,7 @@ const UserJoinedChartComponent = (props) => {
           </div>
         </div>
       </div>
-  
+
       {typeof window !== "undefined" && (
         <Chart
           options={state.options}

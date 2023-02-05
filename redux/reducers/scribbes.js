@@ -6,7 +6,8 @@ const initialState = {
   adminTab:1,
   mangUserMenu:1,
   communityTab:1,
-  sidebarDropDown:"0"
+  sidebarDropDown:"0",
+  mobileDesktopView:true
 };
 
 export const scribbes = createSlice({
@@ -31,8 +32,11 @@ export const scribbes = createSlice({
     handleSidebarDropDown: (state, action) => {
       state.sidebarDropDown = action.payload;
     },
+    handleDeskTopView: (state, action) => {
+      state.mobileDesktopView = action.payload;
+    },
   },
 });
 // Action creators are generated for each case reducer function
-export const {handelAdminTab, handelComunityTab,handelaActivePageTab,handelaUserTab,handelMangUserMenu,handleSidebarDropDown } = scribbes.actions;
+export const {handelAdminTab,handleDeskTopView, handelComunityTab,handelaActivePageTab,handelaUserTab,handelMangUserMenu,handleSidebarDropDown } = scribbes.actions;
 export default scribbes.reducer;
