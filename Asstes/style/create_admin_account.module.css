@@ -64,6 +64,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+  position: relative;
 	cursor: pointer;
 }
 .select_dender{
@@ -77,6 +78,7 @@ justify-content: space-between;
   align-items: center;
   padding-right: 26px;
 	border-radius: 41px;
+  position: relative;
 	border: 2px solid  #bcbcbc;
 }
 .slect_country {

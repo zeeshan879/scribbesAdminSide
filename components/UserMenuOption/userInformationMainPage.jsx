@@ -6,8 +6,11 @@ import UserInformation from "../UserTabContent";
 import AllUsers from "../AllUsers";
 import Header from "../Header";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const UsersInformationMainPage = () => {
+
+
   const mangUserMenu = useSelector(
     (state) => state.allGernalFunction.mangUserMenu
   );

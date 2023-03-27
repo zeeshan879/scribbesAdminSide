@@ -22,6 +22,23 @@ border: 0.3px solid #BCBCBC;
 box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
 border-radius: 10px;
 }
+.gender_select_toogle2{
+position: absolute;
+height: 100px;
+top: 45px;
+left: 0px;
+z-index: 5;
+display: flex;
+flex-direction: column;
+gap: 10px;
+justify-content: center;
+
+width: 200px;
+background: #FFFFFF;
+border: 0.3px solid #BCBCBC;
+box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
 .age_select_toogle{
 position: absolute;
 height: 220px;

@@ -126,6 +126,7 @@ height: 35px;
 }
 .table_row{
 	background-color: white;
+	cursor: pointer;
 
 
 }
@@ -148,6 +149,7 @@ height: 35px;
 
 .table_row2{
 	background-color: transparent;
+	cursor: pointer;
 }
 .filter_left{
 	display: flex;

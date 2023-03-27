@@ -26,6 +26,7 @@ const UserInformation = () => {
   const userTab = useSelector((state) => state.allGernalFunction.userTab);
   const dispatch = useDispatch();
   const router = useRouter()
+  const user_id=router.query.id
   return (
     <>
       {userTab != 5 && (
@@ -90,7 +91,7 @@ const UserInformation = () => {
             ) : (
               <div className={user.appeal_btn}>User Appeal</div>
             )}
-            <Link href="/take-action">
+            <Link href={`/take-action?id=${user_id}`}>
             <div className={user.appeal_btn}>Take Action</div>
             </Link>
             <div className="cursor-pointer">

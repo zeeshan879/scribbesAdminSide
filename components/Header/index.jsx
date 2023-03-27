@@ -8,10 +8,16 @@ import { AiOutlineMenu } from "react-icons/ai";
 import MobileLeftMenu from "../AdminLeftMenu/mobileLeftMenu";
 import addUser from "../../Asstes/DashboardImages/addUser.png";
 import logout from "../../Asstes/DashboardImages/logout.png";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [menuShow, setMenuShow] = useState(false);
   const [profile, setProfile] = useState(false);
+  const admin =useSelector((state)=>state.admin.currentUser)
+  console.log("admin header",admin)
+
+ 
+
   const handleLeftMobileMenu = () => {
     setMenuShow(!menuShow);
   };
@@ -42,7 +48,7 @@ const Header = () => {
             <div className={well.notisep}></div>
             <div>
               <div className="text-[16px] lg:text-[18px]  font-DM font-medium text-[#000580]">
-                John Doe
+              {/* {showData?.userName} */}
               </div>
               <div className={well.user_status}>Super Admin</div>
             </div>
@@ -64,9 +70,9 @@ const Header = () => {
                     </div>
                     <div>
                       <div className="font-DM text-base md:text-[20px] text-[#000580]">
-                        John Doe
+                {/* {showData?.userName} */}
                       </div>
-                      <div className="font-DM text-sm">@johnDoeUser</div>
+                      {/* <div className="font-DM text-sm">{showData?.email}</div> */}
                     </div>
                   </div>
                   <div className="flex items-center gap-[20px] pl-[20px]">
