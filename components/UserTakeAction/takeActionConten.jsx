@@ -10,6 +10,7 @@ import {
   restricUser,
   getCurrentUserData,
 } from "../../redux/reducers/userReducer";
+
 const TakeActionConten = () => {
   const allUsers = useSelector((state) => state.user.allUsers);
   const currentUser = useSelector((state) => state.admin.currentUser);
@@ -22,34 +23,32 @@ const TakeActionConten = () => {
   const user_id = router.query.id;
   const [restrcit, setRestrict] = useState();
 
-  console.log("actionUser===>", actionUser);
   const [read, setRead] = useState(false);
 
-  useEffect(() => {
-    async () => {
+  console.log("user_id", user_id);
+  const ApiCall = async (userId) => {
+    if (userId) {
       const res = await dispatch(getCurrentUserData(user_id));
-      console.log("res===========>",res)
-      setActionUser(res);
-    };
-  }, []);
+      setActionUser(res?.payload?.data);
+      return res.payload;
+    }
+  };
+  useEffect(() => {
+    ApiCall(user_id);
+  }, [user_id]);
   useEffect(() => {
     const currentUserData = allUsers?.data?.filter(
       (data) => data?.id == user_id
     )[0];
     setRestrict(currentUserData);
   }, []);
-  const handleReadOnly = () => {
-    if (read == false) {
-      setRead(true);
-    } else {
-      setRead(false);
+
+  const handleUserAction = async (obj) => {
+    const res = await dispatch(restricUser({ data: obj, userId: user_id }));
+    if (res.payload) {
+      ApiCall(user_id);
     }
-    const readData = {
-      reading: read,
-    };
-    dispatch(restricUser({ data: readData, userId: user_id }));
   };
-  console.log("read======>", read);
 
   const handleVerifyModal = () => {
     setSupportState(true);
@@ -81,10 +80,13 @@ const TakeActionConten = () => {
               <div className={ta.action_text}>5 days, 3h, 5min</div>
               <div className="pt-[12px]">
                 <label class="switch1">
+                  {console.log("actionUser?.reading", actionUser?.reading)}
                   <input
                     type="checkbox"
-                    checked={read}
-                    onChange={() => handleReadOnly()}
+                    checked={actionUser?.reading}
+                    onChange={() =>
+                      handleUserAction({ reading: !actionUser?.reading })
+                    }
                   />
                   <span class="slider1 round"></span>
                 </label>
@@ -102,7 +104,13 @@ const TakeActionConten = () => {
               <div className={ta.action_text}></div>
               <div className="pt-[12px]">
                 <label class="switch1">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={actionUser?.posting}
+                    onChange={() =>
+                      handleUserAction({ posting: !actionUser?.posting })
+                    }
+                  />
                   <span class="slider1 round"></span>
                 </label>
               </div>
@@ -121,7 +129,15 @@ const TakeActionConten = () => {
               <div className={ta.action_text}>5 days, 3h, 5min</div>
               <div className="pt-[12px]">
                 <label class="switch1">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={actionUser?.communityCreation}
+                    onChange={() =>
+                      handleUserAction({
+                        communityCreation: !actionUser?.communityCreation,
+                      })
+                    }
+                  />
                   <span class="slider1 round"></span>
                 </label>
               </div>
@@ -140,7 +156,15 @@ const TakeActionConten = () => {
               <div className={ta.action_text}>5 days, 3h, 5min</div>
               <div className="pt-[12px]">
                 <label class="switch1">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={actionUser?.joinCommunity}
+                    onChange={() =>
+                      handleUserAction({
+                        joinCommunity: !actionUser?.joinCommunity,
+                      })
+                    }
+                  />
                   <span class="slider1 round"></span>
                 </label>
               </div>
