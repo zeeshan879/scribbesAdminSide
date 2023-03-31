@@ -13,9 +13,17 @@ const UserSuspendModal = (props) => {
   const user_id=router.query.id
   const handleSuspendUser=()=>{
     if(props.state2===true){
-      dispatch(veryfiyUser(user_id));
-    }else{
-      dispatch(suspendeUser(user_id))
+      const data1 ={
+        verification:"true",
+      }
+
+      dispatch(veryfiyUser({ data: data1, userId: user_id }))
+    }
+    else{
+      const data2 ={
+        status:"suspended",
+      }
+      dispatch(suspendeUser({ data: data2, userId: user_id }))
     }
   
     props.onClick()

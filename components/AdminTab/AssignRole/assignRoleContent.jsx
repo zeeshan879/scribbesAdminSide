@@ -3,6 +3,31 @@ import ar from "../../../Asstes/style/assign_role.module.css";
 import Image from "next/image";
 import profile from "../../../Asstes/DashboardImages/profile.png";
 const AssignRoleContent = () => {
+  const handleAdminRole = (id) => {
+    const role = {
+      userVerificationRole: true,
+    };
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to assign role!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, assign it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Assign!',
+          'User verification role has been assign.',
+          'success'
+        ).then(()=>{
+          dispatch(mangeRole({ userId: id, data: role }));
+        })
+      }
+    })
+
+  };
   return (
     <>
       <div className={ar.assign_role_main_page}>

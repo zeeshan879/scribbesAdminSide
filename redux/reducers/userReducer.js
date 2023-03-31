@@ -43,10 +43,10 @@ export const getAllUsers = createAsyncThunk(
   // verify user status=======
   export const veryfiyUser = createAsyncThunk(
     "veryfiyUser",
-    async (userId) => {
+    async (obj) => {
       try {
         const { data } = await axiosInstance.put(
-          `${Base_Url}user/update-user-profile/${userId}`
+          `${Base_Url}user/update-user-profile/${obj.userId}`,obj.data
         );
         return data;
       } catch (err) {
@@ -57,10 +57,10 @@ export const getAllUsers = createAsyncThunk(
   // suspend user from user table ===
   export const suspendeUser = createAsyncThunk(
     "suspendeUser",
-    async (userId) => {
+    async (obj) => {
       try {
         const { data } = await axiosInstance.put(
-          `${Base_Url}user/update-user-profile/${userId}`
+          `${Base_Url}user/update-user-profile/${obj.userId}`,obj.data
         );
         return data;
       } catch (err) {

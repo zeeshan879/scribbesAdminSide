@@ -7,7 +7,8 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 const initialState = {
   currentUser: null,
-  tempFollowCommunity:""
+  tempFollowCommunity:"",
+  allAdmins:""
 
 };
 // =========user login 
@@ -51,6 +52,47 @@ export const getCurrentUser = createAsyncThunk(
     }
   }
 );
+export const deleteAdmin = createAsyncThunk(
+  "deleteAdmin",
+  async (userId) => {
+    try {
+      const { data } = await axiosInstance.delete(
+        `${Base_Url}api/admin/delete-admin/${userId}`
+      );
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+);
+export const mangeRole = createAsyncThunk(
+  "mangeRole",
+  async (obj) => {
+    try {
+      const { obj } = await axiosInstance.put(
+        `${Base_Url}api/admin/update-admin-profile${obj.userId}`,obj.data
+      );
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+);
+
+// get all admins 
+export const getAllAdmins = createAsyncThunk(
+  "getAllAdmins",
+  async () => {
+    try {
+      const { data } = await axiosInstance.get(
+        `${Base_Url}api/admin/get-all-admins`
+      );
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+);
 
 
 
@@ -70,6 +112,10 @@ export const adminReducer = createSlice({
   extraReducers: {
     [getCurrentUser.fulfilled]: (state, action) => {
       state.currentUser = action.payload;
+      // state.isLoading = false;
+    },
+    [getAllAdmins.fulfilled]: (state, action) => {
+      state.allAdmins = action.payload;
       // state.isLoading = false;
     },
 

@@ -21,11 +21,9 @@ const TakeActionConten = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const user_id = router.query.id;
-  const [restrcit, setRestrict] = useState();
 
-  const [read, setRead] = useState(false);
 
-  console.log("user_id", user_id);
+
   const ApiCall = async (userId) => {
     if (userId) {
       const res = await dispatch(getCurrentUserData(user_id));
@@ -36,20 +34,12 @@ const TakeActionConten = () => {
   useEffect(() => {
     ApiCall(user_id);
   }, [user_id]);
-  useEffect(() => {
-    const currentUserData = allUsers?.data?.filter(
-      (data) => data?.id == user_id
-    )[0];
-    setRestrict(currentUserData);
-  }, []);
-
   const handleUserAction = async (obj) => {
     const res = await dispatch(restricUser({ data: obj, userId: user_id }));
     if (res.payload) {
       ApiCall(user_id);
     }
   };
-
   const handleVerifyModal = () => {
     setSupportState(true);
     setActive2(!active2);

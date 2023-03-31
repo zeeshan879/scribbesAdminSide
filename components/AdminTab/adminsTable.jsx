@@ -7,6 +7,8 @@ import supper from "../../Asstes/DashboardImages/supper.png";
 import Image from "next/image";
 import { MdOutlineModeEditOutline } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useEffect } from "react";
+import { useSelector,useDispatch } from "react-redux";
 
 const AdminsTable = () => {
   const tableData = [
@@ -101,6 +103,7 @@ const AdminsTable = () => {
       status: "Active",
     },
   ];
+
   return (
     <>
       <div className={at.admin_table_wraper}>

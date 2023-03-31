@@ -5,11 +5,15 @@ import Admin from "./admin";
 import Header from "../Header";
 import { useSelector } from "react-redux";
 import SuperAdminContentSection from "./SuperAdminContentSection"
+import { useEffect } from "react";
 
 const AdminContentTab = () => {
   const activePageTab = useSelector(
     (state) => state.allGernalFunction.activePageTab
   );
+  useEffect(()=>{
+    
+  })
 
   return (
     <>
