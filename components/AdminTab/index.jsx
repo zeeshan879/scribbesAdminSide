@@ -11,9 +11,7 @@ const AdminContentTab = () => {
   const activePageTab = useSelector(
     (state) => state.allGernalFunction.activePageTab
   );
-  useEffect(()=>{
-    
-  })
+
 
   return (
     <>

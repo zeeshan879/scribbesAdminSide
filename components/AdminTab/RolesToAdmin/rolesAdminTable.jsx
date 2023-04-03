@@ -6,7 +6,7 @@ import profile2 from "../../../Asstes/DashboardImages/profile2.png";
 import supper from "../../../Asstes/DashboardImages/supper.png";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllAdmins, mangeRole } from "../../../redux/reducers/adminReducer";
-
+import Link from "next/link";
 
 const RolesToAdminTable = () => {
   const dispatch = useDispatch();
@@ -47,51 +47,50 @@ const RolesToAdminTable = () => {
               {alldminData?.map((data, index) => {
                 return (
                   <>
-                    <tr
-                      className={index % 2 != 0 ? au.table_row2 : au.table_row}
-                    >
-                      <td className="w-[250px] ">
-                        <div className={au.table_name}>
-                          <label class="container1">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                          <div className={au.table_name_inner}>
-                            <div className={au.check_super}>
-                              <Image src={supper} />
+                    <Link href={`/admin/create-role?id=${data.id} `}>
+                      <tr
+                        className={
+                          index % 2 != 0 ? au.table_row2 : au.table_row
+                        }
+                      >
+                        <td className="w-[250px] ">
+                          <div className={au.table_name}>
+                            <label class="container1">
+                              <input type="checkbox" />
+                              <span class="checkmark"></span>
+                            </label>
+                            <div className={au.table_name_inner}>
+                              <div className={au.check_super}>
+                                <Image src={supper} />
+                              </div>
+                              <Image src={profile2} />
+                              {data?.userName}
                             </div>
-                            <Image src={profile2} />
-                            {data?.userName}
                           </div>
-                        </div>
-                      </td>
-                      <td className="font-DM text-base font-normal ">
-                        <div className="pt-[15px] text-center">
-                          {data?.email}
-                        </div>
-                      </td>
-                      <td className="font-DM text-base font-normal">
-                        <div className="pt-[15px]">
-                          {data.rank ? data.rank : "null"}
-                        </div>
-                      </td>
-                      <td className="font-DM text-base font-normal">
-                        <div className="pt-[15px]">{data?.id}</div>
-                      </td>
-                      <td className="font-DM text-base font-normal">
-                        <div className="pt-[15px]">
-                          {data.status ? data.status : "null"}
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          className={au.mange_role_btn}
-                     
-                        >
-                          Manage Role
-                        </div>
-                      </td>
-                    </tr>
+                        </td>
+                        <td className="font-DM text-base font-normal ">
+                          <div className="pt-[15px] text-center">
+                            {data?.email}
+                          </div>
+                        </td>
+                        <td className="font-DM text-base font-normal">
+                          <div className="pt-[15px]">
+                            {data.rank ? data.rank : "null"}
+                          </div>
+                        </td>
+                        <td className="font-DM text-base font-normal">
+                          <div className="pt-[15px]">{data?.id}</div>
+                        </td>
+                        <td className="font-DM text-base font-normal">
+                          <div className="pt-[15px]">
+                            {data.status ? data.status : "null"}
+                          </div>
+                        </td>
+                        <td>
+                          <div className={au.mange_role_btn}>Manage Role</div>
+                        </td>
+                      </tr>
+                    </Link>
                   </>
                 );
               })}

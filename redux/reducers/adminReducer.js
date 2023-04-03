@@ -1,17 +1,16 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../axiosInstance";
-import {Base_Url} from "../../config/baseUrl"
+import { Base_Url } from "../../config/baseUrl";
 import axios from "axios";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 const initialState = {
   currentUser: null,
-  tempFollowCommunity:"",
-  allAdmins:""
-
+  tempFollowCommunity: "",
+  allAdmins: "",
 };
-// =========user login 
+// =========user login
 export const adminLogin = createAsyncThunk("adminLogin", async (data) => {
   try {
     const res = await axiosInstance.post(
@@ -30,21 +29,43 @@ export const adminLogin = createAsyncThunk("adminLogin", async (data) => {
     });
     return res;
   } catch (err) {
-
     Swal.fire({
       icon: "error",
       title: "Oops...",
       text: err.response.data.errorMessage,
-
     });
   }
 });
-export const getCurrentUser = createAsyncThunk(
-  "getCurrentUser",
-  async (userId) => {
+export const addAdmin = createAsyncThunk("addAdmin", async (data) => {
+  console.log("admin data==>",data)
+  try {
+    const res = await axiosInstance.post(
+      `${Base_Url}api/admin/add-admin`,
+      data
+    );
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "congrs....",
+      text: res.data.data?.message,
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    return res;
+  } catch (err) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: err.response.data.errorMessage,
+    });
+  }
+});
+export const getCurrentAdmin = createAsyncThunk(
+  "getCurrentAdmin",
+  async (adminId) => {
     try {
       const { data } = await axiosInstance.get(
-        `${Base_Url}user/get-current-user/${userId}`
+        `${Base_Url}api/admin/get-current-user/${adminId}`
       );
       return data;
     } catch (err) {
@@ -52,40 +73,12 @@ export const getCurrentUser = createAsyncThunk(
     }
   }
 );
-export const deleteAdmin = createAsyncThunk(
-  "deleteAdmin",
-  async (userId) => {
-    try {
-      const { data } = await axiosInstance.delete(
-        `${Base_Url}api/admin/delete-admin/${userId}`
-      );
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-  }
-);
-export const mangeRole = createAsyncThunk(
-  "mangeRole",
-  async (obj) => {
-    try {
-      const { obj } = await axiosInstance.put(
-        `${Base_Url}api/admin/update-admin-profile${obj.userId}`,obj.data
-      );
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-  }
-);
-
-// get all admins 
-export const getAllAdmins = createAsyncThunk(
-  "getAllAdmins",
-  async () => {
+export const getCurrentAdminData = createAsyncThunk(
+  "getCurrentAdminData",
+  async (adminId) => {
     try {
       const { data } = await axiosInstance.get(
-        `${Base_Url}api/admin/get-all-admins`
+        `${Base_Url}api/admin/get-current-user/${adminId}`
       );
       return data;
     } catch (err) {
@@ -93,12 +86,39 @@ export const getAllAdmins = createAsyncThunk(
     }
   }
 );
+export const deleteAdmin = createAsyncThunk("deleteAdmin", async (userId) => {
+  try {
+    const { data } = await axiosInstance.delete(
+      `${Base_Url}api/admin/delete-admin/${userId}`
+    );
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+});
+export const mangeRole = createAsyncThunk("mangeRole", async (obj) => {
+  try {
+    const { obj } = await axiosInstance.put(
+      `${Base_Url}api/admin/update-admin-profile${obj.userId}`,
+      obj.data
+    );
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+});
 
-
-
-
-
-
+// get all admins
+export const getAllAdmins = createAsyncThunk("getAllAdmins", async () => {
+  try {
+    const { data } = await axiosInstance.get(
+      `${Base_Url}api/admin/get-all-admins`
+    );
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 export const adminReducer = createSlice({
   name: "adminReducer",
@@ -110,7 +130,7 @@ export const adminReducer = createSlice({
     },
   },
   extraReducers: {
-    [getCurrentUser.fulfilled]: (state, action) => {
+    [getCurrentAdmin.fulfilled]: (state, action) => {
       state.currentUser = action.payload;
       // state.isLoading = false;
     },
@@ -118,7 +138,6 @@ export const adminReducer = createSlice({
       state.allAdmins = action.payload;
       // state.isLoading = false;
     },
-
   },
 });
 // Action creators are generated for each case reducer function

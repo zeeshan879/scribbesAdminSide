@@ -6,7 +6,7 @@ import Router from 'next/router'
 import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
 import { useDispatch } from "react-redux";
-import {getCurrentUser} from "../redux/reducers/adminReducer"
+import {getCurrentAdmin,getAllAdmins} from "../redux/reducers/adminReducer"
 
 const cookies = new Cookies();
 function MyApp({ Component, pageProps }) {
@@ -26,12 +26,12 @@ const Application = ({ Component, pageProps }) => {
   useEffect(() => {
     if (token) {
       const data = jwt_decode(token);
-      console.log("admin data==>",data?.admin.id
-      )
-      dispatch(getCurrentUser(data?.admin.id));
+      dispatch(getCurrentAdmin(data?.admin?.id));
+      dispatch(getAllAdmins())
     } else {
       Router.push('/login')
     }
+    
   }, []);
   return <Component {...pageProps} />;
 };

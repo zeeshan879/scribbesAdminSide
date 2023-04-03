@@ -78,9 +78,12 @@ const SupperAdminTable = () => {
   const dispatch = useDispatch();
   const allAdmins = useSelector((state) => state.admin.allAdmins);
   const alldminData = allAdmins.data;
+  useEffect(() => {
+    dispatch(getAllAdmins());
+  }, [update]);
 
   const handleAdminDelete = (id) => {
-    console.log("admin id", id);
+
     Swal.fire({
       title: "Are you sure?",
       text: "You want to delete this admin!",
@@ -101,9 +104,7 @@ const SupperAdminTable = () => {
       }
     });
   };
-  useEffect(() => {
-    dispatch(getAllAdmins());
-  }, [update]);
+
   return (
     <>
       <div className={at.super_admin_scroler}>

@@ -70,6 +70,17 @@ a {
 .modal {
   padding-left: 0px !important;
 }
+.ReactFlagsSelect-module_selectBtn__19wW7{
+  border: none !important;
+}
+.ReactFlagsSelect-module_selectFlag__2q5gC img svg {
+border-radius: 100% !important;
+height: 50px !important;
+width: 50px !important;
+}
+.ReactFlagsSelect-module_selectFlag__2q5gC{
+  font-size: 50px;
+}
 .rounded-checkbox {
   width: 20px;
   height: 20px;
