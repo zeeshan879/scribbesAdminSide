@@ -10,6 +10,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllAdmins, deleteAdmin } from "../../redux/reducers/adminReducer";
 import Swal from "sweetalert2/dist/sweetalert2.js";
+import Link from "next/link";
 
 const SupperAdminTable = () => {
   const tableData = [
@@ -74,7 +75,7 @@ const SupperAdminTable = () => {
       status: "Active",
     },
   ];
-  const [update,setUpdate]=useState(false)
+  const [update, setUpdate] = useState(false);
   const dispatch = useDispatch();
   const allAdmins = useSelector((state) => state.admin.allAdmins);
   const alldminData = allAdmins.data;
@@ -83,7 +84,6 @@ const SupperAdminTable = () => {
   }, [update]);
 
   const handleAdminDelete = (id) => {
-
     Swal.fire({
       title: "Are you sure?",
       text: "You want to delete this admin!",
@@ -97,8 +97,7 @@ const SupperAdminTable = () => {
         Swal.fire("Deleted!", "This admin has been deleted.", "success").then(
           () => {
             dispatch(deleteAdmin(id));
-            setUpdate(true)
-           
+            setUpdate(true);
           }
         );
       }
@@ -136,60 +135,66 @@ const SupperAdminTable = () => {
               {alldminData?.map((data, index) => {
                 return (
                   <>
-                    <tr
-                      className={index % 2 != 0 ? au.table_row2 : au.table_row}
-                    >
-                      <td>
-                        <div className={at.profile_td}>
-                          <div>
-                            <label class="container1">
-                              <input type="checkbox" />
-                              <span class="checkmark"></span>
-                            </label>
-                          </div>
-                          <div className="flex items-center gap-[10px] 2xl:gap-[18px]">
-                            <div className="relative">
-                              <div className={at.supper}>
-                                <Image src={supper} />
+    
+                      <tr
+                        className={
+                          index % 2 != 0 ? au.table_row2 : au.table_row
+                        }
+                      >
+                        <td>
+                          <div className={at.profile_td}>
+                            <div>
+                              <label class="container1">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                            <div className="flex items-center gap-[10px] 2xl:gap-[18px]">
+                              <div className="relative">
+                                {data?.adminType === "superAdmin" && (
+                                  <div className={at.supper}>
+                                    <Image src={supper} />
+                                  </div>
+                                )}
+                                <Image src={profile2} />
                               </div>
-                              <Image src={profile2} />
+                              <div className="font-DM text-sm 2xl:text-base font-normal">
+                                {data?.userName ? data?.userName : "null"}
+                              </div>
                             </div>
-                            <div className="font-DM text-sm 2xl:text-base font-normal">
-                              {data?.userName}
+                          </div>
+                        </td>
+                        <td className="font-DM text-sm 2xl:text-base font-normal">
+                          <div className="pt-[18px]">{data?.email}</div>
+                        </td>
+                        <td className="font-DM text-sm 2xl:text-base font-normal">
+                          <div className="pt-[18px]">
+                            {data?.adminType ? data?.adminType : "null"}
+                          </div>
+                        </td>
+                        <td className="font-DM text-sm 2xl:text-base font-normal">
+                          <div className="pt-[18px]">{data.id}</div>
+                        </td>
+                        <td className="font-DM text-sm 2xl:text-base font-normal">
+                          <div className="pt-[18px]">
+                            {data?.status ? data?.status : "null"}
+                          </div>
+                        </td>
+                        <td className="font-DM text-base font-normal">
+                          <div className="pt-[18px] flex gap-[10px] 2xl:gap-[30px] justify-center">
+                            <div className="cursor-pointer">
+                              <MdOutlineModeEditOutline className="text-[#BCBCBC] text-xl" />
+                            </div>
+                            <div
+                              className="cursor-pointer"
+                              onClick={() => handleAdminDelete(data.id)}
+                            >
+                              <RiDeleteBin6Line className="text-[#BCBCBC] text-xl" />
                             </div>
                           </div>
-                        </div>
-                      </td>
-                      <td className="font-DM text-sm 2xl:text-base font-normal">
-                        <div className="pt-[18px]">{data?.email}</div>
-                      </td>
-                      <td className="font-DM text-sm 2xl:text-base font-normal">
-                        <div className="pt-[18px]">
-                          {data?.rank ? data.rank : "null"}
-                        </div>
-                      </td>
-                      <td className="font-DM text-sm 2xl:text-base font-normal">
-                        <div className="pt-[18px]">{data.id}</div>
-                      </td>
-                      <td className="font-DM text-sm 2xl:text-base font-normal">
-                        <div className="pt-[18px]">
-                          {data?.status ? data?.status : "null"}
-                        </div>
-                      </td>
-                      <td className="font-DM text-base font-normal">
-                        <div className="pt-[18px] flex gap-[10px] 2xl:gap-[30px] justify-center">
-                          <div className="cursor-pointer">
-                            <MdOutlineModeEditOutline className="text-[#BCBCBC] text-xl" />
-                          </div>
-                          <div
-                            className="cursor-pointer"
-                            onClick={() => handleAdminDelete(data.id)}
-                          >
-                            <RiDeleteBin6Line className="text-[#BCBCBC] text-xl" />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+                        </td>
+                      </tr>
+           
                   </>
                 );
               })}

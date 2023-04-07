@@ -5,36 +5,97 @@ import profile from "../../../Asstes/DashboardImages/profile.png";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { useEffect } from "react";
-import { getCurrentAdminData,mangeRole } from "../../../redux/reducers/adminReducer";
+import {
+  getCurrentAdminData,
+  mangeRole,
+} from "../../../redux/reducers/adminReducer";
 const AssignRoleContent = () => {
   const router = useRouter();
-  const [assignRole, setAssignRole] = useState();
+  const [currentRole, setCurrentRole] = useState();
+  const [userVerification, setUserVerification] = useState();
+  const [comunityVerification, setComunityVerification] = useState();
+  const [userReports, setuserReports] = useState();
+  const [communityReports, setCommunityReports] = useState();
+  const [suspendUser, setSuspendUser] = useState();
+  const [suspendCommunity, setSuspendCommunity] = useState();
+  const [allRoles, setallRoles] = useState();
+  const [cancel,setCancel]=useState(false)
   const adminRole_id = router.query.id;
   const dispatch = useDispatch();
-
+  console.log("userVerification", currentRole);
   const ApiCall = async (adminRole_id) => {
     if (adminRole_id) {
       const res = await dispatch(getCurrentAdminData(adminRole_id));
-      setAssignRole(res?.payload?.data);
+      setCurrentRole(res?.payload?.data);
+      setUserVerification(res?.payload?.data.userVerificationRole);
+      setComunityVerification(res?.payload?.data.communityVerificationRole);
+      setuserReports(res?.payload?.data.userReportsRole);
+      setCommunityReports(res?.payload?.data.communityReportsRole);
+      setSuspendUser(res?.payload?.data.suspendUserRole);
+      setSuspendCommunity(res?.payload?.data.suspendCommunityRole);
+      setallRoles(res?.payload?.data.allRoles);
       return res.payload;
     }
   };
   useEffect(() => {
     ApiCall(adminRole_id);
-  }, [adminRole_id]);
-
-
-  const handleAdminRole = async (obj) => {
-
-    console.log("obj===========>", obj);
-    // const res = await dispatch(mangeRole({ data: obj, userId: adminRole_id }));
-    // if (res.payload) {
-    //   ApiCall(adminRole_id);
-    // }
-    console.log("assignRole?.userVerificationRole",assignRole?.userVerificationRole)
+    console.log("useEffect run")
+  }, [cancel,adminRole_id]);
+  const handleAdminRole = (data) => {
+    switch (data) {
+      case "userVerification":
+        setUserVerification(!userVerification);
+        break;
+      case "comunityVerification":
+        setComunityVerification(!comunityVerification);
+        break;
+      case "userReports":
+        setuserReports(!userReports);
+        break;
+      case "communityReports":
+        setCommunityReports(!communityReports);
+        break;
+      case "suspendUser":
+        setSuspendUser(!suspendUser);
+        break;
+      case "suspendCommunity":
+        setSuspendCommunity(!suspendCommunity);
+        break;
+      case "allRoles":
+        setUserVerification(allRoles == true ? false : true);
+        setComunityVerification(allRoles == true ? false : true);
+        setuserReports(allRoles == true ? false : true);
+        setSuspendUser(allRoles == true ? false : true);
+        setSuspendCommunity(allRoles == true ? false : true);
+        setCommunityReports(allRoles == true ? false : true);
+        setallRoles(!allRoles);
+        break;
+      default:
+        return 0;
+    }
   };
-
+  const handleChnageAdminRole = () => {
+    const obj = {
+      userVerificationRole: userVerification,
+      communityVerificationRole: comunityVerification,
+      userReportsRole: userReports,
+      communityReportsRole: communityReports,
+      suspendUserRole: suspendUser,
+      suspendCommunityRole: suspendCommunity,
+      allRoles: allRoles,
+    };
+    dispatch(mangeRole({ data: obj, userId: adminRole_id }));
+    Swal.fire(
+      'Success!',
+      'Admin roles has been chnage successfully!',
+      'success'
+    )
+  };
+  const handleCancel=()=>{
+    setCancel(!cancel)
+  }
   return (
     <>
       <div className={ar.assign_role_main_page}>
@@ -43,8 +104,10 @@ const AssignRoleContent = () => {
             <Image src={profile} />
           </div>
           <div className="font-DM font-bold text-[18px] lg:text-[20px]">
-            John Doe
-            <div className={ar.admin_btn}>Admin</div>
+      {currentRole?.userName}
+            <div className={ar.admin_btn}>{
+              currentRole?.adminType? currentRole?.adminType:"null"
+            }</div>
           </div>
           <div className={ar.view_profile_btn}>View Profile</div>
         </div>
@@ -62,17 +125,11 @@ const AssignRoleContent = () => {
               </div>
               <div>
                 <label class="assigneRole">
-                  {
-                    console.log("assignRole?.userVerificationRole",assignRole?.userVerificationRole)
-                  }
                   <input
                     type="checkbox"
-                    checked={assignRole?.userVerificationRole}
-                    onChange={() =>
-                      handleAdminRole({
-                        userVerificationRole: !assignRole?.userVerificationRole,
-                      })
-                    }
+                    checked={userVerification}
+                    name="uverification"
+                    onChange={() => handleAdminRole("userVerification")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -91,13 +148,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.communityVerificationRole}
-                    // onChange={() =>
-                    //   handleAdminRole({
-                    //     communityVerificationRole:
-                    //       !assignRole?.communityVerificationRole,
-                    //   })
-                    // }
+                    checked={comunityVerification}
+                    onChange={() => handleAdminRole("comunityVerification")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -105,7 +157,9 @@ const AssignRoleContent = () => {
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-grotesk font-bold ">User Reports</div>
+                <div className="font-grotesk font-bold text-[18px]">
+                  User Reports
+                </div>
                 <div className="text-base font-DM font-normal pt-[10px]">
                   Assign Admin to handle user reports
                 </div>
@@ -114,12 +168,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.userReportsRole}
-                    // onChange={() =>
-                    //   handleAdminRole({
-                    //     userReportsRole: !assignRole?.userReportsRole,
-                    //   })
-                    // }
+                    checked={userReports}
+                    onChange={() => handleAdminRole("userReports")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -138,12 +188,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.communityReportsRole}
-                    // onChange={() =>
-                    //   handleAdminRole({
-                    //     communityReportsRole: !assignRole?.communityReportsRole,
-                    //   })
-                    // }
+                    checked={communityReports}
+                    onChange={() => handleAdminRole("communityReports")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -162,12 +208,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.suspendUserRole}
-                    // onChange={() =>
-                    //   handleAdminRole({
-                    //     suspendUserRole: !assignRole?.suspendUserRole,
-                    //   })
-                    // }
+                    checked={suspendUser}
+                    onChange={() => handleAdminRole("suspendUser")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -186,12 +228,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.suspendCommunityRole}
-                    // onChange={() =>
-                    //   handleAdminRole({
-                    //     suspendCommunityRole: !assignRole?.suspendCommunityRole,
-                    //   })
-                    // }
+                    checked={suspendCommunity}
+                    onChange={() => handleAdminRole("suspendCommunity")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -210,30 +248,8 @@ const AssignRoleContent = () => {
                 <label class="assigneRole">
                   <input
                     type="checkbox"
-                    // checked={assignRole?.allRoles}
-                    // onChange={() =>
-                    //   handleAdminRole(
-                    //     assignRole?.allRoles
-                    //       ? {
-                    //         userVerificationRole: true,
-                    //           communityVerificationRole: true,
-                    //           suspendCommunityRole: true,
-                    //           suspendUserRole: true,
-                    //           allRoles: true,
-                    //           communityReportsRole: true,
-                    //           userReportsRole: true,
-                    //         }
-                    //       : {
-                    //           suspendCommunityRole: false,
-                    //           suspendUserRole: false,
-                    //           allRoles: false,
-                    //           communityVerificationRole: false,
-                    //           communityReportsRole: false,
-                    //           userReportsRole: false,
-                    //           userVerificationRole: false,
-                    //         }
-                    //   )
-                    // }
+                    checked={allRoles}
+                    onChange={() => handleAdminRole("allRoles")}
                   />
                   <span class="checkmarkAssigneRole"></span>
                 </label>
@@ -243,8 +259,13 @@ const AssignRoleContent = () => {
 
           <div className="flex justify-center md:justify-end pt-[50px] lg:pt-[100px]">
             <div className="flex flex-col md:flex-row items-center gap-[10px]">
-              <div className={ar.canecl_btn}>Cancel</div>
-              <div className={ar.change_btn}>Change Role</div>
+              <div className={ar.canecl_btn} onClick={()=>handleCancel()}>Cancel</div>
+              <div
+                className={ar.change_btn}
+                onClick={() => handleChnageAdminRole()}
+              >
+                Change Role
+              </div>
             </div>
           </div>
         </div>

@@ -13,7 +13,6 @@ const RolesToAdminBodySec = () => {
         <BackArrow pageName={pageInfo} />
         <div className="flex justify-between pt-5 lg:pt-[65px] ">
           <div>
-
           </div>
           <div>
             <RolesToAdminTableFilter />

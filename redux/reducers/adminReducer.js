@@ -87,6 +87,7 @@ export const getCurrentAdminData = createAsyncThunk(
   }
 );
 export const deleteAdmin = createAsyncThunk("deleteAdmin", async (userId) => {
+
   try {
     const { data } = await axiosInstance.delete(
       `${Base_Url}api/admin/delete-admin/${userId}`
@@ -96,17 +97,20 @@ export const deleteAdmin = createAsyncThunk("deleteAdmin", async (userId) => {
     console.log(err);
   }
 });
-export const mangeRole = createAsyncThunk("mangeRole", async (obj) => {
-  try {
-    const { obj } = await axiosInstance.put(
-      `${Base_Url}api/admin/update-admin-profile${obj.userId}`,
-      obj.data
-    );
-    return data;
-  } catch (err) {
-    console.log(err);
+
+export const mangeRole = createAsyncThunk(
+  "mangeRole",
+  async (obj) => {
+    try {
+      const { data } = await axiosInstance.put(
+        `${Base_Url}api/admin/update-admin-profile/${obj.userId}`,obj.data
+      );
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
   }
-});
+);
 
 // get all admins
 export const getAllAdmins = createAsyncThunk("getAllAdmins", async () => {

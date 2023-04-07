@@ -1,139 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 import au from "../../../Asstes/style/allUser.module.css";
 import Image from "next/image";
 import profile2 from "../../../Asstes/DashboardImages/profile2.png";
 import checkMark from "../../../Asstes/DashboardImages/checkMark.png";
 import edit from "../../../Asstes/DashboardImages/edit.png";
-import error from "../../../Asstes/DashboardImages/error.png";
 import delte from "../../../Asstes/DashboardImages/delte.png";
-import q from "../../../Asstes/DashboardImages/q.png";
 import preArrow from "../../../Asstes/DashboardImages/preArrow.png";
 import nextArrow from "../../../Asstes/DashboardImages/nextArrow.png";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  deleteUser,
+  getUserVerificationRequest,
+} from "../../../redux/reducers/userReducer";
+
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 const VerifiedUserTable = () => {
-  const tableData = [
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "Community",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Blocked",
-      country: "United Sates",
-      type: "Community",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: true,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Blocked",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Suspended",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Suspended",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "User",
-    },
-    {
-      name: "John Doe",
-      mark: true,
-      email: "johndoe@mail.com",
-      phone: "+92 300 3399922",
-      check: false,
-      ip: "66.249.66.24",
-      id: "66.249.66.24",
-      status: "Active",
-      country: "United Sates",
-      type: "User",
-    },
-  ];
+  const [update, setUpdate] = useState(false);
+  const allUserVerificationReq = useSelector(
+    (state) => state.user.allUserVerificationReq
+  );
+  console.log("alluserReq", allUserVerificationReq);
+  const dispatch = useDispatch();
+  const showAllUsersReq = allUserVerificationReq?.data;
+  const handleDeleteUser = (data) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You want to delete this user?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "This user has been deleted.", "success").then(
+          () => {
+            dispatch(deleteUser(data));
+            setUpdate(true)
+          }
+        );
+      }
+    });
+  };
+  useEffect(() => {
+    dispatch(getUserVerificationRequest());
+  }, [update]);
   return (
     <>
       <div className="table_scrol_contoler">
@@ -166,7 +79,7 @@ const VerifiedUserTable = () => {
               </tr>
             </thead>
             <tbody>
-              {tableData.map((data, index) => {
+              {showAllUsersReq?.map((data, index) => {
                 return (
                   <>
                     <tr
@@ -180,37 +93,43 @@ const VerifiedUserTable = () => {
                           </label>
                           <div className={au.table_name_inner}>
                             <div className={au.check_mark}>
-                              {data.mark && <Image src={checkMark} />}
+                              {data?.mark && <Image src={checkMark} />}
                             </div>
                             <Image src={profile2} />
-                            {data.name}
+                            {data?.userName}
                           </div>
                         </div>
                       </td>
                       <td className="font-DM text-sm lg:text-base font-normal">
-                        <div>{data.email}</div>
-                        <div>{data.phone}</div>
+                        <div>{data?.email}</div>
+                        <div>{data?.phoneNo ? data.phoneNo : "null"}</div>
                       </td>
                       <td className="font-DM text-sm lg:text-base font-normal">
-                        <div className="pt-[10px]">{data.ip}</div>
+                        <div className="pt-[10px]">
+                          {data?.IP ? data?.IP : "null"}
+                        </div>
                       </td>
                       <td className="font-DM text-sm lg:text-base font-normal">
-                        <div className="pt-[10px]">{data.id}</div>
+                        <div className="pt-[10px]">{data?.id}</div>
                       </td>
                       <td className="font-DM text-sm lg:text-base font-normal">
-                        <div className="pt-[10px]">{data.status}</div>
+                        <div className="pt-[10px]">{data?.type}</div>
                       </td>
                       <td className="font-DM text-sm lg:text-base font-normal">
-                        <div className="pt-[10px]">{data.country}</div>
+                        <div className="pt-[10px]">
+                          {data.country ? data.country : "null"}
+                        </div>
                       </td>
-
                       <td>
                         <div className="pt-[10px] flex items-center gap-8">
                           <div className="flex gap-4 items-center">
                             <div className="cursor-pointer">
                               <Image src={edit} />
                             </div>
-                            <div className="cursor-pointer">
+                            <div
+                              className="cursor-pointer"
+                              onClick={() => handleDeleteUser(data?.id)}
+                            >
                               <Image src={delte} />
                             </div>
                           </div>

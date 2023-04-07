@@ -10,6 +10,7 @@ import delte from "../../../Asstes/DashboardImages/delte.png";
 import q from "../../../Asstes/DashboardImages/q.png";
 import preArrow from "../../../Asstes/DashboardImages/preArrow.png";
 import nextArrow from "../../../Asstes/DashboardImages/nextArrow.png";
+import { useDispatch,useSelector } from "react-redux";
 
 const VerificationReqTable = () => {
   const tableData = [
@@ -141,6 +142,9 @@ const VerificationReqTable = () => {
 
     },
   ];
+  const allVerificationReq=useSelector((state)=>state.user.allVerificationReq)
+  const showAllReq=allVerificationReq?.data
+  console.log("allreq",showAllReq)
   return (
     <>
     <div className="table_scrol_contoler">
@@ -173,7 +177,7 @@ const VerificationReqTable = () => {
             </tr>
           </thead>
           <tbody>
-            {tableData.map((data,index) => {
+            {showAllReq?.map((data,index) => {
               return (
                 <>
                   <tr className={index %2 !=0?au.table_row2: au.table_row}>
@@ -182,28 +186,30 @@ const VerificationReqTable = () => {
                         
                         <div className={au.table_name_inner}>
                           <div className={au.check_mark}>
-                            {data.mark && <Image src={checkMark} />}
+                            {data?.mark && <Image src={checkMark} />}
                           </div>
                           <Image src={profile2} />
-                          {data.name}
+                          {data?.userName?data?.userName:data.communityName
+
+}
                         </div>
                       </div>
                     </td>
                     <td className="font-DM text-sm lg:text-sm lg:text-base font-normal">
-                      <div>{data.email}</div>
-                      <div>{data.phone}</div>
+                      <div>{data?.email?data.email: data["Users.email"]}</div>
+                      <div>{data?.phoneNo?data.phoneNo:data["Users.phoneNo"]}</div>
                     </td>
                     <td className="font-DM text-sm lg:text-base font-normal">
-                      <div className="pt-[10px]">{data.type}</div>
+                      <div className="pt-[10px]">{data?.type}</div>
                     </td>
                     <td className="font-DM text-sm lg:text-base font-normal">
-                      <div className="pt-[10px]">{data.ip}</div>
+                      <div className="pt-[10px]">{data?.IP?data.IP:"null"}</div>
                     </td>
                     <td className="font-DM text-sm lg:text-base font-normal">
-                      <div className="pt-[10px]">{data.id}</div>
+                      <div className="pt-[10px]">{data?.id}</div>
                     </td>
                     <td className="font-DM text-sm lg:text-base font-normal">
-                      <div className="pt-[10px]">{data.status}</div>
+                      <div className="pt-[10px]">{data?.createdAt}</div>
                     </td>
             
                     <td>
@@ -213,7 +219,7 @@ const VerificationReqTable = () => {
                             <Image src={edit} />
                           </div>
                           <div className="cursor-pointer">
-                            {/*<Image src={delte} />*/}
+                            {/* <Image src={delte} /> */}
                           </div>
                         </div>
    

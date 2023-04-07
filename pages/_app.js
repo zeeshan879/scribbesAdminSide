@@ -7,6 +7,7 @@ import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
 import { useDispatch } from "react-redux";
 import {getCurrentAdmin,getAllAdmins} from "../redux/reducers/adminReducer"
+import {getAllverificationRequest,getUserVerificationRequest,getCommunityVerificationRequest} from "../redux/reducers/userReducer"
 
 const cookies = new Cookies();
 function MyApp({ Component, pageProps }) {
@@ -28,6 +29,9 @@ const Application = ({ Component, pageProps }) => {
       const data = jwt_decode(token);
       dispatch(getCurrentAdmin(data?.admin?.id));
       dispatch(getAllAdmins())
+      dispatch(getAllverificationRequest())
+      dispatch(getUserVerificationRequest())
+      dispatch(getCommunityVerificationRequest())
     } else {
       Router.push('/login')
     }
